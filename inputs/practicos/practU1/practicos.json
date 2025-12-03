@@ -1,17 +1,17 @@
-{
+﻿{
   "moduleId": "u1",
   "title": "Practicos Unidad 1",
   "exercises": [
     {
       "id": "u1-e01",
       "title": "Variacion de temperatura en Fahrenheit",
-      "statement": "Se necesita elevar la temperatura de una muestra en 40 °C. Si parte de 68.2 °F, ¿que temperatura final en °F debe leerse en el termometro?",
-      "hint": "Solo importa la variacion: ΔT(°F) = 9/5 × ΔT(°C). Luego suma a la temperatura inicial en °F.",
-      "solution": "ΔT = 9/5 × 40 = 72 °F. Temperatura final: 68.2 + 72 = 140.2 °F.",
+      "statement": "Se necesita elevar la temperatura de una muestra en 40 Â°C. Si parte de 68.2 Â°F, Â¿que temperatura final en Â°F debe leerse en el termometro?",
+      "hint": "Solo importa la variacion: Î”T(Â°F) = 9/5 Ã— Î”T(Â°C). Luego suma a la temperatura inicial en Â°F.",
+      "solution": "Î”T = 9/5 Ã— 40 = 72 Â°F. Temperatura final: 68.2 + 72 = 140.2 Â°F.",
       "tags": ["termologia", "conversion", "escalas"],
       "difficulty": "baja",
       "images": [
-        "inputs/modulo1/filminas1/1.Intro_a_la_termodinamica.png"
+        "inputs/modulos/modulo1/filminas1/1.Intro_a_la_termodinamica.png"
       ],
       "source": {
         "pdf": "inputs/Practico Fisica 2 2023.pdf",
@@ -22,9 +22,9 @@
     {
       "id": "u1-e02",
       "title": "Calor para calentar cobre",
-      "statement": "Una barra de cobre de 0.8 kg se calienta de 22 °C a 80 °C. Con cp = 0.39 kJ/(kg·K), calcula el calor aportado en kJ.",
-      "hint": "Usa Q = m · c · ΔT, con ΔT en K (equivale a °C).",
-      "solution": "ΔT = 58 K. Q = 0.8 × 0.39 × 58 ≈ 18.1 kJ.",
+      "statement": "Una barra de cobre de 0.8 kg se calienta de 22 Â°C a 80 Â°C. Con cp = 0.39 kJ/(kgÂ·K), calcula el calor aportado en kJ.",
+      "hint": "Usa Q = m Â· c Â· Î”T, con Î”T en K (equivale a Â°C).",
+      "solution": "Î”T = 58 K. Q = 0.8 Ã— 0.39 Ã— 58 â‰ˆ 18.1 kJ.",
       "tags": ["calorimetria", "capacidad_termica"],
       "difficulty": "media",
       "images": [],
@@ -36,3 +36,4 @@
     }
   ]
 }
+

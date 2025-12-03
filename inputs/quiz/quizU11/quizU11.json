@@ -1,0 +1,403 @@
+{
+  "moduleId": "u11",
+  "title": "Quiz Unidad 11 - Corriente alterna",
+  "questions": [
+    {
+      "question": "En un generador de corriente alterna ideal, la fem inducida en una bobina que gira en un campo magnético uniforme se expresa como ε(t) = ε_max · sen(ωt). ¿Cuál de las siguientes expresiones corresponde a ε_max?",
+      "options": [
+        "ε_max = N · A · B · ω",
+        "ε_max = N · A · B / ω",
+        "ε_max = N · B · ω / A",
+        "ε_max = A · B · ω / N"
+      ],
+      "answer": 0,
+      "explanation": "A partir de Φ_B = B · A · cos(ωt) y de la ley de Faraday, ε = -N · dΦ_B/dt = N · A · B · ω · sen(ωt), de donde se identifica ε_max = N · A · B · ω."
+    },
+    {
+      "question": "La diferencia de potencial suministrada por una fuente de CA senoidal se escribe como Δv(t) = ΔV_max · sen(ωt). ¿Cuál es la relación correcta entre la frecuencia angular ω y el período T de la señal?",
+      "options": [
+        "ω = 2π / T",
+        "ω = T / (2π)",
+        "ω = π · T",
+        "ω = 1 / (2π · T)"
+      ],
+      "answer": 0,
+      "explanation": "Por definición de frecuencia angular, ω = 2π · f y f = 1/T, por lo tanto ω = 2π / T."
+    },
+    {
+      "question": "En un circuito puramente resistivo conectado a una fuente de CA senoidal, ¿cuál es la relación de fase entre el voltaje en el resistor y la corriente que lo atraviesa?",
+      "options": [
+        "Están en fase (φ = 0°)",
+        "La corriente se adelanta 90° al voltaje",
+        "La corriente se atrasa 90° respecto del voltaje",
+        "La corriente se adelanta 45° al voltaje"
+      ],
+      "answer": 0,
+      "explanation": "En un resistor puro se cumple i_R(t) = ΔV_max/R · sen(ωt), es decir, corriente y voltaje tienen la misma dependencia temporal y están en fase con ángulo de fase φ = 0°."
+    },
+    {
+      "question": "Para una corriente alterna i(t) = I_max · sen(ωt), el valor eficaz (rms) de la corriente se define como I_rms = raíz de la media de i². ¿Cuál es la relación correcta entre I_rms e I_max?",
+      "options": [
+        "I_rms = I_max / √2",
+        "I_rms = √2 · I_max",
+        "I_rms = I_max / 2",
+        "I_rms = 2 · I_max"
+      ],
+      "answer": 0,
+      "explanation": "El valor promedio de sen²(ωt) sobre un ciclo es 1/2, por lo que la media de i² es I_max²/2 y entonces I_rms = √(I_max²/2) = I_max/√2."
+    },
+    {
+      "question": "Un tomacorriente domiciliario de 220 V (valor eficaz) entrega un voltaje senoidal. ¿Cuál es aproximadamente el valor máximo ΔV_max de ese voltaje?",
+      "options": [
+        "≈ 311 V",
+        "≈ 155 V",
+        "≈ 220 V",
+        "≈ 440 V"
+      ],
+      "answer": 0,
+      "explanation": "Para una señal senoidal se cumple ΔV_rms = ΔV_max/√2. Despejando, ΔV_max = √2 · ΔV_rms ≈ 1,414 · 220 V ≈ 311 V."
+    },
+    {
+      "question": "En un circuito puramente resistivo, la potencia promedio disipada en el resistor puede escribirse en función de la corriente eficaz I_rms como:",
+      "options": [
+        "P_prom = I_rms² · R",
+        "P_prom = I_max² · R",
+        "P_prom = I_rms · R",
+        "P_prom = I_max · R / 2"
+      ],
+      "answer": 0,
+      "explanation": "La potencia instantánea es P(t) = i²(t) · R y, al promediar sobre un ciclo, se obtiene P_prom = I_rms² · R, donde I_rms es el valor eficaz de la corriente."
+    },
+    {
+      "question": "En un inductor ideal conectado a una fuente de CA, ¿qué relación de fase existe entre la corriente y el voltaje en sus terminales?",
+      "options": [
+        "La corriente se atrasa 90° respecto del voltaje",
+        "La corriente se adelanta 90° al voltaje",
+        "Corriente y voltaje están en fase",
+        "La corriente se atrasa 45° respecto del voltaje"
+      ],
+      "answer": 0,
+      "explanation": "Al resolver la ecuación de un inductor en CA se obtiene i_L(t) = (ΔV_max/(ω · L)) · sen(ωt - π/2), por lo que la corriente se atrasa un cuarto de ciclo (90°) respecto del voltaje."
+    },
+    {
+      "question": "La reactancia inductiva X_L de un inductor de inductancia L sometido a una señal de frecuencia angular ω se define como:",
+      "options": [
+        "X_L = ω · L",
+        "X_L = 1 / (ω · L)",
+        "X_L = L / ω",
+        "X_L = ω / L"
+      ],
+      "answer": 0,
+      "explanation": "De la relación I_max = ΔV_max/(ω · L) se identifica la reactancia inductiva como X_L = ω · L, medida en ohmios."
+    },
+    {
+      "question": "En un capacitor ideal sometido a una tensión alterna senoidal, ¿cómo se relacionan el voltaje y la corriente?",
+      "options": [
+        "La corriente se adelanta 90° al voltaje",
+        "La corriente se atrasa 90° respecto del voltaje",
+        "Corriente y voltaje están en fase",
+        "La corriente tiene la misma amplitud que el voltaje"
+      ],
+      "answer": 0,
+      "explanation": "La corriente en el capacitor resulta i_C(t) = ω · C · ΔV_max · sen(ωt + π/2), lo que indica que la corriente se adelanta 90° al voltaje."
+    },
+    {
+      "question": "La reactancia capacitiva X_C de un capacitor de capacitancia C sometido a una señal de frecuencia angular ω es:",
+      "options": [
+        "X_C = 1 / (ω · C)",
+        "X_C = ω · C",
+        "X_C = ω / C",
+        "X_C = C / ω"
+      ],
+      "answer": 0,
+      "explanation": "Del análisis del capacitor en CA se obtiene X_C = 1/(ω · C), medida en ohmios, y se cumple I_max = ΔV_max / X_C."
+    },
+    {
+      "question": "En un circuito RLC serie alimentado por una fuente de CA, la impedancia total Z del circuito se expresa como:",
+      "options": [
+        "Z = √(R² + (X_L - X_C)²)",
+        "Z = R + X_L + X_C",
+        "Z = √(R² + X_L² + X_C²)",
+        "Z = √(R² + (X_L + X_C)²)"
+      ],
+      "answer": 0,
+      "explanation": "Del diagrama fasorial resulta que las contribuciones inductiva y capacitiva se combinan como X_L - X_C y la impedancia cumple Z = √(R² + (X_L - X_C)²)."
+    },
+    {
+      "question": "En un circuito RLC serie, la corriente máxima I_max que circula cuando el voltaje máximo aplicado es ΔV_max se calcula como:",
+      "options": [
+        "I_max = ΔV_max / Z",
+        "I_max = Z / ΔV_max",
+        "I_max = ΔV_max · Z",
+        "I_max = ΔV_max / R"
+      ],
+      "answer": 0,
+      "explanation": "La forma general de la ley de Ohm en corriente alterna es I_max = ΔV_max / Z, donde Z es la impedancia del circuito."
+    },
+    {
+      "question": "El ángulo de fase φ entre la corriente y el voltaje aplicado en un circuito RLC serie viene dado por:",
+      "options": [
+        "φ = tan⁻¹((X_L - X_C)/R)",
+        "φ = tan⁻¹(R/(X_L - X_C))",
+        "φ = tan⁻¹((X_L + X_C)/R)",
+        "φ = tan⁻¹(X_C/X_L)"
+      ],
+      "answer": 0,
+      "explanation": "Del triángulo de fasores se obtiene tan φ = (X_L - X_C)/R, por lo que φ = tan⁻¹((X_L - X_C)/R)."
+    },
+    {
+      "question": "En un circuito RLC serie, si se cumple X_L > X_C, ¿qué tipo de comportamiento tiene el circuito y cuál es el signo de φ?",
+      "options": [
+        "Comportamiento inductivo, φ > 0",
+        "Comportamiento capacitivo, φ < 0",
+        "Comportamiento resistivo puro, φ = 0",
+        "Comportamiento capacitivo, φ > 0"
+      ],
+      "answer": 0,
+      "explanation": "Cuando X_L > X_C la parte inductiva domina y el voltaje se adelanta a la corriente, lo que se representa con un ángulo de fase positivo φ > 0."
+    },
+    {
+      "question": "En un circuito RLC serie, si se cumple X_L = X_C, ¿qué ocurre con el ángulo de fase φ y cómo se clasifica el circuito?",
+      "options": [
+        "φ = 0, el circuito es puramente resistivo",
+        "φ > 0, el circuito es inductivo",
+        "φ < 0, el circuito es capacitivo",
+        "φ = 90°, el circuito es reactivo puro"
+      ],
+      "answer": 0,
+      "explanation": "Cuando X_L = X_C se anulan las reactancias y Z = R, de modo que la corriente está en fase con el voltaje (φ = 0) y el circuito se comporta como puramente resistivo."
+    },
+    {
+      "question": "En la tabla de elementos de un circuito de CA, ¿qué ángulo de fase φ se asocia a una reactancia puramente inductiva X_L?",
+      "options": [
+        "+90°",
+        "-90°",
+        "0°",
+        "Entre 0° y -90°"
+      ],
+      "answer": 0,
+      "explanation": "Para un inductor ideal, el voltaje se adelanta 90° a la corriente, lo que se representa con un ángulo de fase de +90°."
+    },
+    {
+      "question": "La potencia promedio suministrada por una fuente de CA a un circuito RLC serie se puede escribir como P_prom = I_rms · ΔV_rms · cos φ. ¿Cómo se denomina el factor cos φ?",
+      "options": [
+        "Factor de potencia",
+        "Factor de calidad",
+        "Reactancia total",
+        "Índice de resonancia"
+      ],
+      "answer": 0,
+      "explanation": "En circuitos de corriente alterna, cos φ se denomina factor de potencia y mide qué fracción de la potencia aparente I_rms · ΔV_rms se convierte en potencia activa."
+    },
+    {
+      "question": "En un circuito de CA, ¿en cuál de los siguientes elementos se disipa potencia promedio en forma de calor?",
+      "options": [
+        "Solo en el resistor",
+        "Solo en el inductor",
+        "Solo en el capacitor",
+        "En el inductor y el capacitor"
+      ],
+      "answer": 0,
+      "explanation": "La potencia promedio P_prom = I_rms² · R muestra que la energía se disipa en el resistor. En inductores y capacitores ideales no hay pérdidas de potencia promedio, solo intercambio de energía."
+    },
+    {
+      "question": "En un circuito RLC serie, la frecuencia angular de resonancia ω₀ se define por la condición X_L = X_C. ¿Cuál es su expresión en función de L y C?",
+      "options": [
+        "ω₀ = 1 / √(L · C)",
+        "ω₀ = √(L · C)",
+        "ω₀ = L / C",
+        "ω₀ = C / L"
+      ],
+      "answer": 0,
+      "explanation": "En resonancia se cumple ω₀ · L = 1/(ω₀ · C), de donde ω₀² = 1/(L · C) y, por lo tanto, ω₀ = 1/√(L · C)."
+    },
+    {
+      "question": "En resonancia serie (ω = ω₀) para un circuito RLC, ¿qué ocurre con la impedancia Z y la corriente I_rms para un voltaje eficaz dado?",
+      "options": [
+        "Z se hace mínima (≈ R) y la corriente I_rms es máxima",
+        "Z se hace máxima e I_rms es mínima",
+        "Z es infinita y no circula corriente",
+        "Z es puramente imaginaria y la corriente es nula"
+      ],
+      "answer": 0,
+      "explanation": "En resonancia X_L = X_C, entonces Z = √(R² + 0) = R, el valor mínimo posible. Para un ΔV_rms dado, I_rms = ΔV_rms/Z alcanza su valor máximo."
+    },
+    {
+      "question": "En un circuito RLC serie, el factor de calidad Q se puede expresar, entre otras formas, como Q = ω₀ · L / R. ¿Qué indica cualitativamente un valor alto de Q?",
+      "options": [
+        "Una curva de resonancia alta y angosta, con mayor selectividad en frecuencia",
+        "Una curva de resonancia baja y ancha, con menor selectividad",
+        "Ausencia de resonancia en el circuito",
+        "Que el circuito es puramente resistivo"
+      ],
+      "answer": 0,
+      "explanation": "Un valor grande de Q implica que la potencia se concentra fuertemente alrededor de la frecuencia de resonancia: la curva P(ω) es alta y angosta, lo que significa alta selectividad en frecuencia."
+    },
+    {
+      "question": "La expresión de la potencia promedio en función de la frecuencia para un circuito RLC serie muestra que P_prom(ω) alcanza su valor máximo cuando:",
+      "options": [
+        "ω = ω₀",
+        "ω = 0",
+        "ω tiende a infinito",
+        "ω = R / L"
+      ],
+      "answer": 0,
+      "explanation": "La fórmula de P_prom(ω) tiene el denominador mínimo cuando X_L - X_C = 0, es decir, cuando ω = ω₀, por lo que la potencia promedio es máxima en la frecuencia de resonancia."
+    },
+    {
+      "question": "En un circuito RLC serie con R constante, ¿qué efecto tiene disminuir el valor de R sobre la curva de resonancia de la corriente I_rms en función de la frecuencia?",
+      "options": [
+        "El pico de la curva se hace más alto y estrecho alrededor de ω₀",
+        "El pico de la curva se hace más bajo y ancho",
+        "El pico se desplaza a una frecuencia angular diferente de ω₀",
+        "La curva se vuelve prácticamente plana, sin máximo definido"
+      ],
+      "answer": 0,
+      "explanation": "Al reducir R se aumenta el factor de calidad Q, lo que hace que la curva de resonancia sea más aguda: pico más alto y ancho de banda más reducido alrededor de la frecuencia de resonancia ω₀."
+    },
+    {
+      "question": "En un circuito puramente inductivo alimentado con una tensión de amplitud ΔV_max, la corriente máxima I_max viene dada por:",
+      "options": [
+        "I_max = ΔV_max / X_L",
+        "I_max = ΔV_max / R",
+        "I_max = ΔV_max / X_C",
+        "I_max = ΔV_max · X_L"
+      ],
+      "answer": 0,
+      "explanation": "Del análisis del inductor en corriente alterna se obtiene I_max = ΔV_max/(ω · L) y, definiendo X_L = ω · L, resulta I_max = ΔV_max / X_L."
+    },
+    {
+      "question": "En un circuito puramente capacitivo, con un capacitor de reactancia X_C, la corriente máxima I_max viene dada por:",
+      "options": [
+        "I_max = ΔV_max / X_C",
+        "I_max = ΔV_max · X_C",
+        "I_max = ΔV_max / R",
+        "I_max = ΔV_max / (X_L - X_C)"
+      ],
+      "answer": 0,
+      "explanation": "Para un capacitor ideal se cumple I_max = ω · C · ΔV_max. Usando X_C = 1/(ω · C) se puede escribir I_max = ΔV_max / X_C."
+    },
+    {
+      "question": "El valor promedio de la corriente en un circuito de CA puramente resistivo, tomado sobre un ciclo completo, es:",
+      "options": [
+        "Cero",
+        "I_max / 2",
+        "I_rms",
+        "I_max"
+      ],
+      "answer": 0,
+      "explanation": "La corriente es senoidal, i(t) = I_max · sen(ωt). El promedio de sen(ωt) sobre un período completo es cero, por lo que el valor promedio de la corriente también es cero."
+    },
+    {
+      "question": "La potencia instantánea en un resistor atravesado por una corriente alterna i(t) se expresa como P(t) = i²(t) · R. ¿Cómo se relaciona el valor promedio de P(t) con el valor eficaz de la corriente?",
+      "options": [
+        "P_prom = I_rms² · R",
+        "P_prom = I_max² · R",
+        "P_prom = I_rms · R",
+        "P_prom = I_max · R / 2"
+      ],
+      "answer": 0,
+      "explanation": "Por definición de valor eficaz se cumple I_rms² = promedio de i²(t). Dado que P(t) = i²(t) · R, al promediar sobre un ciclo se obtiene P_prom = I_rms² · R."
+    },
+    {
+      "question": "En un circuito RLC serie, si la frecuencia de la fuente aumenta muy por encima de la frecuencia de resonancia ω₀, ¿cuál de las siguientes afirmaciones describe mejor el comportamiento del circuito?",
+      "options": [
+        "Predomina la reactancia inductiva y la impedancia aumenta aproximadamente como ω · L",
+        "Predomina la reactancia capacitiva y la impedancia disminuye como 1/(ω · C)",
+        "La impedancia se mantiene constante e igual a R",
+        "El circuito se comporta como un cortocircuito ideal"
+      ],
+      "answer": 0,
+      "explanation": "Para frecuencias muy altas se cumple X_L ≫ X_C y la impedancia está dominada por la parte inductiva, resultando Z ≈ √(R² + X_L²) ≈ X_L = ω · L."
+    },
+
+    {
+      "question": "Explique cómo se genera una fem sinusoidal en un generador de corriente alterna a partir de una bobina que gira en un campo magnético uniforme. Describa el papel de N, A, B y ω en la expresión ε(t) = ε_max · sen(ωt).",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "En un generador de corriente alterna una bobina de N espiras y área A gira con velocidad angular ω en un campo magnético uniforme de módulo B. El flujo magnético en la bobina es Φ_B = B · A · cos(ωt). Aplicando la ley de Faraday se obtiene ε(t) = -N · dΦ_B/dt = N · A · B · ω · sen(ωt). Así, N es el número de espiras, A el área de cada espira, B el módulo del campo magnético y ω la velocidad angular de giro. El producto N · A · B · ω fija la amplitud ε_max de la fem sinusoidal."
+    },
+    {
+      "question": "Defina valor eficaz (rms) de una corriente alterna senoidal y deduzca la relación I_rms = I_max/√2 partiendo de i(t) = I_max · sen(ωt).",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "El valor eficaz de una corriente alterna es el valor de corriente continua que produciría en un resistor la misma potencia promedio que la corriente alterna. Se define como I_rms = raíz del promedio de i². Para i(t) = I_max · sen(ωt) se tiene i²(t) = I_max² · sen²(ωt). El valor promedio de sen²(ωt) sobre un ciclo es 1/2, por lo que la media de i² es I_max²/2. En consecuencia I_rms = √(I_max²/2) = I_max/√2."
+    },
+    {
+      "question": "Describa, utilizando la idea de diagramas fasoriales, cómo se combinan los voltajes en los elementos R, L y C de un circuito RLC serie para obtener la expresión de la impedancia Z = √(R² + (X_L - X_C)²).",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "En un circuito RLC serie la corriente es la misma en los tres elementos. El voltaje en el resistor V_R está en fase con la corriente y se representa mediante un fasor horizontal. El voltaje en el inductor V_L se adelanta 90° a la corriente y se representa mediante un fasor vertical hacia arriba, mientras que el voltaje en el capacitor V_C se atrasa 90° y se representa con un fasor vertical hacia abajo. Al sumar vectorialmente, la componente vertical neta es V_L - V_C y la componente horizontal es V_R. El voltaje máximo aplicado es la hipotenusa de ese triángulo de fasores, por lo que ΔV_max² = (I_max · R)² + (I_max · (X_L - X_C))². Factorizando I_max² se obtiene Z² = R² + (X_L - X_C)²."
+    },
+    {
+      "question": "Explique el concepto de factor de potencia en un circuito de corriente alterna y cómo se relaciona con el ángulo de fase φ entre la corriente y el voltaje. Indique qué implica un factor de potencia bajo para una instalación.",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "El factor de potencia se define como cos φ, donde φ es el ángulo de fase entre el voltaje aplicado y la corriente del circuito. La potencia promedio entregada por la fuente es P_prom = I_rms · ΔV_rms · cos φ. Cuando φ = 0, el circuito es puramente resistivo, cos φ = 1 y toda la potencia aparente se convierte en potencia activa. Si el circuito es muy inductivo o muy capacitivo, φ tiene un valor grande en magnitud y cos φ es pequeño, por lo que circulan corrientes elevadas para una misma potencia activa. Un factor de potencia bajo implica mayores pérdidas por efecto Joule en las líneas y necesidad de equipos de mayor capacidad aparente."
+    },
+    {
+      "question": "Defina la condición de resonancia en un circuito RLC serie y deduzca la expresión de la frecuencia angular de resonancia ω₀ en función de L y C.",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "Un circuito RLC serie está en resonancia cuando la corriente eficaz I_rms alcanza su valor máximo para un voltaje eficaz dado. Esto ocurre cuando la parte reactiva de la impedancia se anula, es decir, cuando X_L = X_C. Como X_L = ω · L y X_C = 1/(ω · C), la condición de resonancia se escribe ω₀ · L = 1/(ω₀ · C). Despejando se tiene ω₀² = 1/(L · C), por lo que la frecuencia angular de resonancia es ω₀ = 1/√(L · C). En resonancia la impedancia se reduce a Z = R y el circuito se comporta como puramente resistivo."
+    },
+    {
+      "question": "Analice cualitativamente cómo varía la corriente eficaz I_rms en un circuito RLC serie cuando la frecuencia de la fuente pasa por debajo, igual y por encima de la frecuencia de resonancia ω₀.",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "Para frecuencias por debajo de la resonancia, ω menor que ω₀, domina la reactancia capacitiva X_C y la impedancia Z es relativamente grande, por lo que la corriente I_rms es pequeña. En resonancia, ω igual a ω₀, se cumple X_L = X_C, la impedancia se reduce a Z = R y la corriente I_rms alcanza su valor máximo. Para frecuencias por encima de la resonancia, ω mayor que ω₀, domina la reactancia inductiva X_L y la impedancia vuelve a crecer aproximadamente como ω · L, por lo que la corriente eficaz disminuye de nuevo. La curva I_rms en función de la frecuencia presenta por eso un pico alrededor de ω₀."
+    },
+    {
+      "question": "Explique qué es el factor de calidad Q en un circuito RLC serie, cómo se relaciona con el ancho de banda Δω y con la resistencia R, e interprete físicamente qué significa un valor alto de Q.",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "El factor de calidad Q es un parámetro adimensional que mide la agudeza de la resonancia. Se define como Q = ω₀/Δω y también puede escribirse como Q = ω₀ · L / R, donde Δω es el ancho de banda de la curva de potencia promedio medida entre los puntos de potencia mitad. Un Q alto significa que la curva de resonancia es muy estrecha y con un pico elevado, lo que implica alta selectividad en frecuencia y que el circuito almacena mucha energía reactiva en comparación con la que disipa por ciclo en la resistencia. Un Q bajo indica una resonancia ancha y poco selectiva, con mayores pérdidas resistivas relativas."
+    },
+    {
+      "question": "Compare el comportamiento en cuanto a potencia promedio de un inductor ideal y de un resistor cuando son atravesados por una corriente alterna. ¿Por qué se dice que en un inductor ideal no hay pérdidas de potencia promedio?",
+      "options": [
+        "Answer A: ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "En un resistor la potencia instantánea P(t) = i²(t) · R es siempre positiva y su promedio P_prom = I_rms² · R representa energía que se transforma irreversiblemente en calor. En un inductor ideal, en cambio, el voltaje y la corriente están desfasados 90°, y la potencia instantánea alterna entre valores positivos y negativos porque la energía se almacena en el campo magnético durante parte del ciclo y se devuelve a la fuente en otra parte. Al promediar sobre un ciclo completo, las contribuciones positiva y negativa se cancelan y la potencia promedio es nula. Por eso se dice que un inductor ideal no disipa potencia promedio, sino que solo intercambia energía con la fuente."
+    }
+  ]
+}

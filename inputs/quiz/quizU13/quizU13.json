@@ -1,0 +1,226 @@
+{
+  "moduleId": "u13",
+  "title": "Quiz Unidad 13 - Óptica Física",
+  "questions": [
+    {
+      "question": "Según el Principio de Huygens, ¿cómo se determina la posición de un nuevo frente de onda a partir de uno anterior?",
+      "options": [
+        "Sumando las intensidades de todas las fuentes de luz presentes.",
+        "Trazando líneas rectas perpendiculares al frente de onda original.",
+        "Considerando cada punto del frente anterior como una fuente puntual de ondas esféricas secundarias; el nuevo frente es la superficie tangente a estas ondas.",
+        "Calculando el índice de refracción del medio en cada punto del espacio."
+      ],
+      "answer": 2,
+      "explanation": "El Principio de Huygens establece que todos los puntos en un frente de onda se toman como fuentes puntuales de ondas esféricas secundarias. Después de un intervalo de tiempo, la nueva posición del frente de onda es la superficie tangente a estos trenes de ondas."
+    },
+    {
+      "question": "Para que se produzca una interferencia sostenida y observable de ondas luminosas, las fuentes deben cumplir dos condiciones fundamentales. ¿Cuáles son?",
+      "options": [
+        "Deben ser polarizadas y de alta intensidad.",
+        "Deben ser coherentes (fase constante entre ellas) y monocromáticas (una sola longitud de onda).",
+        "Deben ser incoherentes y de luz blanca.",
+        "Deben estar muy alejadas entre sí y tener frecuencias diferentes."
+      ],
+      "answer": 1,
+      "explanation": "Las condiciones para la interferencia estable son: 1) Las fuentes deben ser coherentes, es decir, mantener una fase constante una respecto de la otra. 2) Deben ser monocromáticas, es decir, de una sola longitud de onda."
+    },
+    {
+      "question": "En el experimento de doble ranura de Young, la condición para interferencia constructiva (franjas brillantes) en un punto P sobre la pantalla viene dada por:",
+      "options": [
+        "d · sen(θ) = (m + 1/2) · λ",
+        "d · sen(θ) = m · λ",
+        "a · sen(θ) = m · λ",
+        "d · cos(θ) = m · λ"
+      ],
+      "answer": 1,
+      "explanation": "La interferencia constructiva ocurre cuando la diferencia de trayectoria δ es un múltiplo entero de la longitud de onda. Dado que δ = r₂ - r₁ = d · sen(θ), la condición es d · sen(θ) = m · λ (m = 0, ±1, ±2...)."
+    },
+    {
+      "question": "En el mismo experimento de Young, ¿cuál es la expresión para la posición lineal 'y' de las franjas oscuras (mínimos) en la pantalla, asumiendo ángulos pequeños?",
+      "options": [
+        "y_oscuro = (m + 1/2) · (L · λ / d)",
+        "y_oscuro = m · (L · λ / d)",
+        "y_oscuro = (m + 1/2) · (d · λ / L)",
+        "y_oscuro = m · (d / L · λ)"
+      ],
+      "answer": 0,
+      "explanation": "Para interferencia destructiva, d · sen(θ) = (m + 1/2)λ. Para ángulos pequeños, sen(θ) ≈ tan(θ) = y/L. Sustituyendo, y_oscuro = (L/d) · (m + 1/2)λ."
+    },
+    {
+      "question": "Si la distancia entre las rendijas 'd' en el experimento de Young disminuye, ¿qué sucede con la separación entre las franjas de interferencia en la pantalla?",
+      "options": [
+        "Las franjas se juntan más.",
+        "Las franjas se separan más.",
+        "La separación no cambia.",
+        "El patrón desaparece."
+      ],
+      "answer": 1,
+      "explanation": "La distancia entre franjas adyacentes es Δy = L · λ / d. Si 'd' disminuye (está en el denominador), la separación Δy aumenta, por lo que las franjas se separan más."
+    },
+    {
+      "question": "¿Qué cambio de fase experimenta una onda luminosa al reflejarse en la superficie de un medio que tiene un índice de refracción mayor que el medio del que proviene (ej. aire hacia vidrio)?",
+      "options": [
+        "0° (sin cambio de fase)",
+        "45° (π/4 rad)",
+        "90° (π/2 rad)",
+        "180° (π rad)"
+      ],
+      "answer": 3,
+      "explanation": "Cuando un rayo luminoso llega a la superficie de separación con un medio de índice 'n' superior, la parte reflejada experimenta un cambio de fase de 180° (equivalente a λ/2)."
+    },
+    {
+      "question": "Para una película delgada de espesor 't' e índice 'n' rodeada de aire (como una pompa de jabón), ¿cuál es la condición para interferencia CONSTRUCTIVA en la luz reflejada?",
+      "options": [
+        "2nt = m · λ",
+        "2nt = (m + 1/2) · λ",
+        "nt = m · λ",
+        "2t = m · λ"
+      ],
+      "answer": 1,
+      "explanation": "El rayo reflejado en la cara superior cambia de fase 180° (aire-película), mientras que el de la cara inferior no (película-aire). Esta diferencia de fase adicional de π invierte las condiciones normales. Por tanto, para constructiva: 2nt = (m + 1/2)λ."
+    },
+    {
+      "question": "En la difracción de Fraunhofer por una sola rendija de ancho 'a', ¿cuál es la condición matemática que determina la posición de las franjas oscuras (mínimos de intensidad)?",
+      "options": [
+        "a · sen(θ) = m · λ",
+        "a · sen(θ) = (m + 1/2) · λ",
+        "d · sen(θ) = m · λ",
+        "sen(θ) = m · a / λ"
+      ],
+      "answer": 0,
+      "explanation": "En la difracción por una sola rendija, la interferencia destructiva se produce cuando la diferencia de trayectoria entre los rayos de los bordes y el centro (y subdivisiones sucesivas) cancela la onda. La condición es sen(θ_oscuro) = m · λ / a, o bien a · sen(θ) = m · λ."
+    },
+    {
+      "question": "Comparando el ancho del máximo central de difracción de una sola rendija con los máximos secundarios, se observa que:",
+      "options": [
+        "Todos los máximos tienen el mismo ancho.",
+        "El máximo central es aproximadamente el doble de ancho que los secundarios.",
+        "El máximo central es la mitad de ancho que los secundarios.",
+        "El ancho depende de la intensidad de la fuente, no de la geometría."
+      ],
+      "answer": 1,
+      "explanation": "El máximo central se extiende desde m=-1 hasta m=1, cubriendo un rango angular doble en comparación con los máximos secundarios que van de m a m+1. Por ello, el brillo central es el doble de ancho."
+    },
+    {
+      "question": "¿Cuál es la principal diferencia entre la Difracción de Fresnel y la Difracción de Fraunhofer?",
+      "options": [
+        "Fresnel es para ondas sonoras, Fraunhofer para luz.",
+        "Fresnel ocurre en campo lejano (rayos paralelos), Fraunhofer en campo cercano.",
+        "Fresnel ocurre en campo cercano (fuente/pantalla cerca del obstáculo), Fraunhofer en campo lejano (rayos paralelos).",
+        "No hay diferencia física, solo matemática."
+      ],
+      "answer": 2,
+      "explanation": "La difracción de Fresnel (campo cercano) se da cuando la fuente o pantalla están cerca del obstáculo y los frentes de onda son esféricos. La de Fraunhofer (campo lejano) asume que las distancias son grandes, permitiendo considerar los rayos como paralelos (ondas planas)."
+    },
+    {
+      "question": "Una red de difracción tiene N rendijas con un espaciamiento 'd'. La condición para los máximos principales de interferencia es:",
+      "options": [
+        "d · sen(θ) = (m + 1/2) · λ",
+        "d · sen(θ) = m · λ",
+        "N · d · sen(θ) = λ",
+        "a · sen(θ) = m · λ"
+      ],
+      "answer": 1,
+      "explanation": "Al igual que en la doble rendija, para una red de difracción la condición de interferencia constructiva (máximos principales) es que la diferencia de camino entre rendijas adyacentes sea un múltiplo entero de la longitud de onda: d · sen(θ) = m · λ."
+    },
+    {
+      "question": "La polarización de la luz es una prueba experimental de que:",
+      "options": [
+        "La luz se comporta como partículas.",
+        "Las ondas luminosas son longitudinales.",
+        "Las ondas luminosas son transversales.",
+        "La luz tiene masa."
+      ],
+      "answer": 2,
+      "explanation": "La polarización solo puede ocurrir en ondas transversales, donde la vibración del campo eléctrico es perpendicular a la dirección de propagación. Las ondas longitudinales (como el sonido en fluidos) no pueden polarizarse."
+    },
+    {
+      "question": "La Ley de Malus describe la intensidad transmitida por un analizador cuando incide luz polarizada linealmente. Si el ángulo entre el eje de polarización y el eje del analizador es θ, la intensidad es:",
+      "options": [
+        "I = I_max · sen²(θ)",
+        "I = I_max · cos(θ)",
+        "I = I_max · cos²(θ)",
+        "I = I_max · tan(θ)"
+      ],
+      "answer": 2,
+      "explanation": "Según la Ley de Malus, la intensidad de la luz polarizada que pasa a través de un analizador varía con el cuadrado del coseno del ángulo entre el eje de transmisión y la dirección de polarización: I = I_max · cos²(θ)."
+    },
+    {
+      "question": "La polarización por reflexión ocurre completamente en un ángulo específico conocido como ángulo de Brewster (θp). ¿Qué relación cumple este ángulo con el índice de refracción 'n' del material (asumiendo n1=1 para aire)?",
+      "options": [
+        "sen(θp) = n",
+        "cos(θp) = n",
+        "tan(θp) = n",
+        "tan(θp) = 1/n"
+      ],
+      "answer": 2,
+      "explanation": "La Ley de Brewster establece que la luz reflejada está totalmente polarizada cuando la tangente del ángulo de incidencia es igual al índice de refracción del medio reflectante: n = tan(θp)."
+    },
+    {
+      "question": "¿Qué característica geométrica particular tienen el rayo reflejado y el rayo refractado cuando la luz incide exactamente en el ángulo de Brewster?",
+      "options": [
+        "Son paralelos entre sí.",
+        "Forman un ángulo de 90° entre sí.",
+        "Forman un ángulo de 45° entre sí.",
+        "El rayo refractado desaparece."
+      ],
+      "answer": 1,
+      "explanation": "En el ángulo de Brewster, el rayo reflejado (polarizado perpendicularmente al plano de incidencia) y el rayo refractado (parcialmente polarizado) forman un ángulo recto (90°) entre sí."
+    },
+    {
+      "question": "Los materiales birrefringentes, como la calcita, tienen la propiedad de:",
+      "options": [
+        "Tener un solo índice de refracción constante en todas direcciones.",
+        "Absorber toda la luz que pasa a través de ellos.",
+        "Dividir un rayo de luz no polarizada en dos rayos (ordinario y extraordinario) con polarizaciones perpendiculares y velocidades diferentes.",
+        "Reflejar la luz con una eficiencia del 100%."
+      ],
+      "answer": 2,
+      "explanation": "La birrefringencia o doble refracción se debe a que el material tiene diferentes índices de refracción según la dirección de propagación y polarización, dividiendo la luz incidente en un rayo Ordinario (sigue ley de Snell) y un rayo Extraordinario."
+    },
+    {
+      "question": "¿Por qué el cielo se ve azul durante el día según la física óptica?",
+      "options": [
+        "Debido a la reflexión de la luz en los océanos.",
+        "Debido a la difracción de la luz en las nubes.",
+        "Debido a la dispersión de Rayleigh, donde las moléculas de aire dispersan con mayor intensidad las longitudes de onda cortas (azul/violeta).",
+        "Debido a la interferencia destructiva de la luz roja en la atmósfera."
+      ],
+      "answer": 2,
+      "explanation": "El fenómeno es la dispersión (scattering). Las moléculas de aire absorben y reemiten la luz. La intensidad de dispersión es inversamente proporcional a la cuarta potencia de la longitud de onda, por lo que el azul y violeta se dispersan mucho más que el rojo. El ojo es más sensible al azul que al violeta, resultando en un cielo azul."
+    },
+    {
+      "question": "Explique detalladamente el Experimento de Young y cómo demuestra la naturaleza ondulatoria de la luz. Incluya la descripción del patrón observado y las condiciones físicas.",
+      "options": [
+        "Answer A: Ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "Thomas Young (1801) demostró la naturaleza ondulatoria al pasar luz a través de dos rendijas estrechas S1 y S2. En lugar de ver dos líneas brillantes (predicción corpuscular), observó un patrón de franjas brillantes y oscuras alternadas. Esto se debe a la interferencia: cuando las ondas de S1 y S2 llegan en fase (diferencia de camino mλ), se suman constructivamente (brillo); cuando llegan en contrafase (diferencia (m+1/2)λ), se cancelan (oscuridad). Esto probó que la luz se comporta como onda."
+    },
+    {
+      "question": "Describa el fenómeno de interferencia en películas delgadas y explique por qué una mancha de aceite en agua se ve de colores. Mencione el papel de los cambios de fase.",
+      "options": [
+        "Answer A: Ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "La interferencia ocurre entre la luz reflejada en la superficie superior (aire-aceite) y la reflejada en la inferior (aceite-agua). El rayo superior sufre un cambio de fase de 180° (n_aire < n_aceite). El inferior depende de los índices (n_aceite > n_agua, sin cambio). La condición de interferencia (constructiva o destructiva) depende del espesor 't' y la longitud de onda 'λ'. Como la luz blanca tiene muchas λ, para un espesor dado, algunas λ interfieren constructivamente (se ven brillantes/colores) y otras destructivamente, produciendo el patrón iridiscente."
+    },
+    {
+      "question": "Explique el funcionamiento de un polarizador por absorción selectiva (como el Polaroid) y defina qué es el eje de transmisión.",
+      "options": [
+        "Answer A: Ver explicación detallada",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "El material Polaroid está formado por largas cadenas de moléculas de hidrocarburos alineadas. Estas cadenas conducen electrones y absorben las ondas de luz cuyo campo eléctrico vibra paralelo a la alineación de las cadenas (generando corrientes y disipando energía). El 'eje de transmisión' es perpendicular a estas cadenas moleculares; las ondas que vibran en esta dirección no son absorbidas y logran pasar. Así, la luz emergente está polarizada linealmente a lo largo del eje de transmisión."
+    }
+  ]
+}

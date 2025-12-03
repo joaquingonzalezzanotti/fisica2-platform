@@ -1,0 +1,446 @@
+{
+"moduleId": "u12",
+"title": "Quiz Unidad 12 - Fundamentos de ondas y ecuaciones de Maxwell",
+"questions": [
+{
+"question": "La forma original de la ley de Ampère, ∮B·ds = μ0 I, es estrictamente válida para:",
+"options": [
+"Cualquier corriente, incluso si varía con el tiempo",
+"Corrientes de conducción constantes en el tiempo",
+"Cargas en reposo dentro de una superficie cerrada",
+"Solo campos magnéticos producidos por imanes permanentes"
+],
+"answer": 1,
+"explanation": "La expresión ∮B·ds = μ0 I se deduce suponiendo corrientes estacionarias (constantes en el tiempo); cuando las corrientes o campos varían en el tiempo se requiere la corrección de Maxwell con la corriente de desplazamiento, según se desarrolla en la Unidad 12 (Serway–Jewett)."
+},
+{
+"question": "En el análisis de un capacitor de placas paralelas que se está cargando, ¿por qué aparece una contradicción si se aplica la ley de Ampère sin la corrección de Maxwell?",
+"options": [
+"Porque el campo eléctrico entre las placas es nulo",
+"Porque el flujo magnético a través de cualquier superficie es siempre cero",
+"Porque la corriente de conducción atraviesa todas las superficies posibles",
+"Porque para una superficie que corta el espacio entre placas no hay corriente de conducción, pero sí hay campo magnético"
+],
+"answer": 3,
+"explanation": "Al elegir una superficie S1 que atraviesa el conductor se obtiene ∮B·ds = μ0 I; al elegir una superficie S2 entre las placas, atravesada por la misma trayectoria cerrada, no hay corriente de conducción y se obtendría ∮B·ds = 0, lo que es contradictorio pese a describir la misma trayectoria."
+},
+{
+"question": "Maxwell resolvió la contradicción en el caso del capacitor introduciendo la corriente de desplazamiento Id. ¿Cuál es su definición?",
+"options": [
+"Id = μ0 dΦE/dt",
+"Id = ε0 dΦE/dt",
+"Id = ε0 dΦB/dt",
+"Id = μ0 dΦB/dt"
+],
+"answer": 1,
+"explanation": "La corriente de desplazamiento se define como Id = ε0·dΦE/dt, donde ΦE es el flujo de campo eléctrico a través de la superficie considerada."
+},
+{
+"question": "El flujo de campo eléctrico ΦE a través de una superficie se define como:",
+"options": [
+"ΦE = ∮E·ds",
+"ΦE = ∫B·dA",
+"ΦE = ∫E·dA",
+"ΦE = μ0 I"
+],
+"answer": 2,
+"explanation": "El flujo eléctrico se calcula como ΦE = ∫ E·dA, integral de superficie del campo eléctrico sobre la superficie considerada."
+},
+{
+"question": "Para un capacitor de placas paralelas que se está cargando, ¿qué relación se obtiene entre la corriente de desplazamiento Id a través de la superficie entre placas y la corriente de conducción I en el conductor?",
+"options": [
+"Id es nula y solo existe I",
+"Id = I/2",
+"Id = I",
+"Id = 2 I"
+],
+"answer": 2,
+"explanation": "Al expresar el flujo eléctrico en función de la carga sobre las placas se obtiene ΦE = q/ε0, de modo que Id = ε0·dΦE/dt = dq/dt = I; por lo tanto, la corriente de desplazamiento es igual a la corriente de conducción."
+},
+{
+"question": "El origen físico de la corriente de desplazamiento Id en el capacitor de placas paralelas se asocia a:",
+"options": [
+"El movimiento de cargas libres en el vacío",
+"El campo magnético estático entre las placas",
+"El campo eléctrico variable en el tiempo entre las placas",
+"La presencia de un material ferromagnético entre las placas"
+],
+"answer": 2,
+"explanation": "La corriente de desplazamiento surge del campo eléctrico variable en el tiempo que existe entre las placas del capacitor mientras se carga o descarga."
+},
+{
+"question": "La forma general de la ley de Ampère-Maxwell se escribe como:",
+"options": [
+"∮B·ds = μ0 I",
+"∮B·ds = μ0 I + μ0 ε0 dΦE/dt",
+"∮E·ds = − dΦB/dt",
+"∮E·dA = q/ε0"
+],
+"answer": 1,
+"explanation": "La ley de Ampère-Maxwell establece que ∮B·ds = μ0 I + μ0 ε0 dΦE/dt, donde el primer término corresponde a la corriente de conducción y el segundo a la corriente de desplazamiento asociada al campo eléctrico variable."
+},
+{
+"question": "Según la ley de Ampère-Maxwell, ¿cuáles son las fuentes de campo magnético B?",
+"options": [
+"Solo las cargas en reposo",
+"Solo los campos eléctricos estáticos",
+"Las corrientes de conducción y los campos eléctricos variables en el tiempo",
+"Solo los campos magnéticos producidos por imanes"
+],
+"answer": 2,
+"explanation": "El término μ0 I representa la contribución de las corrientes de conducción y el término μ0 ε0 dΦE/dt representa la contribución de los campos eléctricos variables en el tiempo; ambos pueden generar campo magnético."
+},
+{
+"question": "La primera ecuación de Maxwell, la ley de Gauss para el campo eléctrico, se expresa en forma integral como:",
+"options": [
+"∮E·dA = q/ε0",
+"∮B·dA = 0",
+"∮E·ds = − dΦB/dt",
+"∮B·ds = μ0 I + μ0 ε0 dΦE/dt"
+],
+"answer": 0,
+"explanation": "La ley de Gauss para el campo eléctrico establece que el flujo eléctrico total a través de una superficie cerrada es igual a la carga neta encerrada dividida por ε0: ∮E·dA = q/ε0."
+},
+{
+"question": "La ley de Gauss del magnetismo (segunda ecuación de Maxwell) implica que:",
+"options": [
+"El flujo magnético neto a través de una superficie cerrada es distinto de cero",
+"El flujo magnético neto a través de una superficie cerrada es cero",
+"Las líneas de campo magnético pueden empezar y terminar en cargas magnéticas puntuales",
+"El campo magnético solo puede existir en presencia de corrientes"
+],
+"answer": 1,
+"explanation": "La ley de Gauss del magnetismo se escribe ∮B·dA = 0 y establece que el flujo magnético neto a través de cualquier superficie cerrada es cero; esto implica que las líneas de campo magnético no comienzan ni terminan, sino que son siempre cerradas."
+},
+{
+"question": "La ley de Faraday (tercera ecuación de Maxwell) relaciona la fuerza electromotriz inducida con:",
+"options": [
+"La variación del flujo eléctrico en el tiempo",
+"La integral de superficie del campo magnético",
+"La variación del flujo magnético en el tiempo",
+"La corriente de desplazamiento"
+],
+"answer": 2,
+"explanation": "La ley de Faraday se expresa como ∮E·ds = − dΦB/dt y afirma que la fem inducida (integral de línea de E) alrededor de una trayectoria cerrada es igual al negativo de la rapidez de cambio del flujo magnético a través de cualquier superficie limitada por esa trayectoria."
+},
+{
+"question": "La cuarta ecuación de Maxwell, ley de Ampère-Maxwell, establece en forma cualitativa que:",
+"options": [
+"Un campo eléctrico estático produce siempre un campo magnético constante",
+"Solo las corrientes de conducción producen campo magnético",
+"Los campos eléctricos variables en el tiempo pueden producir campos magnéticos",
+"El flujo magnético es proporcional a la carga encerrada"
+],
+"answer": 2,
+"explanation": "La corrección de Maxwell a la ley de Ampère introduce el efecto de los campos eléctricos variables en el tiempo como fuente adicional de campo magnético, a través del término de corriente de desplazamiento."
+},
+{
+"question": "La fuerza de Lorentz sobre una partícula de carga q que se mueve con velocidad v en presencia de campos E y B se escribe como:",
+"options": [
+"F = qE",
+"F = qB",
+"F = qE + q v × B",
+"F = q(E × B)"
+],
+"answer": 2,
+"explanation": "La fuerza de Lorentz resume la acción conjunta de los campos eléctrico y magnético sobre una carga: F = qE + q v × B."
+},
+{
+"question": "En el marco del electromagnetismo clásico, ¿qué conjunto de ecuaciones resume completamente el comportamiento de los campos E y B y su interacción con las cargas?",
+"options": [
+"Solo la ley de Coulomb",
+"Las cuatro ecuaciones de Maxwell junto con la fuerza de Lorentz",
+"Únicamente la ley de Faraday",
+"La ley de Ohm y la ley de Gauss"
+],
+"answer": 1,
+"explanation": "El electromagnetismo clásico queda completamente descrito por las cuatro ecuaciones de Maxwell que gobiernan E y B, más la fuerza de Lorentz que describe la acción de esos campos sobre las cargas."
+},
+{
+"question": "Para una onda electromagnética plana que se propaga en el vacío, las ecuaciones de onda para E y B conducen a una rapidez de propagación c dada por:",
+"options": [
+"c = μ0 ε0",
+"c = 1/(μ0 ε0)",
+"c = 1/√(μ0 ε0)",
+"c = √(μ0 ε0)"
+],
+"answer": 2,
+"explanation": "Al comparar las ecuaciones diferenciales de onda para E y B con la ecuación de onda general se obtiene que la rapidez de propagación es c = 1/√(μ0 ε0), que coincide con la rapidez de la luz en el vacío."
+},
+{
+"question": "¿Qué conclusión permitió extraer Maxwell al encontrar que c = 1/√(μ0 ε0) coincide con la rapidez de la luz en el vacío?",
+"options": [
+"Que la luz es un flujo de partículas sin relación con los campos electromagnéticos",
+"Que la luz es una onda mecánica longitudinal",
+"Que la luz es una onda electromagnética",
+"Que el campo eléctrico no participa en la propagación de la luz"
+],
+"answer": 2,
+"explanation": "Como la rapidez calculada a partir de las constantes electromagnéticas (μ0 y ε0) coincide con la rapidez de la luz, se interpreta que la luz es una onda electromagnética."
+},
+{
+"question": "En una onda electromagnética plana que se propaga en la dirección x en el vacío, según el esquema de la Unidad 12, ¿cómo se orientan típicamente los campos E y B?",
+"options": [
+"E en la dirección x y B en la dirección y",
+"E en la dirección y y B en la dirección z",
+"E en la dirección z y B en la dirección x",
+"E en la dirección y y B también en la dirección y"
+],
+"answer": 1,
+"explanation": "Para la onda considerada, la propagación es a lo largo del eje x, el campo eléctrico E se orienta en la dirección y y el campo magnético B en la dirección z; ambos son perpendiculares entre sí y a la dirección de propagación."
+},
+{
+"question": "Cuando los campos eléctrico y magnético de una onda electromagnética están restringidos a variar en una sola dirección, se dice que la onda está:",
+"options": [
+"Polarizada linealmente",
+"Despolarizada",
+"Polarizada circularmente",
+"En régimen estacionario"
+],
+"answer": 0,
+"explanation": "Si las componentes de los campos E y B varían solo en una dirección espacial, la onda se denomina onda polarizada linealmente."
+},
+{
+"question": "La solución sinusoidal más simple para las magnitudes de campo de una onda electromagnética plana que se propaga en x se escribe como:",
+"options": [
+"E = Emax cos(kx + ωt); B = Bmax cos(kx + ωt)",
+"E = Emax sen(kx − ωt); B = Bmax sen(kx − ωt)",
+"E = Emax cos(kx − ωt); B = Bmax cos(kx − ωt)",
+"E = Emax; B = Bmax constantes"
+],
+"answer": 2,
+"explanation": "Una forma de solución sinusoidal es E = Emax cos(kx − ωt) y B = Bmax cos(kx − ωt), donde Emax y Bmax son las amplitudes máximas, k el número de onda y ω la frecuencia angular."
+},
+{
+"question": "Para una onda electromagnética sinusoidal, el número de onda k y la frecuencia angular ω se definen como:",
+"options": [
+"k = 2π f; ω = 2π/λ",
+"k = 2π/λ; ω = 2π f",
+"k = λ/(2π); ω = f/(2π)",
+"k = 1/λ; ω = 1/f"
+],
+"answer": 1,
+"explanation": "En la descripción de ondas sinusoidales se utiliza k = 2π/λ como número de onda y ω = 2π f como frecuencia angular, donde λ es la longitud de onda y f la frecuencia."
+},
+{
+"question": "La razón ω/k para una onda electromagnética continua en el vacío es igual a:",
+"options": [
+"La amplitud de la onda",
+"La frecuencia al cuadrado",
+"La rapidez de propagación c = λ f",
+"El periodo de la onda"
+],
+"answer": 2,
+"explanation": "De las definiciones k = 2π/λ y ω = 2π f se obtiene ω/k = (2π f)/(2π/λ) = λ f, que es la rapidez de la onda c en el vacío."
+},
+{
+"question": "En una onda electromagnética que se propaga en el vacío, la relación entre las magnitudes de los campos eléctrico y magnético es:",
+"options": [
+"E/B = 1",
+"E/B = μ0",
+"E/B = ε0",
+"E/B = c"
+],
+"answer": 3,
+"explanation": "En todo instante, la relación de magnitudes entre el campo eléctrico y el campo magnético de una onda electromagnética en el vacío cumple E/B = c, siendo c la rapidez de la luz."
+},
+{
+"question": "Para una onda electromagnética de frecuencia f = 40 MHz que se propaga en el vacío (c ≈ 3·10^8 m/s), la longitud de onda λ es aproximadamente:",
+"options": [
+"0,75 m",
+"7,5 m",
+"75 m",
+"750 m"
+],
+"answer": 1,
+"explanation": "Aplicando c = λ f se obtiene λ = c/f = 3·10^8 m/s ÷ 40·10^6 Hz ≈ 7,5 m."
+},
+{
+"question": "En el ejemplo de la onda de 40 MHz, el período T de la onda es:",
+"options": [
+"T = 2,5·10^−7 s",
+"T = 2,5·10^−8 s",
+"T = 2,5·10^−9 s",
+"T = 2,5·10^−6 s"
+],
+"answer": 1,
+"explanation": "El período se calcula como T = 1/f = 1/(40·10^6 Hz) ≈ 2,5·10^−8 s."
+},
+{
+"question": "Si para la misma onda de 40 MHz se tiene Emax = 750 N/C en el vacío, ¿cuál es el valor de Bmax?",
+"options": [
+"Bmax = 2,5·10^−4 T",
+"Bmax = 2,5·10^−5 T",
+"Bmax = 2,5·10^−6 T",
+"Bmax = 7,5·10^−6 T"
+],
+"answer": 2,
+"explanation": "Usando la relación E/B = c se obtiene Bmax = Emax/c = 750 N/C ÷ 3·10^8 m/s ≈ 2,5·10^−6 T."
+},
+{
+"question": "En el ejemplo de la onda que se propaga en la dirección x con E en la dirección y, la dirección de Bmax es:",
+"options": [
+"En la dirección x",
+"En la dirección y",
+"En la dirección z",
+"En dirección opuesta a E, pero en el mismo eje"
+],
+"answer": 2,
+"explanation": "Como se trata de una onda transversal, el campo magnético B es perpendicular tanto a la dirección de propagación como al campo eléctrico; si la propagación es en x y E está en y, entonces B apunta en la dirección z."
+},
+{
+"question": "Según el espectro electromagnético presentado, las ondas de radio y televisión tienen longitudes de onda típicamente en el rango:",
+"options": [
+"λ ≈ 10^5 m a 10^−1 m",
+"λ ≈ 10^−3 m a 7·10^−7 m",
+"λ ≈ 7·10^−7 m a 4·10^−7 m",
+"λ ≈ 10^−10 m a 10^−14 m"
+],
+"answer": 0,
+"explanation": "En el material se indica que las ondas de radio y televisión abarcan aproximadamente desde λ ≈ 10^5 m hasta λ ≈ 10^−1 m."
+},
+{
+"question": "Las microondas tienen longitudes de onda clasificadas aproximadamente en el intervalo:",
+"options": [
+"0,3 m a 10^−4 m",
+"10^5 m a 10^−1 m",
+"10^−8 m a 10^−12 m",
+"7·10^−7 m a 4·10^−7 m"
+],
+"answer": 0,
+"explanation": "Las microondas se caracterizan por longitudes de onda desde aproximadamente 0,3 m hasta 10^−4 m, según el espectro mostrado."
+},
+{
+"question": "Las ondas infrarrojas tienen longitudes de onda en el rango aproximado:",
+"options": [
+"10^−3 m a 7·10^−7 m",
+"7·10^−7 m a 4·10^−7 m",
+"10^−8 m a 10^−12 m",
+"10^−10 m a 10^−14 m"
+],
+"answer": 0,
+"explanation": "El texto indica que las ondas infrarrojas van aproximadamente desde 10^−3 m hasta 7·10^−7 m."
+},
+{
+"question": "La luz visible corresponde aproximadamente a longitudes de onda comprendidas entre:",
+"options": [
+"10^−3 m y 7·10^−7 m",
+"7·10^−7 m (rojo) y 4·10^−7 m (violeta)",
+"4·10^−7 m y 6·10^−10 m",
+"10^−8 m y 10^−12 m"
+],
+"answer": 1,
+"explanation": "La luz visible detectada por el ojo humano abarca aproximadamente desde λ ≈ 7·10^−7 m (rojo) hasta λ ≈ 4·10^−7 m (violeta)."
+},
+{
+"question": "La sensibilidad del ojo humano a la luz visible es máxima aproximadamente para una longitud de onda de:",
+"options": [
+"1·10^−3 m",
+"7·10^−7 m",
+"5,5·10^−7 m",
+"4·10^−7 m"
+],
+"answer": 2,
+"explanation": "En el material se menciona que la sensibilidad del ojo humano es máxima alrededor de λ ≈ 5,5·10^−7 m."
+},
+{
+"question": "Las ondas ultravioletas (UV) se caracterizan por longitudes de onda aproximadamente en el rango:",
+"options": [
+"10^5 m a 10^−1 m",
+"10^−3 m a 7·10^−7 m",
+"4·10^−7 m a 6·10^−10 m",
+"10^−8 m a 10^−12 m"
+],
+"answer": 2,
+"explanation": "Las ondas ultravioletas cubren longitudes de onda desde aproximadamente 4·10^−7 m hasta 6·10^−10 m y son responsables, entre otros efectos, de las quemaduras solares."
+},
+{
+"question": "Los rayos X tienen longitudes de onda aproximadas en el intervalo:",
+"options": [
+"10^−8 m a 10^−12 m",
+"10^−3 m a 7·10^−7 m",
+"4·10^−7 m a 6·10^−10 m",
+"10^−10 m a 10^−14 m"
+],
+"answer": 0,
+"explanation": "Los rayos X se sitúan típicamente en el rango de longitudes de onda de alrededor de 10^−8 m a 10^−12 m."
+},
+{
+"question": "Los rayos gamma se caracterizan por:",
+"options": [
+"Ser ondas mecánicas producidas por oscilaciones de la materia",
+"Ser ondas electromagnéticas emitidas por núcleos radiactivos con λ desde ~10^−10 m hasta menos de 10^−14 m",
+"Ser ondas electromagnéticas emitidas solo por antenas de radio",
+"Tener longitudes de onda comparables al tamaño de un edificio"
+],
+"answer": 1,
+"explanation": "Los rayos gamma son ondas electromagnéticas muy energéticas emitidas por núcleos radiactivos y tienen longitudes de onda que van desde aproximadamente 10^−10 m hasta menos de 10^−14 m."
+},
+{
+"question": "¿Cuál de las siguientes afirmaciones es coherente con la ley de Gauss del magnetismo?",
+"options": [
+"Existen monopolos magnéticos que actúan como fuentes aisladas de líneas de campo B",
+"Las líneas de campo magnético pueden comenzar pero no terminar en ciertas regiones del espacio",
+"Las líneas de campo magnético no comienzan ni terminan; forman lazos cerrados",
+"El flujo magnético neto a través de cualquier superficie cerrada es proporcional a la carga eléctrica encerrada"
+],
+"answer": 2,
+"explanation": "Como ∮B·dA = 0 para cualquier superficie cerrada, el número de líneas de campo magnético que entra a un volumen es igual al que sale; esto implica que las líneas de B forman lazos cerrados y no tienen origen ni fin aislado."
+},
+{
+"question": "Pregunta de desarrollo: Explique cómo la introducción de la corriente de desplazamiento Id por Maxwell resuelve la aparente contradicción de la ley de Ampère en el caso de un capacitor que se está cargando.",
+"options": [
+"Answer A: ver explicación detallada",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "Respuesta esperada (esquema): describir el ejemplo del capacitor de placas paralelas en carga; construir dos superficies distintas con la misma trayectoria cerrada P: S1 atraviesa el conductor (corriente de conducción I distinta de cero) y S2 se encuentra entre las placas (corriente de conducción nula). Explicar que, sin el término de corriente de desplazamiento, la ley de Ampère daría ∮B·ds = μ0 I sobre S1 y ∮B·ds = 0 sobre S2, lo que es contradictorio. Introducir Id = ε0·dΦE/dt asociada al campo eléctrico variable entre las placas, de modo que ∮B·ds = μ0(I + Id) toma el mismo valor para ambas superficies, restaurando la consistencia de la ley integral."
+},
+{
+"question": "Pregunta de desarrollo: Describa cualitativamente el contenido físico de cada una de las cuatro ecuaciones de Maxwell en forma integral en el vacío.",
+"options": [
+"Answer A: ver explicación detallada",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "Respuesta esperada (esquema): 1) Ley de Gauss para E: el flujo eléctrico total a través de una superficie cerrada es proporcional a la carga neta encerrada (∮E·dA = q/ε0), relacionando la distribución de carga con el campo eléctrico. 2) Ley de Gauss del magnetismo: el flujo magnético neto a través de cualquier superficie cerrada es cero (∮B·dA = 0), lo que implica que no hay monopolos magnéticos y las líneas de B son cerradas. 3) Ley de Faraday: la fem inducida (integral de línea del campo eléctrico) alrededor de una trayectoria cerrada es igual al negativo de la rapidez de cambio del flujo magnético a través de una superficie limitada por esa trayectoria (∮E·ds = − dΦB/dt); describe la inducción electromagnética. 4) Ley de Ampère-Maxwell: la integral de línea del campo magnético alrededor de una trayectoria cerrada es igual a μ0 veces la corriente de conducción neta más μ0 ε0 veces la rapidez de cambio del flujo eléctrico (∮B·ds = μ0 I + μ0 ε0 dΦE/dt); indica que corrientes y campos eléctricos variables generan campos magnéticos."
+},
+{
+"question": "Pregunta de desarrollo: Explique cómo se llega a la conclusión de que la luz es una onda electromagnética a partir de las ecuaciones de Maxwell.",
+"options": [
+"Answer A: ver explicación detallada",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "Respuesta esperada (esquema): partir de las ecuaciones de Maxwell en el vacío y obtener las ecuaciones de onda para E y B de la forma ∂²E/∂x² = μ0 ε0 ∂²E/∂t² y análoga para B; comparar con la ecuación de onda general para identificar la rapidez de propagación v = 1/√(μ0 ε0). Calcular numéricamente esa rapidez usando los valores de μ0 y ε0 y mostrar que coincide con la rapidez de la luz en el vacío (~3·10^8 m/s). Concluir que las perturbaciones de los campos E y B que predicen las ecuaciones de Maxwell se propagan como ondas a esa rapidez y, por tanto, la luz puede interpretarse como una forma de onda electromagnética."
+},
+{
+"question": "Pregunta de desarrollo: Describa las características principales de una onda electromagnética plana polarizada linealmente que se propaga en la dirección x.",
+"options": [
+"Answer A: ver explicación detallada",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "Respuesta esperada (esquema): indicar que se trata de una onda transversal en la que el campo eléctrico E y el campo magnético B son perpendiculares entre sí y a la dirección de propagación x; especificar que, para el caso considerado, E se orienta en la dirección y y B en la dirección z; mencionar que las magnitudes de E y B dependen de x y t (pero no de y ni de z) y se pueden escribir como funciones sinusoidales E = Emax cos(kx − ωt) y B = Bmax cos(kx − ωt); detallar que la onda está polarizada linealmente porque el vector E oscila sobre una línea fija en el espacio y que en el vacío se cumple E/B = c."
+},
+{
+"question": "Pregunta de desarrollo: Presente una descripción cualitativa del espectro electromagnético, ordenando las distintas regiones (radio, microondas, infrarrojo, visible, ultravioleta, rayos X y gamma) de menor a mayor frecuencia e indicando ejemplos de fuentes o aplicaciones típicas.",
+"options": [
+"Answer A: ver explicación detallada",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "Respuesta esperada (esquema): comenzar por las ondas de radio y televisión (frecuencias más bajas, longitudes de onda más grandes, generadas por antenas y circuitos LC); seguir con las microondas (hornos microondas, radares); luego el infrarrojo (radiación térmica, emisiones moleculares, aplicaciones en fisioterapia y control remoto); continuar con la luz visible (emisiones atómicas y moleculares, visión humana, indicar el rango de colores de rojo a violeta); luego el ultravioleta (procedente del Sol, responsable de quemaduras solares, aplicaciones en esterilización); seguir con los rayos X (producidos por el frenado de electrones de alta energía en blancos metálicos, aplicaciones en diagnóstico médico y estudio de cristales); y finalmente los rayos gamma (emitidos por núcleos radiactivos, muy penetrantes y potencialmente dañinos, con aplicaciones en medicina y física nuclear)."
+}
+]
+}

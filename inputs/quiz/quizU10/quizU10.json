@@ -1,0 +1,380 @@
+{
+  "moduleId": "u10",
+  "title": "Quiz Unidad 10 - Propiedades magnéticas de la materia",
+  "questions": [
+    {
+      "question": "¿Cuál es el origen del momento magnético total de un átomo en la materia?",
+      "options": [
+        "Solo del movimiento orbital de los protones alrededor del núcleo",
+        "De la suma vectorial de los momentos magnéticos orbitales y de espín de los electrones",
+        "Únicamente del espín del núcleo atómico",
+        "Exclusivamente de la interacción con un campo magnético externo"
+      ],
+      "answer": 1,
+      "explanation": "El momento magnético total de un átomo resulta de la suma vectorial de los momentos magnéticos orbitales y de espín de los electrones."
+    },
+    {
+      "question": "¿Qué caracteriza a un material diamagnético?",
+      "options": [
+        "Posee dipolos magnéticos permanentes fuertemente alineados aun sin campo externo",
+        "No tiene momentos magnéticos permanentes y solo presenta momentos magnéticos inducidos",
+        "Tiene dipolos permanentes que se alinean parcialmente con el campo externo",
+        "Tiene dominios magnéticos con fuerte acoplamiento entre momentos vecinos"
+      ],
+      "answer": 1,
+      "explanation": "Los materiales diamagnéticos no poseen momentos magnéticos permanentes apreciables; al aplicar un campo externo solo aparecen momentos magnéticos inducidos débiles, opuestos al campo."
+    },
+    {
+      "question": "En un material paramagnético, ¿qué ocurre al aplicar un campo magnético externo?",
+      "options": [
+        "Los dipolos magnéticos permanentes se desordenan completamente",
+        "Los dipolos permanentes sufren una alineación parcial con el campo externo",
+        "Se destruyen todos los momentos magnéticos permanentes",
+        "El material queda magnetizado permanentemente sin depender del campo externo"
+      ],
+      "answer": 1,
+      "explanation": "En un material paramagnético los dipolos magnéticos permanentes se alinean parcialmente con el campo aplicado; la alineación aumenta con la intensidad de campo y disminuye con la temperatura."
+    },
+    {
+      "question": "¿Cómo se comportan los materiales ferromagnéticos frente a un campo magnético externo?",
+      "options": [
+        "Presentan una interacción muy débil entre momentos magnéticos vecinos",
+        "No presentan momentos magnéticos permanentes",
+        "Presentan fuerte interacción entre momentos magnéticos vecinos y alineamiento intenso incluso con campos débiles",
+        "Se comportan igual que un material diamagnético ideal"
+      ],
+      "answer": 2,
+      "explanation": "En los ferromagnéticos existe un fuerte acoplamiento entre momentos magnéticos vecinos, lo que produce un alineamiento intenso incluso con campos externos débiles y permite la existencia de imanes permanentes."
+    },
+    {
+      "question": "¿Cómo se define la magnetización M de un material?",
+      "options": [
+        "Como el flujo magnético total que atraviesa una superficie cerrada",
+        "Como el momento magnético por unidad de volumen de la sustancia",
+        "Como la intensidad de campo magnético por unidad de longitud",
+        "Como la permeabilidad relativa por la permeabilidad del vacío"
+      ],
+      "answer": 1,
+      "explanation": "La magnetización M se define como el momento magnético por unidad de volumen del material."
+    },
+    {
+      "question": "En presencia de un material, el campo magnético total B en una región se expresa como:",
+      "options": [
+        "B = B0 − Bm",
+        "B = μ0 H",
+        "B = B0 + Bm",
+        "B = μ0 (H − M)"
+      ],
+      "answer": 2,
+      "explanation": "Al introducir un material, el campo total se escribe como B = B0 + Bm, donde B0 es el campo debido a las corrientes libres y Bm el debido a la magnetización del material."
+    },
+    {
+      "question": "La contribución del material al campo magnético Bm se relaciona con la magnetización M mediante:",
+      "options": [
+        "Bm = M / μ0",
+        "Bm = μ0 M",
+        "Bm = M · H",
+        "Bm = μ0 H"
+      ],
+      "answer": 1,
+      "explanation": "El campo generado por la magnetización del material se relaciona como Bm = μ0 M."
+    },
+    {
+      "question": "¿Cómo se define el vector intensidad de campo magnético H en un medio material?",
+      "options": [
+        "H = B − μ0 M",
+        "H = B / μ0 − M",
+        "H = μ0 (B + M)",
+        "H = M / μ0 − B"
+      ],
+      "answer": 1,
+      "explanation": "En un medio material, la intensidad de campo magnético se define como H = B/μ0 − M."
+    },
+    {
+      "question": "¿Cuál es la unidad en el SI para la magnetización M y para la intensidad de campo H?",
+      "options": [
+        "Tesla (T)",
+        "Weber (Wb)",
+        "Ampere por metro (A/m)",
+        "Henry por metro (H/m)"
+      ],
+      "answer": 2,
+      "explanation": "Tanto la magnetización M como la intensidad de campo H se expresan en A/m en el Sistema Internacional."
+    },
+    {
+      "question": "En el vacío, ¿qué relación se cumple entre B y H?",
+      "options": [
+        "B = μ H con μ ≫ μ0",
+        "B = μ0 H",
+        "B = H / μ0",
+        "B = H"
+      ],
+      "answer": 1,
+      "explanation": "En el vacío no hay magnetización (M = 0), por lo que se cumple B = μ0 H."
+    },
+    {
+      "question": "En muchas sustancias diamagnéticas y paramagnéticas se cumple que la magnetización M es proporcional a H. ¿Cómo se expresa esta relación?",
+      "options": [
+        "M = μ0 H",
+        "M = μ H",
+        "M = χ H",
+        "M = B / μ0"
+      ],
+      "answer": 2,
+      "explanation": "En materiales lineales se cumple M = χ H, donde χ es la susceptibilidad magnética, adimensional."
+    },
+    {
+      "question": "Si M = χ H, ¿cómo se puede escribir B en función de H para un material lineal e isótropo?",
+      "options": [
+        "B = μ0 (H + χ H) = μ0 (1 + χ) H",
+        "B = μ0 (H − χ H) = μ0 (1 − χ) H",
+        "B = χ μ0 H",
+        "B = H / (μ0 χ)"
+      ],
+      "answer": 0,
+      "explanation": "Sustituyendo M = χ H en B = μ0 (H + M) se obtiene B = μ0 (H + χ H) = μ0 (1 + χ) H."
+    },
+    {
+      "question": "La permeabilidad magnética μ de un material lineal se relaciona con μ0 y la susceptibilidad χ mediante:",
+      "options": [
+        "μ = μ0 / (1 + χ)",
+        "μ = μ0 (1 + χ)",
+        "μ = χ / μ0",
+        "μ = μ0 − χ"
+      ],
+      "answer": 1,
+      "explanation": "A partir de B = μ H y B = μ0 (1 + χ) H se concluye que μ = μ0 (1 + χ)."
+    },
+    {
+      "question": "La permeabilidad relativa Km de un material se define como:",
+      "options": [
+        "Km = μ0 / μ",
+        "Km = μ χ",
+        "Km = 1 + χ",
+        "Km = χ − 1"
+      ],
+      "answer": 2,
+      "explanation": "La permeabilidad relativa del material se define como Km = μ / μ0 = 1 + χ."
+    },
+    {
+      "question": "Según el valor de la permeabilidad μ respecto de μ0, un material diamagnético se caracteriza por:",
+      "options": [
+        "μ < μ0",
+        "μ ≈ 0",
+        "μ > μ0",
+        "μ ≫ μ0"
+      ],
+      "answer": 0,
+      "explanation": "Los materiales diamagnéticos tienen μ ligeramente menor que μ0."
+    },
+    {
+      "question": "En los materiales paramagnéticos, la susceptibilidad magnética χ y la orientación de M respecto de H son:",
+      "options": [
+        "χ negativo y M opuesto a H",
+        "χ positivo y M en la misma dirección que H",
+        "χ muy grande y M independiente de H",
+        "χ nulo y M siempre cero"
+      ],
+      "answer": 1,
+      "explanation": "En materiales paramagnéticos χ es positivo y la magnetización M se alinea en la misma dirección que H."
+    },
+    {
+      "question": "En ingeniería de comunicaciones, ¿qué aproximación suele hacerse para las sustancias diamagnéticas?",
+      "options": [
+        "Se toma μ ≫ μ0",
+        "Se considera μ = 0",
+        "Se toma μ ≈ μ0 y muchas veces se reemplaza por μ = μ0",
+        "Se supone χ ≫ 1"
+      ],
+      "answer": 2,
+      "explanation": "En la mayoría de aplicaciones se considera que para materiales diamagnéticos μ es casi idéntico a μ0, por lo que se suele tomar μ = μ0."
+    },
+    {
+      "question": "En un toroide, al llenar el núcleo vacío con una sustancia magnética, ¿qué ocurre con H dentro del material?",
+      "options": [
+        "H aumenta proporcionalmente a μ",
+        "H disminuye a medida que aumenta M",
+        "H permanece aproximadamente igual y depende solo de las corrientes verdaderas (n·I)",
+        "H se hace nulo porque el material genera su propio campo"
+      ],
+      "answer": 2,
+      "explanation": "En el toroide, H depende solo de las corrientes verdaderas en el arrollamiento (H = n·I); al introducir el material cambia B pero H se mantiene."
+    },
+    {
+      "question": "En un toroide con núcleo de hierro de permeabilidad μ = 5000 μ0, ¿cómo se compara aproximadamente B en el hierro respecto de B0 en el vacío?",
+      "options": [
+        "B es aproximadamente igual a B0",
+        "B es aproximadamente 5000 veces mayor que B0",
+        "B es 1/5000 de B0",
+        "B solo duplica el valor de B0"
+      ],
+      "answer": 1,
+      "explanation": "Si μ = 5000 μ0, entonces B = μ H ≈ 5000 μ0 H = 5000 B0, es decir, B es unas 5000 veces mayor que en el vacío."
+    },
+    {
+      "question": "¿Qué son los dominios magnéticos en un material ferromagnético?",
+      "options": [
+        "Regiones donde los momentos magnéticos están orientados al azar",
+        "Regiones microscópicas en las que todos los momentos magnéticos están alineados",
+        "Regiones donde no existe ningún momento magnético",
+        "Regiones que solo aparecen en materiales diamagnéticos"
+      ],
+      "answer": 1,
+      "explanation": "Los dominios son regiones microscópicas dentro de un ferromagnético donde todos los momentos magnéticos están alineados en la misma dirección."
+    },
+    {
+      "question": "En una muestra ferromagnética inicialmente desmagnetizada, ¿cómo es el momento magnético total del material?",
+      "options": [
+        "Máximo, con todos los dominios alineados",
+        "Distinto de cero debido al campo magnético terrestre",
+        "Nulo, porque los dominios están orientados al azar",
+        "Nulo, porque no existen dominios magnéticos"
+      ],
+      "answer": 2,
+      "explanation": "En una muestra desmagnetizada los dominios están orientados al azar, de modo que el momento magnético total es aproximadamente nulo."
+    },
+    {
+      "question": "¿Qué describe el ciclo de histéresis B–H de un material ferromagnético?",
+      "options": [
+        "La variación de la resistencia eléctrica con la temperatura",
+        "La relación entre flujo eléctrico y campo eléctrico",
+        "La respuesta magnetización–campo al someter el material a ciclos de magnetización y desmagnetización",
+        "La variación de la conductividad térmica con la frecuencia"
+      ],
+      "answer": 2,
+      "explanation": "El ciclo de histéresis B–H describe cómo responde el material al ser magnetizado y desmagnetizado, mostrando la remanencia y el campo coercitivo."
+    },
+    {
+      "question": "En el ciclo de histéresis, la inducción magnética distinta de cero que queda cuando H vuelve a cero se denomina:",
+      "options": [
+        "Campo coercitivo",
+        "Magnetización remanente o inducción remanente",
+        "Permeabilidad relativa",
+        "Susceptibilidad diferencial"
+      ],
+      "answer": 1,
+      "explanation": "Cuando se reduce H a cero y B no vuelve a cero se habla de magnetización remanente o inducción remanente."
+    },
+    {
+      "question": "En un ciclo de histéresis, el campo coercitivo se asocia con:",
+      "options": [
+        "El valor de H necesario para alcanzar la saturación",
+        "El valor de B cuando H = 0",
+        "El valor de H necesario para que B vuelva a ser cero al invertir el campo",
+        "El valor de H cuando M = 0 por primera vez"
+      ],
+      "answer": 2,
+      "explanation": "El campo coercitivo es el valor de H (de signo opuesto al inicial) necesario para que B vuelva a ser cero al desmagnetizar el material."
+    },
+    {
+      "question": "¿Qué representa el área encerrada en el lazo de histéresis de un material ferromagnético?",
+      "options": [
+        "La energía almacenada en el material que puede recuperarse sin pérdidas",
+        "El trabajo necesario por ciclo y las pérdidas de energía asociadas a la magnetización cíclica",
+        "La resistencia magnética del material",
+        "La capacidad calorífica del material"
+      ],
+      "answer": 1,
+      "explanation": "El área del lazo de histéresis representa el trabajo por ciclo y, por tanto, las pérdidas de energía debidas a la magnetización cíclica del material."
+    },
+    {
+      "question": "Comparando dos materiales ferromagnéticos, uno magnéticamente duro y otro blando, ¿qué característica diferencia principalmente sus ciclos de histéresis?",
+      "options": [
+        "El lazo de un material duro es más estrecho, con poca remanencia",
+        "El lazo de un material blando es más ancho, con alta remanencia",
+        "El lazo de un material duro es más ancho, con gran remanencia y campo coercitivo elevado",
+        "Ambos tienen lazos idénticos, solo cambia la permeabilidad relativa"
+      ],
+      "answer": 2,
+      "explanation": "Los materiales magnéticamente duros presentan lazos de histéresis anchos, con gran remanencia y campo coercitivo alto; los blandos tienen lazos estrechos y se magnetizan y desmagnetizan con facilidad."
+    },
+    {
+      "question": "Describa las principales diferencias entre materiales diamagnéticos, paramagnéticos y ferromagnéticos en términos de momentos magnéticos, signo de la susceptibilidad χ y valor relativo de la permeabilidad μ.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "Diamagnéticos: no poseen momentos magnéticos permanentes apreciables; solo presentan momentos inducidos opuestos al campo aplicado, su susceptibilidad χ es negativa y su permeabilidad es ligeramente menor que μ0. Paramagnéticos: tienen dipolos magnéticos permanentes que, sin campo, están orientados al azar; al aplicar un campo los dipolos se alinean parcialmente con él, la susceptibilidad χ es positiva pero pequeña y la permeabilidad es ligeramente mayor que μ0. Ferromagnéticos: presentan dominios con momentos magnéticos permanentes fuertemente acoplados; aun con campos débiles se produce un fuerte alineamiento que puede mantenerse al retirar el campo, con susceptibilidades efectivas muy grandes y permeabilidades muy superiores a μ0."
+    },
+    {
+      "question": "Defina magnetización M, susceptibilidad magnética χ y permeabilidad relativa Km, explicando la relación cuantitativa entre estos parámetros en un material lineal.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "La magnetización M se define como el momento magnético por unidad de volumen. La susceptibilidad magnética χ es el coeficiente adimensional que relaciona M con la intensidad de campo H en un material lineal, mediante M = χ H. La permeabilidad magnética se define por B = μ H y, en un material lineal e isótropo, se obtiene μ = μ0 (1 + χ). La permeabilidad relativa Km se define como Km = μ / μ0 = 1 + χ."
+    },
+    {
+      "question": "Explique el significado físico del vector intensidad de campo magnético H y su relación con B y M. Comente el caso particular de un toroide con núcleo magnético.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "El vector H representa la contribución al campo magnético debida exclusivamente a las corrientes libres o verdaderas del circuito, separando el efecto de la materia. En un medio material se define H = B/μ0 − M, donde B es la inducción magnética total y M la magnetización. En el vacío, M = 0 y se cumple B = μ0 H. En el toroide, H se obtiene a partir de las corrientes que circulan por el arrollamiento (H = n·I) y es independiente de si el núcleo está vacío o lleno de material; al introducir un núcleo ferromagnético, M se vuelve distinta de cero y B aumenta, pero H sigue determinada por las corrientes del devanado."
+    },
+    {
+      "question": "Describa el fenómeno de ferromagnetismo utilizando el concepto de dominios magnéticos y explique cómo se origina la magnetización permanente.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "En los materiales ferromagnéticos los momentos magnéticos atómicos interactúan fuertemente entre sí, formando regiones microscópicas llamadas dominios en las que todos los momentos están alineados. En una muestra desmagnetizada los dominios se orientan al azar y el momento magnético total es nulo. Al aplicar un campo externo, crecen los dominios alineados con el campo a expensas de los demás, produciendo una magnetización neta. Si este alineamiento resulta estable al retirar el campo por la estructura cristalina y el acoplamiento entre dominios, el material conserva una magnetización remanente y se comporta como un imán permanente."
+    },
+    {
+      "question": "Explique paso a paso el recorrido típico de un ciclo de histéresis B–H para una muestra ferromagnética inicialmente desmagnetizada y el significado de cada tramo.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "Partiendo de una muestra desmagnetizada (punto O, B ≈ 0, H = 0), al incrementar H desde cero B aumenta siguiendo la curva O–a debido al crecimiento y reorientación de dominios favorables al campo hasta alcanzar la saturación cercana al punto a. Al reducir H desde a hasta 0 el material no vuelve por el mismo camino, sino que sigue a–b: en b, H = 0 pero B ≠ 0, lo que corresponde a la magnetización remanente. Al invertir el campo y aumentar su módulo, B disminuye y llega a cero en el punto c; el valor de H en c es el campo coercitivo necesario para desmagnetizar el material. Si se continúa aumentando H en ese sentido el material satura de nuevo pero con magnetización opuesta (punto d). Al volver a reducir H y luego cambiar de signo se sigue la rama d–f–a, cerrando el lazo de histéresis."
+    },
+    {
+      "question": "Compare cualitativamente el ciclo de histéresis de un material magnéticamente duro con el de uno blando y relacione la forma del lazo con aplicaciones típicas como imanes permanentes y transformadores.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "Un material magnéticamente duro presenta un lazo de histéresis ancho, con alta magnetización remanente y campo coercitivo grande; una vez magnetizado conserva fuertemente su magnetización y requiere campos importantes para desmagnetizarlo, lo que es adecuado para imanes permanentes. Un material magnéticamente blando exhibe un lazo estrecho, con remanencia y coercitividad pequeñas; se magnetiza y desmagnetiza fácilmente y el área del lazo es menor, por lo que es apropiado para núcleos de transformadores y dispositivos excitados con campos alternos."
+    },
+    {
+      "question": "Justifique por qué, en el diseño de transformadores, se utilizan materiales ferromagnéticos blandos en los núcleos en lugar de materiales magnéticamente duros.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "En un transformador el núcleo está sometido a ciclos alternos de magnetización; se busca minimizar las pérdidas energéticas por histéresis. Los materiales ferromagnéticos blandos poseen lazos de histéresis estrechos, con baja remanencia y bajo campo coercitivo, lo que reduce el trabajo por ciclo y, por tanto, las pérdidas. Además, su capacidad para magnetizarse y desmagnetizarse con facilidad facilita el acoplamiento del flujo entre los arrollamientos."
+    },
+    {
+      "question": "Explique por qué todos los materiales pueden considerarse, en algún grado, diamagnéticos y por qué este efecto suele pasar desapercibido en materiales con momentos permanentes.",
+      "options": [
+        "Answer A: ver explicación",
+        "Answer B",
+        "Answer C",
+        "Answer D"
+      ],
+      "answer": 0,
+      "explanation": "Ante un campo magnético aplicado, en todos los materiales se inducen corrientes microscópicas que generan momentos magnéticos opuestos al campo (efecto diamagnético). Por ello, en sentido estricto, todos los materiales son diamagnéticos. Sin embargo, cuando existen momentos magnéticos permanentes, como en materiales paramagnéticos o ferromagnéticos, la contribución de esos dipolos permanentes es mucho mayor que la contribución diamagnética inducida, de manera que el efecto diamagnético queda enmascarado en la respuesta macroscópica del material."
+    }
+  ]
+}

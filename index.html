@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fisica II - Learning Dashboard</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <!-- KaTeX para renderizar formulas en quizzes y practicos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
@@ -43,6 +43,13 @@
       grid-template-columns: 280px 1fr;
       min-height: 100vh;
     }
+    .layout.collapsed {
+      grid-template-columns: 76px 1fr;
+    }
+    .layout.collapsed aside {
+      padding: 12px 8px;
+      width: 76px;
+    }
     aside {
       background: linear-gradient(160deg, #0d1b2a, #1b263b);
       color: #e9edf5;
@@ -62,6 +69,25 @@
       display: grid; place-items: center; font-weight: 700; color: #0b132b;
     }
     .brand h1 { margin: 0; font-size: 18px; line-height: 1.2; }
+    .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .hamburger {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: grid; place-items: center;
+      cursor: pointer;
+      transition: background 0.15s ease, border 0.15s ease;
+      margin-top: -4px;
+    }
+    .hamburger:hover { background: rgba(255,255,255,0.16); }
+    .hamburger span {
+      display: block;
+      width: 18px; height: 2px;
+      background: #e9edf5;
+      margin: 3px 0;
+      border-radius: 999px;
+    }
     .sidebar-section h2 {
       font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em;
       color: #94a3b8; margin: 0 0 8px 0;
@@ -82,6 +108,38 @@
     .module-item.active {
       background: #e0fbfc; color: #0b132b; border-color: transparent;
       box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+    .module-circle {
+      display: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e0fbfc;
+      color: #0b132b;
+      font-weight: 800;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .module-text {
+      flex: 1;
+    }
+    .layout.collapsed aside .brand { display: none; }
+    .layout.collapsed aside .sidebar-section h2 { display: none; }
+    .layout.collapsed .module-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+    .layout.collapsed .module-item .module-text {
+      display: none;
+    }
+    .layout.collapsed .module-item .module-circle {
+      display: inline-flex;
+      width: 28px;
+      height: 28px;
+      font-size: 13px;
     }
     main {
       padding: 28px 32px 32px 32px;
@@ -129,6 +187,16 @@
     .section-stack { display: flex; flex-direction: column; gap: 12px; }
     .theory-stack { display: flex; flex-direction: column; gap: 12px; }
     .toggle-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .mini-btn {
+      border: 1px solid var(--border);
+      background: #e2e8f0;
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .align-right { margin-left: auto; }
     button {
       border: none; background: var(--accent); color: #fff; font-weight: 700;
       padding: 10px 14px; border-radius: 12px; cursor: pointer;
@@ -206,7 +274,7 @@
       margin: 12px auto 0 auto;
       display: block;
     }
-    /* Nueva UI de prácticos */
+    /* Nueva UI de practicos */
     .practice-section {
       display: grid;
       gap: 14px;
@@ -262,7 +330,7 @@
       margin-top: 8px;
     }
     .practice-link::after {
-      content: '↗';
+      content: '';
       font-size: 12px;
     }
     .practice-cta {
@@ -312,12 +380,17 @@
 <body>
   <div class="layout">
     <aside>
-      <div class="brand">
-        <div class="brand-icon">F2</div>
-        <div>
-          <h1>Fisica II 2025</h1>
-          <div style="color:#cbd5e1;font-size:12px;">Vista dinamica • Programa y Unidades</div>
+      <div class="brand-row">
+        <div class="brand">
+          <div class="brand-icon">F2</div>
+          <div>
+            <h1>Fisica II 2025</h1>
+            <div style="color:#cbd5e1;font-size:12px;">Vista dinamica  Programa y Unidades</div>
+          </div>
         </div>
+        <button id="toggleSidebar" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
       <div class="sidebar-section">
         <h2>Modulos</h2>
@@ -331,58 +404,70 @@
           <p id="moduleSubtitle">Basado en Programa de Fisica II 2025.</p>
         </div>
         <div class="toggle-row">
-          <span class="pill" id="folderHint">Estructura: inputs/modulo#/</span>
-          <button id="quizBtn">Quiz rapido (3 preg.)</button>
+          <span class="pill" id="folderHint">Estructura: inputs/modulos/modulo#/</span>
         </div>
       </div>
 
       <div class="section-stack">
         <div class="card" id="summaryCard">
-          <h3>Resumen</h3>
-          <p id="moduleSummary">Usa la barra lateral para explorar las unidades del programa.</p>
-          <div class="chips" id="moduleSources"></div>
-          <div id="summaryImageWrap"></div>
-          <div id="moduleConcepts" style="margin-top:8px;"></div>
+          <div class="toggle-row" style="justify-content:space-between;">
+            <h3 style="margin:0;">Resumen</h3>
+            <button id="summaryToggle" class="mini-btn">Ocultar</button>
+          </div>
+          <div id="summaryBody">
+            <p id="moduleSummary">Usa la barra lateral para explorar las unidades del programa.</p>
+            <div class="chips" id="moduleSources"></div>
+            <div id="summaryImageWrap"></div>
+            <div id="moduleConcepts" style="margin-top:8px;"></div>
+          </div>
         </div>
 
         <div class="card" id="conceptsCard">
           <div class="tab-row">
             <button class="tab-btn active" data-tab="teorico">Teorico</button>
-            <button class="tab-btn" data-tab="practicos">Prácticos</button>
+            <button class="tab-btn" data-tab="practicos">Practicos</button>
           </div>
           <div id="theoryPanel" class="theory-stack">
             <div id="slidesCard" class="card" style="box-shadow:none;border:1px solid var(--border);">
               <div class="toggle-row">
                 <h3 style="margin:0;">Filminas del modulo</h3>
-                <span class="pill" id="slidesHint">inputs/modulo#/filminas#</span>
+                <span class="pill" id="slidesHint">inputs/modulos/modulo#/filminas#</span>
                 <select id="slidesSelect" style="padding:8px 10px;border-radius:10px;border:1px solid var(--border);font-weight:600;background:#f8fafc;min-width:220px;"></select>
+                <button id="slidesCollapse" class="mini-btn align-right">Ocultar</button>
               </div>
-              <p id="slidesStatus" class="slides-status">Cargando...</p>
-              <div id="slidesViewer" style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#f8fafc;color:var(--muted);">
-                <div style="padding:12px;">Selecciona una filmina para ver el PDF.</div>
+              <div id="slidesBody">
+                <p id="slidesStatus" class="slides-status">Cargando...</p>
+                <div id="slidesViewer" style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#f8fafc;color:var(--muted);">
+                  <div style="padding:12px;">Selecciona una filmina para ver el PDF.</div>
+                </div>
               </div>
             </div>
 
             <div id="pdfCard" class="card" style="box-shadow:none;border:1px solid var(--border);">
               <div class="toggle-row">
                 <h3 style="margin:0;">Ver PDFs del modulo</h3>
-                <button id="pdfToggleBtn" style="background:#0f172a;">Mostrar/Ocultar</button>
                 <select id="pdfSelect" style="padding:8px 10px;border-radius:10px;border:1px solid var(--border);font-weight:600;background:#f8fafc;">
                   <option>Selecciona modulo</option>
                 </select>
+                <button id="pdfToggleBtn" class="mini-btn align-right">Mostrar/Ocultar</button>
               </div>
-              <div id="pdfViewer" class="hidden" style="border:1px solid var(--border);border-radius:12px;overflow:hidden;min-height:320px;background:#f8fafc;display:grid;place-items:center;color:var(--muted);">
-                Selecciona un PDF y haz clic en Mostrar/Ocultar.
+              <div id="pdfBody">
+                <div id="pdfViewer" class="hidden" style="border:1px solid var(--border);border-radius:12px;overflow:hidden;min-height:320px;background:#f8fafc;display:grid;place-items:center;color:var(--muted);">
+                  Selecciona un PDF y haz clic en Mostrar/Ocultar.
+                </div>
               </div>
             </div>
 
             <div id="quizCard" class="card" style="box-shadow:none;border:1px solid var(--border);">
               <div class="toggle-row">
-                <h3 style="margin:0;">Repaso • Quiz rapido</h3>
+                <h3 style="margin:0;">Repaso - Quiz</h3>
                 <span class="pill" id="quizTitle">Selecciona modulo</span>
+                <button id="quizCollapse" class="mini-btn align-right">Ocultar</button>
               </div>
-              <div class="quiz" id="quizZone"></div>
-              <button id="gradeBtn" style="display:none;">Calificar</button>
+              <div id="quizBody">
+                <div class="quiz" id="quizZone"></div>
+                <button id="gradeBtn" style="display:none;">Calificar</button>
+              </div>
             </div>
           </div>
           <div id="modulePractices" class="hidden"></div>
@@ -392,7 +477,7 @@
   </div>
 
   <script>
-    // Datos con ruta actual y sugerencia de carpeta inputs/modulo#
+    // Datos con ruta actual y sugerencia de carpeta inputs/modulos/modulo#
     const modules = [
       {
         id: 'u1',
@@ -401,20 +486,20 @@
         sources: ['Programa 2025 - Unidad 1'],
         concepts: [
           { title: 'Temperatura y medicion', points: ['Escalas termometricas (Celsius, Fahrenheit, Kelvin) y cero absoluto.', 'Termometros como dispositivos de equilibrio termico y propiedades termometricas (volumen, presion, resistencia).'] },
-          { title: 'Calor y energia interna', points: ['Calor como transferencia de energia; calorimetria (Q = m c ΔT).', 'Energia interna: suma de energias microscopicas; variables de estado vs transferencia.'] },
-          { title: 'Dilatacion y comportamiento del agua', points: ['Coeficientes de dilatacion lineal/superficial/volumetrica; agua 0–4 °C aumenta densidad.'] },
-          { title: 'Equivalente mecanico', points: ['Relacion trabajo-energia termica; 1 cal ≈ 4,186 J.'] }
+          { title: 'Calor y energia interna', points: ['Calor como transferencia de energia; calorimetria (Q = m c T).', 'Energia interna: suma de energias microscopicas; variables de estado vs transferencia.'] },
+          { title: 'Dilatacion y comportamiento del agua', points: ['Coeficientes de dilatacion lineal/superficial/volumetrica; agua 04 C aumenta densidad.'] },
+          { title: 'Equivalente mecanico', points: ['Relacion trabajo-energia termica; 1 cal  4,186 J.'] }
         ],
-        folder: 'inputs/modulo1/',
-        slidesFolder: 'inputs/modulo1/filminas1/',
+        folder: 'inputs/modulos/modulo1/',
+        slidesFolder: 'inputs/modulos/modulo1/filminas1/',
         pdfs: [
-          { label: 'Unidad 1 C1 - Fundamentos de termologia', file: 'inputs/modulo1/Unidad 1 C1-Fundamentos de termolog\u00eda.pdf' },
-          { label: 'Unidad 1 C2 - Energia interna', file: 'inputs/modulo1/Unidad 1-C2- Concepto de energ\u00eda interna.pdf' },
-          { label: 'Unidad 1 C3 - Transformaciones en gases', file: 'inputs/modulo1/Unidad 1-C3-Transformaciones en gases.pdf' }
+          { label: 'Unidad 1 C1 - Fundamentos de termologia', file: 'inputs/modulos/modulo1/Unidad 1 C1-Fundamentos de termolog\u00eda.pdf' },
+          { label: 'Unidad 1 C2 - Energia interna', file: 'inputs/modulos/modulo1/Unidad 1-C2- Concepto de energ\u00eda interna.pdf' },
+          { label: 'Unidad 1 C3 - Transformaciones en gases', file: 'inputs/modulos/modulo1/Unidad 1-C3-Transformaciones en gases.pdf' }
         ],
         practices: [
-          { title: 'Práctico 1 - Fundamentos de Termología', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 1', note: 'Temperatura, contacto térmico y equilibrio.' },
-          { title: 'Práctico 2 - Calorimetría', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 2', note: 'Capacidad térmica, mezclas y equilibrio.' }
+          { title: 'Practico 1 - Fundamentos de Termologia', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 1', note: 'Temperatura, contacto termico y equilibrio.' },
+          { title: 'Practico 2 - Calorimetria', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 2', note: 'Capacidad termica, mezclas y equilibrio.' }
         ]
       },
       {
@@ -423,20 +508,20 @@
         summary: 'Primera y segunda ley, ciclos de Carnot e invertido, entropia y rendimiento.',
         sources: ['Programa 2025 - Unidad 2'],
         concepts: [
-          { title: 'Primera ley', points: ['dE = Q + W; signo Q>0 hacia el sistema, W>0 sobre el sistema.', 'Trabajo como área bajo la curva P-V; casos isobárico, isocórico, isotérmico, adiabático.'] },
-          { title: 'Procesos adiabáticos', points: ['Q = 0; relaciones PV^γ = cte y T·V^(γ-1) = cte; γ = Cp/Cv.', 'En expansión adiabática E_int disminuye, en compresión aumenta.'] },
-          { title: 'Segunda ley y máquinas térmicas', points: ['Enunciados Kelvin-Planck y Clausius; imposibilidad de eficiencia 100%.', 'Máquina de Carnot: dos isotermas + dos adiabáticas; eficiencia e = 1 - Tc/Th.'] },
-          { title: 'Entropía', points: ['dS = δQ_rev / T; variable de estado.', 'En procesos reales ΔS_universo > 0; en reversibles ΔS_universo = 0.'] }
+          { title: 'Primera ley', points: ['dE = Q + W; signo Q>0 hacia el sistema, W>0 sobre el sistema.', 'Trabajo como area bajo la curva P-V; casos isobarico, isocorico, isotermico, adiabatico.'] },
+          { title: 'Procesos adiabaticos', points: ['Q = 0; relaciones PV^ = cte y TV^(-1) = cte;  = Cp/Cv.', 'En expansion adiabatica E_int disminuye, en compresion aumenta.'] },
+          { title: 'Segunda ley y maquinas termicas', points: ['Enunciados Kelvin-Planck y Clausius; imposibilidad de eficiencia 100%.', 'Maquina de Carnot: dos isotermas + dos adiabaticas; eficiencia e = 1 - Tc/Th.'] },
+          { title: 'Entropia', points: ['dS = Q_rev / T; variable de estado.', 'En procesos reales S_universo > 0; en reversibles S_universo = 0.'] }
         ],
-        folder: 'inputs/modulo2/',
-        slidesFolder: 'inputs/modulo2/filminas2/',
+        folder: 'inputs/modulos/modulo2/',
+        slidesFolder: 'inputs/modulos/modulo2/filminas2/',
         pdfs: [
-          { label: 'Unidad 2 C4 - Los principios de la termodinamica', file: 'inputs/modulo2/Unidad 2- C4 Los principios de la termodin\u00e1mica.pdf' }
+          { label: 'Unidad 2 C4 - Los principios de la termodinamica', file: 'inputs/modulos/modulo2/Unidad 2- C4 Los principios de la termodin\u00e1mica.pdf' }
         ],
         practices: [
-          { title: 'Práctico 3 - Transformaciones en gases', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 3', note: 'Trabajo y calor en isoterma, isobara, isocora, adiabática.' },
-          { title: 'Práctico 4 - Primer Principio', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 4', note: 'Balances de energía en procesos simples.' },
-          { title: 'Práctico 5 - Segundo Principio', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 5', note: 'Carnot, rendimiento y entropía.' }
+          { title: 'Practico 3 - Transformaciones en gases', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 3', note: 'Trabajo y calor en isoterma, isobara, isocora, adiabatica.' },
+          { title: 'Practico 4 - Primer Principio', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 4', note: 'Balances de energia en procesos simples.' },
+          { title: 'Practico 5 - Segundo Principio', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 5', note: 'Carnot, rendimiento y entropia.' }
         ]
       },
       {
@@ -445,18 +530,18 @@
         summary: 'Carga electrica, Ley de Coulomb, campo electrico y flujo (Gauss).',
         sources: ['Programa 2025 - Unidad 3'],
         concepts: [
-          { title: 'Carga electrica', points: ['Signo, cuantizacion y conservacion; interacción atractiva/repulsiva.', 'Distribuciones discretas y continuas; superposición.'] },
-          { title: 'Campo electrico', points: ['Definición, líneas de campo y magnitud de cargas puntuales.', 'Flujo eléctrico y simetría (Gauss); superficies plana, cilíndrica, esférica.'] }
+          { title: 'Carga electrica', points: ['Signo, cuantizacion y conservacion; interaccion atractiva/repulsiva.', 'Distribuciones discretas y continuas; superposicion.'] },
+          { title: 'Campo electrico', points: ['Definicion, lineas de campo y magnitud de cargas puntuales.', 'Flujo electrico y simetria (Gauss); superficies plana, cilindrica, esferica.'] }
         ],
-        folder: 'inputs/modulo3/',
-        slidesFolder: 'inputs/modulo3/filminas3/',
+        folder: 'inputs/modulos/modulo3/',
+        slidesFolder: 'inputs/modulos/modulo3/filminas3/',
         pdfs: [
-          { label: 'Unidad 3 C5 - Ley de Coulomb y Campo electrico', file: 'inputs/modulo3/Unidad 3-C5- Ley de Coulomb-Campo E\u00e9ctrico.pdf' },
-          { label: 'Unidad 3 C6 - Electrostatica y campos electricos 2', file: 'inputs/modulo3/Unidad 3-C6- Electrost\u00e1tica y campos el\u00e9ctricos 2\u00b0 parte.pdf' }
+          { label: 'Unidad 3 C5 - Ley de Coulomb y Campo electrico', file: 'inputs/modulos/modulo3/Unidad 3-C5- Ley de Coulomb-Campo E\u00e9ctrico.pdf' },
+          { label: 'Unidad 3 C6 - Electrostatica y campos electricos 2', file: 'inputs/modulos/modulo3/Unidad 3-C6- Electrost\u00e1tica y campos el\u00e9ctricos 2\u00b0 parte.pdf' }
         ],
         practices: [
-          { title: 'Práctico 6 - Carga y Campo Eléctrico', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 6', note: 'Cálculo de campo por cargas discretas y continuas.' },
-          { title: 'Práctico 7 - Trabajo y Energía Potencial', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 7', note: 'Relación campo-potencial y energía almacenada.' }
+          { title: 'Practico 6 - Carga y Campo Electrico', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 6', note: 'Calculo de campo por cargas discretas y continuas.' },
+          { title: 'Practico 7 - Trabajo y Energia Potencial', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 7', note: 'Relacion campo-potencial y energia almacenada.' }
         ]
       },
       {
@@ -465,16 +550,16 @@
         summary: 'Trabajo en campo electrostatico, potencial, gradiente y aplicaciones.',
         sources: ['Programa 2025 - Unidad 4'],
         concepts: [
-          { title: 'Trabajo y potencial', points: ['Trabajo en campo electrostatico; potencial de cargas puntuales y distribuciones.', 'Relación entre energía potencial y diferencia de potencial.'] },
-          { title: 'Campo desde potencial', points: ['E = -grad V; uso de simetría para derivar campos.', 'Equipotenciales y líneas de campo; aplicaciones básicas.'] }
+          { title: 'Trabajo y potencial', points: ['Trabajo en campo electrostatico; potencial de cargas puntuales y distribuciones.', 'Relacion entre energia potencial y diferencia de potencial.'] },
+          { title: 'Campo desde potencial', points: ['E = -grad V; uso de simetria para derivar campos.', 'Equipotenciales y lineas de campo; aplicaciones basicas.'] }
         ],
-        folder: 'inputs/modulo4/',
-        slidesFolder: 'inputs/modulo4/filminas4/',
+        folder: 'inputs/modulos/modulo4/',
+        slidesFolder: 'inputs/modulos/modulo4/filminas4/',
         pdfs: [
-          { label: 'Unidad 4 C7 - El potencial electrico', file: 'inputs/modulo4/Unidad 4-C7- El potencial el\u00e9ctrico.pdf' }
+          { label: 'Unidad 4 C7 - El potencial electrico', file: 'inputs/modulos/modulo4/Unidad 4-C7- El potencial el\u00e9ctrico.pdf' }
         ],
         practices: [
-          { title: 'Práctico 7 - Trabajo y Potencial', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 7', note: 'Potencial de cargas puntuales y distribuciones.' }
+          { title: 'Practico 7 - Trabajo y Potencial', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 7', note: 'Potencial de cargas puntuales y distribuciones.' }
         ]
       },
       {
@@ -483,16 +568,16 @@
         summary: 'Capacitancia, conexiones serie/paralelo, energia en capacitores y propiedades electricas de la materia.',
         sources: ['Programa 2025 - Unidad 5'],
         concepts: [
-          { title: 'Capacitancia', points: ['Dependencia geometrica y diel\u00e9ctrico.', 'Serie y paralelo para capacidad equivalente.', 'Capacidad en geometrías plana, cilindrica, esférica.'] },
+          { title: 'Capacitancia', points: ['Dependencia geometrica y diel\u00e9ctrico.', 'Serie y paralelo para capacidad equivalente.', 'Capacidad en geometrias plana, cilindrica, esferica.'] },
           { title: 'Energia', points: ['E = 1/2 C V^2; densidad de energia.', 'Descarga y riesgos.', 'Rol del diel\u00e9ctrico y ruptura.'] }
         ],
-        folder: 'inputs/modulo5/',
-        slidesFolder: 'inputs/modulo5/filminas5/',
+        folder: 'inputs/modulos/modulo5/',
+        slidesFolder: 'inputs/modulos/modulo5/filminas5/',
         pdfs: [
-          { label: 'Unidad 5 - Propiedades electricas y capacidad', file: 'inputs/modulo5/Unidad 5 Propiedades el\u00e9ctricas de la materia y la capacidad el\u00e9ctrica.pdf' }
+          { label: 'Unidad 5 - Propiedades electricas y capacidad', file: 'inputs/modulos/modulo5/Unidad 5 Propiedades el\u00e9ctricas de la materia y la capacidad el\u00e9ctrica.pdf' }
         ],
         practices: [
-          { title: 'Práctico 8 - Dieléctrico y Condensadores', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 8', note: 'Capacitores planos, cilindricos, esféricos y con dieléctrico.' }
+          { title: 'Practico 8 - Dielectrico y Condensadores', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 8', note: 'Capacitores planos, cilindricos, esfericos y con dielectrico.' }
         ]
       },
       {
@@ -504,13 +589,13 @@
           { title: 'Corriente y carga', points: ['Flujo de carga por unidad de tiempo.', 'Relacion con densidad de corriente.', 'Sentido convencional vs movimiento de electrones.'] },
           { title: 'Ley de Ohm y potencia', points: ['I = V/R en conductores ohmicos.', 'Potencia P = I^2 R y variacion con temperatura.', 'Modelo microscopico de conduccion.'] }
         ],
-        folder: 'inputs/modulo6/',
-        slidesFolder: 'inputs/modulo6/filminas6/',
+        folder: 'inputs/modulos/modulo6/',
+        slidesFolder: 'inputs/modulos/modulo6/filminas6/',
         pdfs: [
-          { label: 'Unidad 6 - La corriente electrica', file: 'inputs/modulo6/unidad 6 La corriente el\u00e9ctrica.pdf' }
+          { label: 'Unidad 6 - La corriente electrica', file: 'inputs/modulos/modulo6/unidad 6 La corriente el\u00e9ctrica.pdf' }
         ],
         practices: [
-          { title: 'Práctico 9 - Corriente Eléctrica', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 9', note: 'Ley de Ohm, potencia de Joule y conductividad.' }
+          { title: 'Practico 9 - Corriente Electrica', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 9', note: 'Ley de Ohm, potencia de Joule y conductividad.' }
         ]
       },
       {
@@ -522,13 +607,13 @@
           { title: 'Analisis de redes', points: ['Kirchhoff de corrientes y tensiones.', 'Puente de Wheatstone y potenciometro.', 'Potencia disipada en redes.'] },
           { title: 'Conexiones', points: ['Serie y paralelo para resistencias y fuentes.', 'Caida de tension y division de corriente.', 'FEM internas y mallas.'] }
         ],
-        folder: 'inputs/modulo7/',
-        slidesFolder: 'inputs/modulo7/filminas7/',
+        folder: 'inputs/modulos/modulo7/',
+        slidesFolder: 'inputs/modulos/modulo7/filminas7/',
         pdfs: [
-          { label: 'Unidad 7 - El circuito electrico', file: 'inputs/modulo7/Unidad 7 El circuito el\u00e9ctrico.pdf' }
+          { label: 'Unidad 7 - El circuito electrico', file: 'inputs/modulos/modulo7/Unidad 7 El circuito el\u00e9ctrico.pdf' }
         ],
         practices: [
-          { title: 'Práctico 10 - Circuitos de Corriente Continua', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 10', note: 'Mallas, nodos y división de corriente/tensión.' }
+          { title: 'Practico 10 - Circuitos de Corriente Continua', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 10', note: 'Mallas, nodos y division de corriente/tension.' }
         ]
       },
       {
@@ -537,17 +622,17 @@
         summary: 'Ley de Biot-Savart y Ampere; campo de conductores y fuerzas sobre cargas/corrientes.',
         sources: ['Programa 2025 - Unidad 8'],
         concepts: [
-          { title: 'Fuentes de B', points: ['Corrientes rectas, espiras, solenoides y toroides.', 'Integral de Ampere en casos simetricos.', 'Superposición de campos.'] },
-          { title: 'Fuerzas magneticas', points: ['q v B sen(theta).', 'Momento sobre espiras y razon e/m.', 'Aplicaciones: espectrometría, motores simples.'] }
+          { title: 'Fuentes de B', points: ['Corrientes rectas, espiras, solenoides y toroides.', 'Integral de Ampere en casos simetricos.', 'Superposicion de campos.'] },
+          { title: 'Fuerzas magneticas', points: ['q v B sen(theta).', 'Momento sobre espiras y razon e/m.', 'Aplicaciones: espectrometria, motores simples.'] }
         ],
-        folder: 'inputs/modulo8/',
-        slidesFolder: 'inputs/modulo8/filminas8/',
+        folder: 'inputs/modulos/modulo8/',
+        slidesFolder: 'inputs/modulos/modulo8/filminas8/',
         pdfs: [
-          { label: 'Unidad 8-1 - Magnetostatica e interaccion', file: 'inputs/modulo8/Unidad 8-1 Magnetost\u00e1tica e interacci\u00f3n magn\u00e9tica.pdf' },
-          { label: 'Unidad 8-2 - Biot-Savart y Ampere', file: 'inputs/modulo8/Unidad 8-2 Ley de Biot-Savart-Ley de Ampere.pdf' }
+          { label: 'Unidad 8-1 - Magnetostatica e interaccion', file: 'inputs/modulos/modulo8/Unidad 8-1 Magnetost\u00e1tica e interacci\u00f3n magn\u00e9tica.pdf' },
+          { label: 'Unidad 8-2 - Biot-Savart y Ampere', file: 'inputs/modulos/modulo8/Unidad 8-2 Ley de Biot-Savart-Ley de Ampere.pdf' }
         ],
         practices: [
-          { title: 'Práctico 11 - Campo de Inducción Magnética', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 11', note: 'Aplicaciones de Biot-Savart y Ampere a geometrías simples.' }
+          { title: 'Practico 11 - Campo de Induccion Magnetica', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 11', note: 'Aplicaciones de Biot-Savart y Ampere a geometrias simples.' }
         ]
       },
       {
@@ -559,13 +644,13 @@
           { title: 'Fem inducida', points: ['Depende de d(flux)/dt.', 'Bobinas giratorias y conductores moviles.', 'Regla de Lenz y sentido de la corriente inducida.'] },
           { title: 'Inductancia', points: ['Constante de tiempo L/R.', 'Energia almacenada 1/2 L I^2.', 'Auto vs mutua induccion.'] }
         ],
-        folder: 'inputs/modulo9/',
-        slidesFolder: 'inputs/modulo9/filminas9/',
+        folder: 'inputs/modulos/modulo9/',
+        slidesFolder: 'inputs/modulos/modulo9/filminas9/',
         pdfs: [
-          { label: 'Unidad 9 - Induccion electromagnetica', file: 'inputs/modulo9/Unidad 9 Inducci\u00f3n electromagn\u00e9tica (1).pdf' }
+          { label: 'Unidad 9 - Induccion electromagnetica', file: 'inputs/modulos/modulo9/Unidad 9 Inducci\u00f3n electromagn\u00e9tica (1).pdf' }
         ],
         practices: [
-          { title: 'Práctico 12 - Inducción Electromagnética', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 12', note: 'Circuitos RL, FEM inducida, constante de tiempo.' }
+          { title: 'Practico 12 - Induccion Electromagnetica', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 12', note: 'Circuitos RL, FEM inducida, constante de tiempo.' }
         ]
       },
       {
@@ -574,16 +659,16 @@
         summary: 'Paramagnetismo, diamagnetismo, ferromagnetismo y ciclo de histeresis.',
         sources: ['Programa 2025 - Unidad 10'],
         concepts: [
-          { title: 'Materiales magneticos', points: ['Respuesta a campos: para, dia y ferro.', 'Permeabilidad relativa y absoluta.', 'Dominios magnéticos.'] },
-          { title: 'Histeresis', points: ['Curva B-H y energia disipada.', 'Retentividad y coercitividad.', 'Ciclos y pérdidas.'] }
+          { title: 'Materiales magneticos', points: ['Respuesta a campos: para, dia y ferro.', 'Permeabilidad relativa y absoluta.', 'Dominios magneticos.'] },
+          { title: 'Histeresis', points: ['Curva B-H y energia disipada.', 'Retentividad y coercitividad.', 'Ciclos y perdidas.'] }
         ],
-        folder: 'inputs/modulo10/',
-        slidesFolder: 'inputs/modulo10/filminas10/',
+        folder: 'inputs/modulos/modulo10/',
+        slidesFolder: 'inputs/modulos/modulo10/filminas10/',
         pdfs: [
-          { label: 'Unidad 10 - Propiedades magneticas de la materia', file: 'inputs/modulo10/Unidad 10 Propiedades magneticas de la materia.pdf' }
+          { label: 'Unidad 10 - Propiedades magneticas de la materia', file: 'inputs/modulos/modulo10/Unidad 10 Propiedades magneticas de la materia.pdf' }
         ],
         practices: [
-          { title: 'Práctico 11 - Campo de Inducción Magnética (extensión cualitativa)', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 11', note: 'Propiedades magnéticas de materiales (apoyo conceptual).' }
+          { title: 'Practico 11 - Campo de Induccion Magnetica (extension cualitativa)', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 11', note: 'Propiedades magneticas de materiales (apoyo conceptual).' }
         ]
       },
       {
@@ -593,15 +678,15 @@
         sources: ['Programa 2025 - Unidad 11'],
         concepts: [
           { title: 'Fasores y ondas', points: ['Representacion senoidal de voltajes y corrientes.', 'Fase y frecuencia angular omega.', 'Voltaje RMS y corriente RMS.'] },
-          { title: 'Impedancia', points: ['Z_R = R, Z_L = j omega L, Z_C = 1/(j omega C).', 'Resonancia cuando omega L = 1/omega C.', 'Factor de potencia y corrección.'] }
+          { title: 'Impedancia', points: ['Z_R = R, Z_L = j omega L, Z_C = 1/(j omega C).', 'Resonancia cuando omega L = 1/omega C.', 'Factor de potencia y correccion.'] }
         ],
-        folder: 'inputs/modulo11/',
-        slidesFolder: 'inputs/modulo11/filminas11/',
+        folder: 'inputs/modulos/modulo11/',
+        slidesFolder: 'inputs/modulos/modulo11/filminas11/',
         pdfs: [
-          { label: 'Unidad 11 - Corriente Alterna', file: 'inputs/modulo11/Unidad 11 Corriente Alterna.pdf' }
+          { label: 'Unidad 11 - Corriente Alterna', file: 'inputs/modulos/modulo11/Unidad 11 Corriente Alterna.pdf' }
         ],
         practices: [
-          { title: 'Práctico 13 - Corriente Alterna', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 13', note: 'Impedancias, potencia y resonancia en RLC.' }
+          { title: 'Practico 13 - Corriente Alterna', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 13', note: 'Impedancias, potencia y resonancia en RLC.' }
         ]
       },
       {
@@ -613,13 +698,13 @@
           { title: 'Ecuacion de onda', points: ['Relacion laplaciano-tiempo.', 'Ondas viajeras y velocidad de fase.', 'Longitud de onda y frecuencia.'] },
           { title: 'Maxwell', points: ['Unificacion de electricidad y magnetismo.', 'Corriente de desplazamiento en Ampere-Maxwell.', 'Ecuaciones en forma integral y diferencial.'] }
         ],
-        folder: 'inputs/modulo12/',
-        slidesFolder: 'inputs/modulo12/filminas12/',
+        folder: 'inputs/modulos/modulo12/',
+        slidesFolder: 'inputs/modulos/modulo12/filminas12/',
         pdfs: [
-          { label: 'Unidad 12 - Fundamentos de ondas y ecuaciones de Maxwell', file: 'inputs/modulo12/Unidad 12 Fundamentos de ondas y ecuaciones de Maxwell.pdf' }
+          { label: 'Unidad 12 - Fundamentos de ondas y ecuaciones de Maxwell', file: 'inputs/modulos/modulo12/Unidad 12 Fundamentos de ondas y ecuaciones de Maxwell.pdf' }
         ],
         practices: [
-          { title: 'Práctico 14 - Ondas EM y Maxwell', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 14', note: 'Velocidad de propagación, campos en el vacío.' }
+          { title: 'Practico 14 - Ondas EM y Maxwell', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 14', note: 'Velocidad de propagacion, campos en el vacio.' }
         ]
       },
       {
@@ -631,13 +716,13 @@
           { title: 'Interferencia', points: ['Principio de Huygens; franjas por superposicion.', 'Peliculas delgadas y recubrimientos antirreflejo.', 'Interferometro de Michelson.'] },
           { title: 'Difraccion y polarizacion', points: ['Rendijas simples y multiples.', 'Metodos para polarizar y analizar luz.', 'Redes de difraccion y maxima.'] }
         ],
-        folder: 'inputs/modulo13/',
-        slidesFolder: 'inputs/modulo13/filminas13/',
+        folder: 'inputs/modulos/modulo13/',
+        slidesFolder: 'inputs/modulos/modulo13/filminas13/',
         pdfs: [
-          { label: 'Unidad 13 - Optica fisica', file: 'inputs/modulo13/Unidad 13 \u00e0ptica f\u00edsica.pdf' }
+          { label: 'Unidad 13 - Optica fisica', file: 'inputs/modulos/modulo13/Unidad 13 \u00e0ptica f\u00edsica.pdf' }
         ],
         practices: [
-          { title: 'Práctico 15 - Óptica Ondulatoria', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 15', note: 'Franjas de Young, redes de difracción, polarización.' }
+          { title: 'Practico 15 - ptica Ondulatoria', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 15', note: 'Franjas de Young, redes de difraccion, polarizacion.' }
         ]
       }
     ];
@@ -685,6 +770,21 @@
         { title: 'Cap. 15 - Optica Ondulatoria', page: 121 }
       ]
     };
+    const practiceFormulasMap = {
+      u1: 'assets/img/formulas/u1.png',
+      u2: 'assets/img/formulas/u2.png',
+      u3: 'assets/img/formulas/u3.png',
+      u4: 'assets/img/formulas/u4.png',
+      u5: 'assets/img/formulas/u5.png',
+      u6: 'assets/img/formulas/u6.png',
+      u7: 'assets/img/formulas/u7.png',
+      u8: 'assets/img/formulas/u8.png',
+      u9: 'assets/img/formulas/u9.png',
+      u10: 'assets/img/formulas/u10.png',
+      u11: 'assets/img/formulas/u11.png',
+      u12: 'assets/img/formulas/u12.png',
+      u13: 'assets/img/formulas/u13.png'
+    };
 
     const moduleList = document.getElementById('moduleList');
     const titleEl = document.getElementById('moduleTitle');
@@ -706,7 +806,6 @@
     const pdfToggleBtn = document.getElementById('pdfToggleBtn');
     const quizTitleEl = document.getElementById('quizTitle');
     const quizZone = document.getElementById('quizZone');
-    const quizBtn = document.getElementById('quizBtn');
     const gradeBtn = document.getElementById('gradeBtn'); // legacy (oculto)
 
     let currentModule = null;
@@ -720,7 +819,14 @@
       modules.forEach((mod, idx) => {
         const div = document.createElement('div');
         div.className = 'module-item' + (idx === 0 ? ' active' : '');
-        div.textContent = mod.title;
+        const circle = document.createElement('span');
+        circle.className = 'module-circle';
+        circle.textContent = idx + 1;
+        const text = document.createElement('span');
+        text.className = 'module-text';
+        text.textContent = mod.title;
+        div.appendChild(circle);
+        div.appendChild(text);
         div.addEventListener('click', () => selectModule(mod.id));
         moduleList.appendChild(div);
       });
@@ -752,12 +858,25 @@
       pdfToggleBtn.textContent = 'Mostrar PDF';
       renderPdfOptions();
       quizTitleEl.textContent = `Quiz: ${currentModule.title}`;
-      quizZone.innerHTML = '<p style="color:var(--muted);margin:0;">El quiz se cargará automáticamente (aleatorio) o con "Quiz rapido".</p>';
+      quizZone.innerHTML = '<p style="color:var(--muted);margin:0;">El quiz se cargara automaticamente (aleatorio) o con "Quiz rapido".</p>';
       gradeBtn.style.display = 'none';
       currentQuiz = [];
       currentQuestionIndex = 0;
       correctCount = 0;
-      generateQuiz(); // auto-cargar quiz al seleccionar módulo
+      // colapsar bloques teoricos al iniciar/cambiar modulo
+      const slidesBody = document.getElementById('slidesBody');
+      const pdfBody = document.getElementById('pdfBody');
+      const quizBody = document.getElementById('quizBody');
+      slidesBody?.classList.add('hidden');
+      pdfBody?.classList.add('hidden');
+      quizBody?.classList.add('hidden');
+      const slidesCollapseBtn = document.getElementById('slidesCollapse');
+      const pdfCollapseBtn = document.getElementById('pdfCollapse');
+      const quizCollapseBtn = document.getElementById('quizCollapse');
+      if (slidesCollapseBtn) slidesCollapseBtn.textContent = 'Mostrar';
+      if (pdfCollapseBtn) pdfCollapseBtn.textContent = 'Mostrar';
+      if (quizCollapseBtn) quizCollapseBtn.textContent = 'Mostrar';
+      generateQuiz(); // auto-cargar quiz al seleccionar modulo
     }
 
     function renderConcepts() {
@@ -787,15 +906,58 @@
       const head = document.createElement('div');
       head.className = 'practice-head';
       const h = document.createElement('h4');
-      h.textContent = 'Guía práctica en PDF';
+      h.textContent = 'Guia practica en PDF';
       head.appendChild(h);
       const count = document.createElement('span');
       count.className = 'pill';
       count.id = 'practiceCount';
       const chapters = practiceChapterMap[currentModule.id] || [];
-      count.textContent = chapters.length ? `${chapters.length} capítulo(s)` : 'Sin capítulos asignados';
+      count.textContent = chapters.length ? `${chapters.length} capitulo(s)` : 'Sin capitulos asignados';
       head.appendChild(count);
       wrapper.appendChild(head);
+
+      // Bloque de formulas por capitulo (imagen oculta por defecto)
+      const formulaBlock = document.createElement('div');
+      formulaBlock.className = 'card';
+      formulaBlock.style.boxShadow = 'none';
+      formulaBlock.style.border = '1px solid var(--border)';
+
+      const formulaHead = document.createElement('div');
+      formulaHead.className = 'toggle-row';
+      const formulaTitle = document.createElement('h4');
+      formulaTitle.style.margin = '0';
+      formulaTitle.textContent = 'Formulas del capitulo';
+      formulaHead.appendChild(formulaTitle);
+      const formulaToggle = document.createElement('button');
+      formulaToggle.className = 'mini-btn align-right';
+      formulaToggle.textContent = 'Mostrar';
+      formulaHead.appendChild(formulaToggle);
+      formulaBlock.appendChild(formulaHead);
+
+      const formulaBody = document.createElement('div');
+      formulaBody.id = 'practiceFormulaBody';
+      formulaBody.classList.add('hidden');
+      const formulaSrc = practiceFormulasMap[currentModule.id] || '';
+      const formulaImg = document.createElement('img');
+      formulaImg.id = 'practiceFormulaImg';
+      if (formulaSrc) formulaImg.src = formulaSrc;
+      formulaImg.alt = 'Formulas del capitulo';
+      formulaImg.style.width = '100%';
+      formulaImg.style.maxWidth = '1100px';
+      formulaImg.style.objectFit = 'contain';
+      formulaImg.style.borderRadius = '12px';
+      formulaImg.style.border = '1px solid var(--border)';
+      formulaImg.style.background = '#f8fafc';
+      formulaImg.onerror = () => { formulaImg.classList.add('hidden'); };
+      formulaBody.appendChild(formulaImg);
+      formulaBlock.appendChild(formulaBody);
+
+      formulaToggle.addEventListener('click', () => {
+        const hidden = formulaBody.classList.toggle('hidden');
+        formulaToggle.textContent = hidden ? 'Mostrar' : 'Ocultar';
+      });
+
+      wrapper.appendChild(formulaBlock);
 
       const grid = document.createElement('div');
       grid.className = 'practice-grid';
@@ -803,7 +965,7 @@
       if (!chapters.length) {
         const empty = document.createElement('p');
         empty.className = 'practice-empty';
-        empty.textContent = 'No hay capítulos prácticos asociados a este módulo.';
+        empty.textContent = 'No hay capitulos practicos asociados a este modulo.';
         grid.appendChild(empty);
       } else {
         chapters.forEach((ch, idx) => {
@@ -817,7 +979,7 @@
 
           const sub = document.createElement('p');
           sub.className = 'practice-sub';
-          sub.textContent = `Página inicial: ${ch.page}`;
+          sub.textContent = `Pagina inicial: ${ch.page}`;
           card.appendChild(sub);
 
           const toggle = document.createElement('button');
@@ -935,7 +1097,7 @@
         loadSlide(slidesSelect.value);
       } catch (e) {
         slidesStatus.textContent = 'No se pudo listar la carpeta de filminas.';
-        slidesViewer.innerHTML = 'Verifica que ' + folder + ' esté accesible.';
+        slidesViewer.innerHTML = 'Verifica que ' + folder + ' este accesible.';
       }
     }
 
@@ -975,7 +1137,7 @@
         if (idx === 0) opt.selected = true;
         pdfSelect.appendChild(opt);
       });
-      // No cargamos automáticamente; se carga al mostrar.
+      // No cargamos automaticamente; se carga al mostrar.
     }
 
     function loadPdf(path) {
@@ -989,7 +1151,10 @@
 
     function togglePdf() {
       pdfVisible = !pdfVisible;
+      // asegurar que el cuerpo este visible al mostrar
+      const pdfBody = document.getElementById('pdfBody');
       if (pdfVisible) {
+        pdfBody?.classList.remove('hidden');
         pdfViewer.classList.remove('hidden');
         pdfToggleBtn.textContent = 'Ocultar PDF';
         if (pdfSelect.value) loadPdf(pdfSelect.value);
@@ -1026,7 +1191,7 @@
           if (data) break;
         }
         if (!data) {
-          quizZone.innerHTML = `<p style="color:var(--muted);margin:0;">No se encontró quiz. Probé: ${candidates.join(', ')}. Agrega quiz.json o quizU#.json en la carpeta del módulo.</p>`;
+          quizZone.innerHTML = `<p style="color:var(--muted);margin:0;">No se encontro quiz. Probe: ${candidates.join(', ')}. Agrega quiz.json o quizU#.json en la carpeta del modulo.</p>`;
           gradeBtn.style.display = 'none';
           return;
         }
@@ -1069,9 +1234,9 @@
           ? (item.correct ? 'Correcta. ' : (item.selected === null ? 'Mostrada sin respuesta. ' : 'Incorrecta. ')) + (item.explanation || '')
           : '';
 
-        quizZone.innerHTML = `
-          <div class="quiz-item">
-            <div style="font-weight:700;color:var(--accent);margin-bottom:6px;">${progress}</div>
+      quizZone.innerHTML = `
+        <div class="quiz-item">
+          <div style="font-weight:700;color:var(--accent);margin-bottom:6px;">${progress}</div>
           <div class="quiz-question">${item.q}</div>
           <div class="options" id="optionsBox"></div>
           <div id="feedback" class="${item.revealed ? '' : 'hidden'}" style="margin-top:8px;font-weight:700;color:${item.correct ? '#15803d' : '#dc2626'};">
@@ -1079,8 +1244,9 @@
           </div>
           <div class="toggle-row" style="margin-top:10px;gap:8px;">
             <button id="respondBtn" ${item.revealed ? 'disabled' : ''}>Responder</button>
-            <button id="revealBtn" ${item.revealed ? 'disabled' : ''} style="background:#0f172a;">Mostrar respuesta</button>
             <button id="nextBtn" ${item.revealed ? '' : 'disabled'}>${btnNextLabel}</button>
+            <button id="revealBtn" ${item.revealed ? 'disabled' : ''} class="mini-btn">Mostrar respuesta</button>
+            <button id="quizBtn" class="mini-btn">Regenerar test</button>
           </div>
         </div>
       `;
@@ -1107,7 +1273,7 @@
         if (item.revealed) return;
         if (item.selected === null) {
           const fb = document.getElementById('feedback');
-          fb.textContent = 'Elige una opción o usa "Mostrar respuesta".';
+          fb.textContent = 'Elige una opcion o usa "Mostrar respuesta".';
           fb.classList.remove('hidden');
           fb.style.color = '#dc2626';
           return;
@@ -1138,19 +1304,42 @@
           quizZone.innerHTML = `<p style="margin:0;font-weight:700;">Completado: ${correctCount} de ${total} correctas.</p>`;
         }
       });
+
+      const regenBtn = document.getElementById('quizBtn');
+      if (regenBtn) regenBtn.addEventListener('click', generateQuiz);
     }
 
-    quizBtn.addEventListener('click', generateQuiz);
-    gradeBtn.style.display = 'none'; // no usamos el botón masivo ahora
+    document.getElementById('summaryToggle').addEventListener('click', () => {
+      const body = document.getElementById('summaryBody');
+      const hidden = body.classList.toggle('hidden');
+      document.getElementById('summaryToggle').textContent = hidden ? 'Mostrar' : 'Ocultar';
+    });
+    document.getElementById('slidesCollapse').addEventListener('click', () => {
+      const body = document.getElementById('slidesBody');
+      const hidden = body.classList.toggle('hidden');
+      document.getElementById('slidesCollapse').textContent = hidden ? 'Mostrar' : 'Ocultar';
+    });
+    document.getElementById('quizCollapse').addEventListener('click', () => {
+      const body = document.getElementById('quizBody');
+      const hidden = body.classList.toggle('hidden');
+      document.getElementById('quizCollapse').textContent = hidden ? 'Mostrar' : 'Ocultar';
+    });
+    gradeBtn.style.display = 'none'; // no usamos el boton masivo ahora
     pdfSelect.addEventListener('change', (e) => loadPdf(e.target.value));
     pdfToggleBtn.addEventListener('click', togglePdf);
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => switchTab(btn.dataset.tab));
     });
     slidesSelect.addEventListener('change', (e) => loadSlide(e.target.value));
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      const layout = document.querySelector('.layout');
+      const collapsed = layout.classList.toggle('collapsed');
+      document.getElementById('toggleSidebar').ariaLabel = collapsed ? 'Mostrar modulos' : 'Ocultar modulos';
+    });
 
       renderModules();
       selectModule(modules[0].id);
   </script>
 </body>
 </html>
+

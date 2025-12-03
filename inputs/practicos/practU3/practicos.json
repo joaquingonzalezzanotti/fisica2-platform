@@ -1,17 +1,17 @@
-{
+﻿{
   "moduleId": "u3",
   "title": "Practicos Unidad 3",
   "exercises": [
     {
       "id": "u3-e01",
       "title": "Campo en el punto medio de dos cargas",
-      "statement": "Hay una carga +3 µC en x = 0 m y una carga -3 µC en x = 0.20 m. ¿Cual es el campo electrico en el punto medio?",
+      "statement": "Hay una carga +3 ÂµC en x = 0 m y una carga -3 ÂµC en x = 0.20 m. Â¿Cual es el campo electrico en el punto medio?",
       "hint": "Calcula E de cada carga a 0.10 m. El campo del positivo apunta a la derecha; el de la carga negativa tambien apunta hacia ella (derecha).",
-      "solution": "E de cada carga: k·q/r² ≈ 8.99e9·3e-6/0.1² ≈ 2.70×10^6 N/C. Se suman: E ≈ 5.4×10^6 N/C a la derecha.",
+      "solution": "E de cada carga: kÂ·q/rÂ² â‰ˆ 8.99e9Â·3e-6/0.1Â² â‰ˆ 2.70Ã—10^6 N/C. Se suman: E â‰ˆ 5.4Ã—10^6 N/C a la derecha.",
       "tags": ["coulomb", "superposicion", "campo"],
       "difficulty": "media",
       "images": [
-        "inputs/modulo3/filminas3/3.Electroestatica.png"
+        "inputs/modulos/modulo3/filminas3/3.Electroestatica.png"
       ],
       "source": {
         "pdf": "inputs/Practico Fisica 2 2023.pdf",
@@ -22,9 +22,9 @@
     {
       "id": "u3-e02",
       "title": "Linea infinita y Ley de Gauss",
-      "statement": "Una linea de carga infinita tiene densidad lineal λ = 3.0 µC/m. Determina E a 5.0 cm del eje usando Gauss.",
-      "hint": "E·(2πrL) = λL/ε0 ⇒ E = λ/(2π ε0 r).",
-      "solution": "E = 3.0e-6 / (2π·8.85e-12·0.05) ≈ 1.1×10^6 N/C, radial hacia afuera.",
+      "statement": "Una linea de carga infinita tiene densidad lineal Î» = 3.0 ÂµC/m. Determina E a 5.0 cm del eje usando Gauss.",
+      "hint": "EÂ·(2Ï€rL) = Î»L/Îµ0 â‡’ E = Î»/(2Ï€ Îµ0 r).",
+      "solution": "E = 3.0e-6 / (2Ï€Â·8.85e-12Â·0.05) â‰ˆ 1.1Ã—10^6 N/C, radial hacia afuera.",
       "tags": ["gauss", "simetria", "campo"],
       "difficulty": "media",
       "images": [],
@@ -36,3 +36,4 @@
     }
   ]
 }
+

@@ -1,0 +1,380 @@
+{
+"moduleId": "u9",
+"title": "Quiz Unidad 9 - Inducción electromagnética ",
+"questions": [
+{
+"question": "Según los experimentos de Faraday con una espira y un imán, ¿cuándo se observa una corriente inducida en la espira?",
+"options": [
+"Solo cuando el imán permanece fijo frente a la espira",
+"Cuando hay movimiento relativo entre el imán y la espira que cambia el flujo magnético",
+"Únicamente cuando el imán se aleja de la espira",
+"Únicamente cuando el imán se acerca a la espira"
+],
+"answer": 1,
+"explanation": "La corriente inducida aparece cuando varía el flujo magnético a través de la espira, es decir, cuando hay movimiento relativo entre imán y espira que modifica B o la geometría del enlace de flujo."
+},
+{
+"question": "La ley de Faraday para la fuerza electromotriz inducida en una bobina de N espiras se expresa como:",
+"options": [
+"ε = N · Φ_B",
+"ε = − dΦ_B/dt",
+"ε = − N · dΦ_B/dt",
+"ε = − Φ_B/dN"
+],
+"answer": 2,
+"explanation": "Para una bobina de N espiras, la ley de Faraday indica que la fem inducida total es ε = − N · dΦ_B/dt, donde Φ_B es el flujo magnético enlazado por una espira."
+},
+{
+"question": "¿Cuál es la expresión del flujo magnético Φ_B a través de una superficie encerrada por una espira cuando el campo magnético es uniforme?",
+"options": [
+"Φ_B = B · A · sen θ",
+"Φ_B = B · A · cos θ",
+"Φ_B = B / A · cos θ",
+"Φ_B = B² · A"
+],
+"answer": 1,
+"explanation": "Para un campo uniforme, el flujo magnético es Φ_B = B · A · cos θ, donde θ es el ángulo entre el campo B y la normal a la superficie A."
+},
+{
+"question": "La unidad SI del flujo magnético Φ_B es:",
+"options": [
+"Tesla (T)",
+"Volt (V)",
+"Weber (Wb)",
+"Henry (H)"
+],
+"answer": 2,
+"explanation": "El flujo magnético tiene unidades de [B][A] = T·m². Esa combinación se denomina weber (Wb). 1 Wb = 1 T·m²."
+},
+{
+"question": "Para que la fuerza electromotriz inducida ε en una espira sea distinta de cero, según la ley de Faraday, es necesario que:",
+"options": [
+"El campo magnético B sea constante y el área A fija",
+"Varíe el flujo magnético, ya sea porque cambia B, A o el ángulo entre B y la normal a la espira",
+"La espira sea de material ferromagnético",
+"La espira tenga resistencia nula"
+],
+"answer": 1,
+"explanation": "La fem inducida es proporcional a la rapidez de cambio del flujo magnético Φ_B. Este puede variar si cambia la magnitud de B, el área efectiva A o el ángulo entre B y la normal a la espira."
+},
+{
+"question": "Una barra conductora de longitud ℓ se mueve con velocidad v perpendicular a un campo magnético uniforme B. ¿Cuál es el módulo de la diferencia de potencial inducida entre sus extremos?",
+"options": [
+"ΔV = B · v / ℓ",
+"ΔV = B · ℓ / v",
+"ΔV = v · B · ℓ",
+"ΔV = v / (B · ℓ)"
+],
+"answer": 2,
+"explanation": "Cuando la barra se mueve perpendicular a B, aparece un campo eléctrico interno E = vB y la fem de movimiento entre sus extremos es ΔV = E · ℓ = v B ℓ."
+},
+{
+"question": "En el circuito con una barra conductora que se desliza sobre dos rieles formando un lazo cerrado de área variable en un campo B uniforme, la corriente inducida en el lazo viene dada por:",
+"options": [
+"I = B · ℓ · v · R",
+"I = B · ℓ · v / R",
+"I = R / (B · ℓ · v)",
+"I = B² · ℓ² · v² / R"
+],
+"answer": 1,
+"explanation": "La fem de movimiento en la barra es |ε| = B ℓ v. Como el circuito tiene una resistencia R, la corriente inducida es I = |ε|/R = B ℓ v / R."
+},
+{
+"question": "En el circuito con barra deslizante sometida a una fuerza externa F_ap, ¿cuál es el origen de la energía que se disipa por efecto Joule en la resistencia R?",
+"options": [
+"La energía almacenada en el campo eléctrico entre los rieles",
+"La energía interna de la barra",
+"El trabajo realizado por la fuerza externa que mantiene el movimiento de la barra",
+"La energía proporcionada por una batería ideal"
+],
+"answer": 2,
+"explanation": "No hay batería en el circuito: la energía eléctrica disipada en la resistencia proviene del trabajo mecánico realizado por la fuerza externa que mueve la barra contra la fuerza magnética."
+},
+{
+"question": "La ley de Lenz establece que la corriente inducida en una espira:",
+"options": [
+"Produce siempre un campo magnético en el mismo sentido que el campo externo",
+"Produce un campo magnético que se opone al cambio del flujo magnético que la origina",
+"Es independiente del sentido del cambio del flujo magnético",
+"Solo aparece si el flujo magnético es creciente"
+],
+"answer": 1,
+"explanation": "La ley de Lenz indica que la corriente inducida circula de manera que el campo magnético asociado se opone al cambio de flujo que la genera, garantizando la conservación de la energía."
+},
+{
+"question": "En un generador de corriente alterna, una bobina de N espiras y área A gira con rapidez angular ω en un campo magnético uniforme B. El flujo magnético instantáneo a través de la bobina es:",
+"options": [
+"Φ_B(t) = B A sen(ω t)",
+"Φ_B(t) = N B A cos(ω t)",
+"Φ_B(t) = B A cos(ω t)",
+"Φ_B(t) = N B A sen(ω t)"
+],
+"answer": 2,
+"explanation": "Si θ es el ángulo entre B y la normal a la espira, entonces θ = ω t y el flujo es Φ_B = B A cos θ = B A cos(ω t). La dependencia en N aparece en la fem total, no en el flujo por vuelta."
+},
+{
+"question": "La fem inducida en una bobina de N espiras que gira en un campo magnético uniforme con rapidez angular ω se escribe como:",
+"options": [
+"ε(t) = N A B ω cos(ω t)",
+"ε(t) = N A B ω sen(ω t)",
+"ε(t) = A B ω sen(ω t)",
+"ε(t) = N A B sen(ω t)"
+],
+"answer": 1,
+"explanation": "A partir de Φ_B = B A cos(ω t) y la ley de Faraday, ε = −N dΦ_B/dt = N A B ω sen(ω t), despreciando el signo global. El máximo valor es ε_max = N A B ω."
+},
+{
+"question": "En el generador de corriente alterna ideal, el valor máximo de la fem inducida ε(t) ocurre cuando:",
+"options": [
+"ω t = 0° o 180°",
+"ω t = 45° o 225°",
+"ω t = 90° o 270°",
+"ω t = 360°"
+],
+"answer": 2,
+"explanation": "Si ε(t) = ε_max sen(ω t), la fem es máxima en valor absoluto cuando sen(ω t) = ±1, lo que ocurre para ω t = 90° y 270°."
+},
+{
+"question": "En un generador de corriente continua con colector (anillos partidos), la finalidad del colector es:",
+"options": [
+"Invertir el sentido de giro del rotor",
+"Mantener siempre la misma polaridad de tensión en los bornes externos, obteniendo una tensión unidireccional pulsante",
+"Aumentar la frecuencia de la tensión entregada",
+"Reducir el campo magnético del estator"
+],
+"answer": 1,
+"explanation": "El colector invierte las conexiones de la bobina giratoria al circuito externo en el momento adecuado, de modo que la polaridad de la tensión en los bornes externos se mantenga siempre con el mismo signo."
+},
+{
+"question": "El fenómeno por el cual un circuito con corriente variable en el tiempo genera una fem inducida en sí mismo se denomina:",
+"options": [
+"Inductancia mutua",
+"Autoinducción",
+"Rectificación",
+"Resonancia"
+],
+"answer": 1,
+"explanation": "Cuando el propio cambio de la corriente de un circuito produce un cambio de flujo magnético que induce una fem en el mismo circuito, se habla de autoinducción."
+},
+{
+"question": "La fem autoinducida ε_L en una bobina de inductancia L recorrida por una corriente I(t) se expresa como:",
+"options": [
+"ε_L = L I",
+"ε_L = L dI/dt",
+"ε_L = − L dI/dt",
+"ε_L = − I / L"
+],
+"answer": 2,
+"explanation": "La fem autoinducida es proporcional a la rapidez de cambio de la corriente y se opone a dicho cambio: ε_L = − L · dI/dt."
+},
+{
+"question": "Para una bobina de N vueltas, la inductancia L puede escribirse como:",
+"options": [
+"L = N Φ_B / I",
+"L = Φ_B / (N I)",
+"L = N I / Φ_B",
+"L = Φ_B / I"
+],
+"answer": 0,
+"explanation": "De la definición, N Φ_B es el flujo total enlazado por la bobina. La inductancia es L = N Φ_B / I, asumiendo un comportamiento lineal entre flujo y corriente."
+},
+{
+"question": "La unidad SI de la inductancia L es el henry (H). ¿Cuál de las siguientes equivalencias es correcta?",
+"options": [
+"1 H = 1 V·A",
+"1 H = 1 V·s / A",
+"1 H = 1 A / (V·s)",
+"1 H = 1 W / A"
+],
+"answer": 1,
+"explanation": "A partir de ε_L = − L dI/dt, se tiene que L tiene unidades de V·s/A. Esta unidad recibe el nombre de henry (H)."
+},
+{
+"question": "La inductancia de un solenoide largo de N vueltas, longitud ℓ, área de sección transversal A y núcleo de aire viene dada por:",
+"options": [
+"L = μ₀ N A / ℓ",
+"L = μ₀ N² A / ℓ",
+"L = μ₀ A / (N ℓ)",
+"L = μ₀ N² ℓ / A"
+],
+"answer": 1,
+"explanation": "Para un solenoide ideal con núcleo de aire, el campo interno es B = μ₀ N I / ℓ y el flujo por vuelta es Φ_B = B A. El flujo total N Φ_B conduce a L = μ₀ N² A / ℓ."
+},
+{
+"question": "La inductancia mutua M₁₂ entre dos bobinas se define como:",
+"options": [
+"M₁₂ = N₁ Φ₁₂ / I₂",
+"M₁₂ = N₂ Φ₁₂ / I₁",
+"M₁₂ = N₁ N₂ / Φ₁₂",
+"M₁₂ = Φ₁₂ / (N₂ I₁)"
+],
+"answer": 1,
+"explanation": "Si Φ₁₂ es el flujo que atraviesa la bobina 2 debido a la corriente I₁ en la bobina 1, la inductancia mutua se define como M₁₂ = N₂ Φ₁₂ / I₁."
+},
+{
+"question": "Respecto a las constantes de inductancia mutua M₁₂ y M₂₁ entre dos bobinas acopladas magnéticamente, es correcto afirmar que:",
+"options": [
+"M₁₂ y M₂₁ son en general diferentes",
+"M₁₂ = M₂₁ = M",
+"M₁₂ = − M₂₁",
+"M₁₂ = 0 si la corriente es constante"
+],
+"answer": 1,
+"explanation": "Puede demostrarse que, para dos bobinas acopladas, la inductancia mutua es simétrica: M₁₂ = M₂₁ = M, y depende solo de la geometría y orientación relativa de los circuitos."
+},
+{
+"question": "En un circuito serie formado por una fuente ideal de fem ε, un resistor R y un inductor de inductancia L, la ecuación de mallas (segunda ley de Kirchhoff) durante la carga del circuito (interruptor cerrado sobre la fuente) es:",
+"options": [
+"ε + I R + L dI/dt = 0",
+"ε − I R + L dI/dt = 0",
+"ε − I R − L dI/dt = 0",
+"I R − ε − L dI/dt = 0"
+],
+"answer": 2,
+"explanation": "Al aplicar la ley de Kirchhoff y tomando la convención de signos usual, se obtiene ε − I R − L dI/dt = 0 durante el crecimiento de la corriente en el circuito RL."
+},
+{
+"question": "La corriente I(t) en un circuito RL serie durante el proceso de carga, partiendo de I(0)=0, viene dada por:",
+"options": [
+"I(t) = (ε/R) e^{−t/τ}",
+"I(t) = (ε/R) (1 − e^{−t/τ})",
+"I(t) = (ε/L) (1 − e^{−t/τ})",
+"I(t) = (ε/R) (1 + e^{−t/τ})"
+],
+"answer": 1,
+"explanation": "La solución de la ecuación diferencial del circuito RL es I(t) = (ε/R) (1 − e^{−t/τ}), donde τ = L/R es la constante de tiempo. La corriente crece exponencialmente desde 0 hasta el valor final ε/R."
+},
+{
+"question": "En un circuito RL serie, la constante de tiempo τ = L/R representa:",
+"options": [
+"El tiempo que tarda la corriente en alcanzar exactamente su valor final ε/R",
+"El tiempo en el que la corriente se hace nula",
+"El tiempo característico en el que la corriente alcanza aproximadamente el 63 % de su valor final",
+"El período de oscilación del circuito"
+],
+"answer": 2,
+"explanation": "En un circuito RL, a t = τ la corriente alcanza I(τ) ≈ 0,632 (ε/R). Por ello, τ = L/R es el tiempo característico asociado al cambio de corriente."
+},
+{
+"question": "La energía almacenada en el campo magnético de un inductor de inductancia L recorrido por una corriente I es:",
+"options": [
+"U = L I",
+"U = (1/2) L I",
+"U = (1/2) L I²",
+"U = L I²"
+],
+"answer": 2,
+"explanation": "Al integrar la potencia asociada al inductor se obtiene que la energía almacenada en su campo magnético es U = (1/2) L I²."
+},
+{
+"question": "La densidad de energía magnética (energía por unidad de volumen) en una región donde existe un campo magnético uniforme B en el vacío es:",
+"options": [
+"u_B = B² / (2 μ₀)",
+"u_B = μ₀ B² / 2",
+"u_B = B / (2 μ₀)",
+"u_B = μ₀ B / 2"
+],
+"answer": 0,
+"explanation": "A partir del caso del solenoide ideal se obtiene que la densidad de energía magnética es u_B = B² / (2 μ₀), resultado extensible a cualquier región con campo magnético."
+},
+{
+"question": "En el circuito RL alimentado por una fuente ideal, la potencia I ε entregada por la fuente se reparte en:",
+"options": [
+"Solo potencia disipada en la resistencia R",
+"Potencia disipada en R y potencia almacenada transitoriamente en el campo magnético del inductor",
+"Solo potencia almacenada en el inductor",
+"Potencia disipada en el inductor, que actúa como una resistencia pura"
+],
+"answer": 1,
+"explanation": "La fuente entrega potencia I ε que se descompone en potencia disipada en la resistencia (I² R) y potencia asociada a la variación de la energía magnética del inductor (L I dI/dt)."
+},
+{
+"question": "[ORAL] Describa cualitativamente el experimento básico de Faraday con una espira y un imán y explique cómo se relaciona con la ley de Faraday-Lenz.",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "Se espera que el estudiante describa una espira conectada a un galvanómetro y un imán que se acerca y se aleja de la espira. Debe explicar que la aguja solo se desvía cuando hay movimiento relativo (variación del flujo magnético) y que el sentido de la corriente se invierte al invertir el movimiento. Luego debe relacionarlo con la ley de Faraday (ε proporcional a − dΦ_B/dt) y con la ley de Lenz (el sentido de la corriente se opone al cambio de flujo)."
+},
+{
+"question": "[ORAL] Explique el funcionamiento del circuito formado por una barra conductora que se desliza sobre dos rieles en un campo magnético uniforme y analice el balance de energía involucrado.",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "El estudiante debe describir la barra que se mueve con velocidad v sobre rieles, generando una fem de movimiento ε = B ℓ v y una corriente I = ε/R en el circuito. Debe explicar que la fuerza magnética sobre la barra se opone al movimiento y que una fuerza externa debe realizar trabajo para mantener velocidad constante. Ese trabajo mecánico se transforma en energía eléctrica, que finalmente se disipa como calor en la resistencia (efecto Joule), cumpliendo la conservación de la energía."
+},
+{
+"question": "[ORAL] Describa el principio de funcionamiento de un generador de corriente alterna y deduzca cualitativamente la forma temporal de la fem inducida.",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "La respuesta debe mencionar una bobina que gira en un campo magnético uniforme, accionada por una fuente de trabajo mecánico (turbina hidráulica, de vapor, etc.). El estudiante debe explicar que el flujo magnético varía como Φ_B = B A cos(ω t) y que, aplicando la ley de Faraday, la fem resultante es sinusoidal en el tiempo, ε(t) ∝ sen(ω t), con valor máximo ε_max = N A B ω. También debe indicar que la frecuencia de la tensión depende de la rapidez angular de giro."
+},
+{
+"question": "[ORAL] Compare cualitativamente un generador de corriente alterna con un generador de corriente continua que utiliza colector (anillos partidos).",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "Se espera que el estudiante indique que ambos dispositivos se basan en una bobina girando en un campo magnético, pero que en el generador de corriente alterna se usan anillos colectores completos y se obtiene una fem alterna senoidal, mientras que en el generador de corriente continua se usan anillos partidos (colector) que invierten las conexiones en cada semivuelta, de modo que la tensión externa es unidireccional y pulsante. Puede mencionarse que al usar varias bobinas desfasadas se reduce el rizado de la tensión continua."
+},
+{
+"question": "[ORAL] Defina autoinducción y explique el significado físico de la inductancia L de un circuito.",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "El estudiante debe definir autoinducción como el fenómeno por el cual una corriente variable en un circuito genera una fem ε_L = − L dI/dt en el mismo circuito debido al flujo magnético que él mismo crea. Debe interpretar L como una medida de la oposición al cambio de corriente (análogo inercial a la masa en mecánica): cuanto mayor es L, más difícil es variar rápidamente la corriente, ya que se requiere mayor fem para un mismo dI/dt. También puede mencionar que L depende de la geometría del circuito y del medio magnético."
+},
+{
+"question": "[ORAL] Explique el concepto de inductancia mutua entre dos bobinas y relacione este fenómeno con el funcionamiento cualitativo de un transformador.",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "La respuesta debe introducir la inductancia mutua como la capacidad de una bobina para inducir una fem en otra debido a la variación de su corriente: ε₂ = − M dI₁/dt, donde M depende de la geometría y acoplamiento de las bobinas. Para el transformador ideal, una corriente alterna en el primario genera un flujo variable en el núcleo que enlaza el secundario, induciendo en él una fem proporcional al número de vueltas. Debe mencionarse que la relación de tensiones está dada por V₂/V₁ ≈ N₂/N₁ y que el transformador permite adaptar niveles de tensión y corriente en sistemas de potencia."
+},
+{
+"question": "[ORAL] Describa el comportamiento temporal de la corriente en un circuito RL serie al cerrar y al abrir el interruptor, indicando el papel de la constante de tiempo τ.",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "Se espera que el estudiante explique que, al cerrar el interruptor, la corriente no salta instantáneamente a su valor final ε/R, sino que crece de forma exponencial según I(t) = (ε/R)(1 − e^{−t/τ}), con τ = L/R. Al cabo de un tiempo del orden de varias τ, la corriente se aproxima al valor estacionario. Al abrir el interruptor, la corriente decae exponencialmente desde I_i hasta cero como I(t) = I_i e^{−t/τ}. Debe enfatizarse que la inductancia se opone a cambios bruscos de corriente y que τ fija la escala temporal de estos cambios."
+},
+{
+"question": "[ORAL] Explique cómo se obtiene la expresión de la energía almacenada en un inductor U = (1/2) L I² y cómo se llega a la densidad de energía magnética u_B = B²/(2 μ₀).",
+"options": [
+"Respuesta: ver explicación",
+"Sin respuesta",
+"Sin respuesta",
+"Sin respuesta"
+],
+"answer": 0,
+"explanation": "La respuesta debe partir del balance de potencia en un circuito RL: la potencia de la fuente I ε se reparte en I² R y L I dI/dt. Al identificar L I dI/dt con dU/dt y luego integrar desde I = 0 hasta I, se obtiene U = ∫ L I dI = (1/2) L I². Para un solenoide ideal se usa la expresión de L en función de su geometría y del campo B interno (B = μ₀ n I) para escribir U en términos de B y del volumen V, llegándose a U = (B² / (2 μ₀)) V y por tanto a la densidad u_B = U/V = B²/(2 μ₀)."
+}
+]
+}
