@@ -1,0 +1,381 @@
+{
+  "moduleId": "u5",
+  "title": "Quiz Unidad 5 - Propiedades eléctricas de la materia y capacidad eléctrica",
+  "questions": [
+    {
+      "question": "¿Cuál es la expresión que define la capacitancia de un capacitor ideal?",
+      "options": [
+        "C = Q / ΔV",
+        "C = ΔV / Q",
+        "C = Q · ΔV",
+        "C = 1 / (Q · ΔV)"
+      ],
+      "answer": 0,
+      "explanation": "La capacitancia se define como la razón entre la magnitud de la carga en cualquiera de los conductores y la magnitud de la diferencia de potencial entre ellos: C = Q / ΔV."
+    },
+    {
+      "question": "¿De qué depende la capacitancia de un capacitor ideal según la definición del texto?",
+      "options": [
+        "Solo de la carga Q almacenada",
+        "Solo de la diferencia de potencial ΔV",
+        "De las características geométricas y del espacio entre los conductores",
+        "De la resistencia interna del material conductor"
+      ],
+      "answer": 2,
+      "explanation": "La capacitancia no depende ni de Q ni de ΔV, sino del tamaño de los conductores, la distancia entre ellos y las propiedades del espacio (medio) que los separa."
+    },
+    {
+      "question": "¿Cuál es la unidad del Sistema Internacional (SI) para la capacitancia?",
+      "options": [
+        "Coulomb (C)",
+        "Volt (V)",
+        "Faradio (F)",
+        "Ohm (Ω)"
+      ],
+      "answer": 2,
+      "explanation": "La unidad de capacitancia en el SI es el faradio (F), en honor a Michael Faraday. Un faradio equivale a un coulomb por volt."
+    },
+    {
+      "question": "En la práctica, ¿en qué rango típico se encuentran las capacitancias de los capacitores comerciales mencionados en el texto?",
+      "options": [
+        "Entre kilofarads y megafarads",
+        "Entre microfarads y picofarads",
+        "Entre farads y kilofarads",
+        "Entre nanofarads y henrios"
+      ],
+      "answer": 1,
+      "explanation": "Se indica que los dispositivos representativos tienen capacitancias entre microfarads (10⁻⁶ F) y picofarads (10⁻¹² F)."
+    },
+    {
+      "question": "Para un capacitor de placas paralelas en el vacío, ¿cuál es la expresión de su capacitancia?",
+      "options": [
+        "C = ε0 · d / A",
+        "C = ε0 · A / d",
+        "C = A / (ε0 · d)",
+        "C = d / (ε0 · A)"
+      ],
+      "answer": 1,
+      "explanation": "Para placas paralelas separadas una distancia d y de área A, la capacitancia es C = ε0 · A / d."
+    },
+    {
+      "question": "En un capacitor de placas paralelas en el vacío, si se duplica el área de las placas A y se mantiene constante la distancia d, ¿qué sucede con la capacitancia?",
+      "options": [
+        "La capacitancia se duplica",
+        "La capacitancia se reduce a la mitad",
+        "La capacitancia no cambia",
+        "La capacitancia se vuelve cero"
+      ],
+      "answer": 0,
+      "explanation": "Como C = ε0 · A / d, si A se duplica y d permanece constante, la capacitancia se duplica."
+    },
+    {
+      "question": "En un capacitor de placas paralelas en el vacío, si se reduce la distancia entre placas d (sin producir descarga), ¿qué ocurre con la capacitancia?",
+      "options": [
+        "La capacitancia aumenta",
+        "La capacitancia disminuye",
+        "La capacitancia se mantiene constante",
+        "La capacitancia se hace negativa"
+      ],
+      "answer": 0,
+      "explanation": "C = ε0 · A / d, por lo que al disminuir d, la relación A/d aumenta y la capacitancia aumenta."
+    },
+    {
+      "question": "¿Cuál es la expresión de la capacitancia de una esfera conductora aislada de radio a?",
+      "options": [
+        "C = 4 π ε0 a",
+        "C = ε0 / (4 π a)",
+        "C = a / (4 π ε0)",
+        "C = 4 π a / ε0"
+      ],
+      "answer": 0,
+      "explanation": "De la relación entre potencial y carga para una esfera cargada se obtiene C = 4 π ε0 a, proporcional al radio e independiente de la carga."
+    },
+    {
+      "question": "En el capacitor cilíndrico ideal descrito en el texto, ¿cómo depende la capacitancia C de la longitud l de los cilindros?",
+      "options": [
+        "Es inversamente proporcional a l",
+        "Es directamente proporcional a l",
+        "Es independiente de l",
+        "Es proporcional a l²"
+      ],
+      "answer": 1,
+      "explanation": "La expresión C = l / (2 ke ln(b/a)) muestra que la capacitancia es directamente proporcional a la longitud l de los cilindros."
+    },
+    {
+      "question": "En un conjunto de capacitores conectados en paralelo, ¿qué magnitud es igual para todos los capacitores?",
+      "options": [
+        "La carga Q en cada capacitor",
+        "La diferencia de potencial ΔV en cada capacitor",
+        "La energía almacenada en cada capacitor",
+        "La densidad de carga superficial en cada placa"
+      ],
+      "answer": 1,
+      "explanation": "En la conexión en paralelo todos los capacitores están sometidos a la misma diferencia de potencial ΔV, mientras que las cargas pueden ser diferentes."
+    },
+    {
+      "question": "Para una combinación de capacitores en paralelo, ¿cómo se calcula la capacitancia equivalente Ceq?",
+      "options": [
+        "1 / Ceq = 1 / C1 + 1 / C2 + ...",
+        "Ceq = C1 + C2 + C3 + ...",
+        "Ceq = (C1 · C2) / (C1 + C2)",
+        "Ceq = promedio aritmético de las capacitancias"
+      ],
+      "answer": 1,
+      "explanation": "En paralelo la capacitancia equivalente es la suma directa: Ceq = C1 + C2 + C3 + ... ."
+    },
+    {
+      "question": "En un conjunto de capacitores conectados en serie, ¿qué magnitud es la misma en todos ellos?",
+      "options": [
+        "La diferencia de potencial ΔV en cada capacitor",
+        "La carga Q almacenada en cada capacitor",
+        "La capacitancia de cada capacitor",
+        "La energía almacenada en cada capacitor"
+      ],
+      "answer": 1,
+      "explanation": "En serie la carga Q es la misma en todos los capacitores; las diferencias de potencial se reparten."
+    },
+    {
+      "question": "Para una combinación de capacitores en serie, ¿cómo se relaciona la capacitancia equivalente Ceq con las capacitancias individuales?",
+      "options": [
+        "Ceq = C1 + C2 + C3 + ...",
+        "1 / Ceq = 1 / C1 + 1 / C2 + 1 / C3 + ...",
+        "Ceq = (C1 · C2 · C3)^(1/3)",
+        "Ceq es el máximo de las capacitancias individuales"
+      ],
+      "answer": 1,
+      "explanation": "En serie se cumple 1 / Ceq = 1 / C1 + 1 / C2 + 1 / C3 + ... ."
+    },
+    {
+      "question": "En una combinación de capacitores en serie, la capacitancia equivalente Ceq es:",
+      "options": [
+        "Mayor que la mayor de las capacitancias individuales",
+        "Igual a la suma de todas las capacitancias",
+        "Menor que la menor de las capacitancias individuales",
+        "Igual al promedio de las capacitancias individuales"
+      ],
+      "answer": 2,
+      "explanation": "Se indica que la capacitancia equivalente en serie resulta siempre menor que la menor de las capacitancias del agrupamiento."
+    },
+    {
+      "question": "¿Cuál de las siguientes expresiones es correcta para la energía almacenada U en un capacitor?",
+      "options": [
+        "U = Q² / (2 C)",
+        "U = Q · C",
+        "U = C / (2 Q²)",
+        "U = 2 C (ΔV)²"
+      ],
+      "answer": 0,
+      "explanation": "Una de las formas equivalentes de la energía almacenada es U = Q² / (2 C). También son válidas U = 1/2 Q ΔV y U = 1/2 C (ΔV)²."
+    },
+    {
+      "question": "La energía almacenada en un capacitor de placas paralelas ocupa principalmente:",
+      "options": [
+        "El volumen del material conductor de las placas",
+        "El campo eléctrico en la región entre las placas",
+        "La batería que lo alimenta",
+        "Las conexiones metálicas externas"
+      ],
+      "answer": 1,
+      "explanation": "La energía se almacena en el campo eléctrico entre las placas; la densidad de energía se define sobre ese volumen."
+    },
+    {
+      "question": "La densidad de energía eléctrica uE asociada a un campo eléctrico uniforme E en el vacío se expresa como:",
+      "options": [
+        "uE = ε0 E²",
+        "uE = 1/2 ε0 E²",
+        "uE = E² / (2 ε0)",
+        "uE = 1/2 E / ε0"
+      ],
+      "answer": 1,
+      "explanation": "A partir del capacitor de placas paralelas se obtiene uE = U / (A d) = 1/2 ε0 E², expresión de validez general."
+    },
+    {
+      "question": "¿Qué es un dieléctrico en el contexto de los capacitores?",
+      "options": [
+        "Un material conductor perfecto que disminuye la capacitancia",
+        "Un material no conductor que se utiliza entre las placas de un capacitor",
+        "Un tipo especial de batería recargable",
+        "Un dispositivo que mide la diferencia de potencial"
+      ],
+      "answer": 1,
+      "explanation": "Un dieléctrico es un material no conductor, como hule, vidrio o papel encerado, que se coloca entre las placas del capacitor."
+    },
+    {
+      "question": "Según el texto, una de las propiedades importantes de insertar un dieléctrico entre las placas de un capacitor es:",
+      "options": [
+        "Disminuir la capacitancia",
+        "Disminuir el voltaje máximo de operación",
+        "Incrementar la capacitancia y el voltaje máximo de operación",
+        "Anular el campo eléctrico entre las placas"
+      ],
+      "answer": 2,
+      "explanation": "El dieléctrico incrementa la capacitancia, incrementa el voltaje máximo de operación y puede servir como soporte mecánico para acercar las placas."
+    },
+    {
+      "question": "En el experimento descrito, para un capacitor cargado y luego desconectado de la batería, al insertar un dieléctrico se observa que:",
+      "options": [
+        "La diferencia de potencial entre placas se mantiene constante",
+        "La diferencia de potencial disminuye y la capacitancia aumenta",
+        "La carga en las placas aumenta",
+        "La capacitancia disminuye y la diferencia de potencial aumenta"
+      ],
+      "answer": 1,
+      "explanation": "Con el capacitor desconectado la carga Q permanece constante; al insertar el dieléctrico la capacitancia aumenta y, en consecuencia, la diferencia de potencial ΔV disminuye."
+    },
+    {
+      "question": "La constante dieléctrica K de un material se define en el texto como:",
+      "options": [
+        "K = ΔV / ΔV0",
+        "K = ΔV0 / ΔV",
+        "K = Q / Q0",
+        "K = C0 / C"
+      ],
+      "answer": 1,
+      "explanation": "Se define K como ΔV0 / ΔV, donde ΔV0 es la diferencia de potencial sin dieléctrico y ΔV con dieléctrico; se cumple K > 1."
+    },
+    {
+      "question": "Si C0 es la capacitancia de un capacitor de placas paralelas en el vacío, ¿cómo se expresa la capacitancia C cuando se llena completamente el espacio entre placas con un dieléctrico de constante K?",
+      "options": [
+        "C = C0 / K",
+        "C = K · C0",
+        "C = K² · C0",
+        "C = C0 / K²"
+      ],
+      "answer": 1,
+      "explanation": "Se demuestra que C = K C0; al insertar un material dieléctrico la capacitancia aumenta en un factor K."
+    },
+    {
+      "question": "A nivel microscópico, en un material dieléctrico polar sometido al campo eléctrico entre las placas del capacitor:",
+      "options": [
+        "Los dipolos moleculares permanecen siempre fijos sin orientación",
+        "Los dipolos tienden a alinearse parcialmente con el campo, polarizando el material",
+        "Los dipolos se destruyen por el campo eléctrico",
+        "El campo eléctrico no ejerce ningún efecto sobre las moléculas"
+      ],
+      "answer": 1,
+      "explanation": "El campo ejerce un momento de torsión sobre los dipolos, lo que provoca su alineación parcial y la polarización del dieléctrico."
+    },
+    {
+      "question": "El campo eléctrico neto E dentro de un dieléctrico lineal colocado entre las placas de un capacitor se relaciona con el campo en el vacío E0 mediante:",
+      "options": [
+        "E = E0 · K",
+        "E = E0 / K",
+        "E = K² E0",
+        "E = E0 - K"
+      ],
+      "answer": 1,
+      "explanation": "Se obtiene que E = E0 / K, es decir, el campo dentro del dieléctrico es menor que el campo en el vacío para K > 1."
+    },
+    {
+      "question": "De acuerdo con la deducción mostrada, la densidad de carga superficial inducida σ_ind en el dieléctrico satisface:",
+      "options": [
+        "σ_ind = (K - 1) σ",
+        "σ_ind = σ / K",
+        "σ_ind = (K - 1) σ / K",
+        "σ_ind = K σ"
+      ],
+      "answer": 2,
+      "explanation": "Al combinar las expresiones para el campo y las cargas superficiales se llega a σ_ind = (K - 1) σ / K."
+    },
+    {
+      "question": "Para un capacitor cargado y desconectado de la batería, al insertar un dieléctrico, ¿cómo cambia la energía almacenada U en comparación con la energía inicial U0?",
+      "options": [
+        "U = U0 · K",
+        "U = U0 / K",
+        "U = U0 · K²",
+        "U no cambia"
+      ],
+      "answer": 1,
+      "explanation": "En el caso desconectado, con Q constante, se deduce que U = U0 / K; la energía final es menor que la inicial."
+    },
+    {
+      "question": "En el caso de un capacitor conectado permanentemente a una batería, al insertar un dieléctrico, la energía almacenada U en el capacitor satisface:",
+      "options": [
+        "U = U0 / K",
+        "U = U0",
+        "U = K · U0",
+        "U = 0"
+      ],
+      "answer": 2,
+      "explanation": "En este caso ΔV permanece constante y la capacitancia aumenta a K C0, por lo que U = 1/2 C (ΔV)² pasa a U = K U0; la energía aumenta."
+    },
+    {
+      "question": "En el caso desconectado, la energía que “desaparece” al insertar el dieléctrico puede interpretarse como:",
+      "options": [
+        "Trabajo positivo realizado por un agente externo para introducir el dieléctrico",
+        "Trabajo negativo realizado por un agente externo que se opone a la atracción del dieléctrico",
+        "Pérdida irreversible sin interpretación física",
+        "Disminución de la masa de las placas"
+      ],
+      "answer": 1,
+      "explanation": "El dieléctrico es atraído por el campo; para evitar su aceleración, un agente externo realiza trabajo negativo equivalente a U - U0, lo que explica la disminución de energía en el capacitor."
+    },
+
+    {
+      "question": "Explique con sus palabras qué es la capacitancia de un capacitor y de qué factores depende principalmente.",
+      "options": [
+        "Answer A: mirar explanation para la respuesta extensa",
+        "Answer B: no corresponde",
+        "Answer C: no corresponde",
+        "Answer D: no corresponde"
+      ],
+      "answer": 0,
+      "explanation": "La capacitancia mide la capacidad de un sistema de conductores para almacenar carga eléctrica por unidad de diferencia de potencial entre ellos. Se define como C = Q / ΔV. No depende de la carga ni del voltaje en un estado particular, sino de la geometría del sistema (tamaño y forma de los conductores, distancia entre ellos) y de las propiedades del medio que los separa (permitividad del vacío o del dieléctrico). Cuanto mayor es el área efectiva de las placas y menor la distancia entre ellas, mayor es la capacitancia; la presencia de un dieléctrico con constante K > 1 también la incrementa."
+    },
+    {
+      "question": "Describa detalladamente el proceso mediante el cual se carga un capacitor de placas paralelas cuando se conecta a una batería ideal.",
+      "options": [
+        "Answer A: mirar explanation para la respuesta extensa",
+        "Answer B: no corresponde",
+        "Answer C: no corresponde",
+        "Answer D: no corresponde"
+      ],
+      "answer": 0,
+      "explanation": "Al conectar un capacitor de placas paralelas a una batería, el terminal negativo de la batería empuja electrones hacia la placa conectada a él, mientras que extrae electrones de la placa conectada al terminal positivo. El campo eléctrico establecido por la batería en los conductores ejerce una fuerza sobre los electrones libres en los alambres, produciendo una corriente transitoria. La placa conectada al terminal negativo adquiere carga neta negativa, y la placa conectada al terminal positivo queda con carga neta positiva de igual magnitud. Este proceso continúa hasta que la diferencia de potencial entre las placas es igual a la fem de la batería; en ese momento el campo en los conductores se anula, la corriente cesa y el sistema alcanza el equilibrio electrostático con una carga Q tal que Q = C · ΔV."
+    },
+    {
+      "question": "Explique cómo se relaciona la energía almacenada en un capacitor con el campo eléctrico entre sus placas y defina la densidad de energía uE.",
+      "options": [
+        "Answer A: mirar explanation para la respuesta extensa",
+        "Answer B: no corresponde",
+        "Answer C: no corresponde",
+        "Answer D: no corresponde"
+      ],
+      "answer": 0,
+      "explanation": "La energía almacenada en un capacitor se interpreta como energía potencial eléctrica asociada al campo eléctrico existente entre las placas. Para un capacitor de placas paralelas, la energía total puede escribirse como U = 1/2 C (ΔV)². Usando que C = ε0 A / d y ΔV = E d, se llega a U = 1/2 ε0 A d E². El producto A d es el volumen ocupado por el campo eléctrico; por lo tanto, la energía por unidad de volumen se define como densidad de energía uE = U / (A d) = 1/2 ε0 E². Esta expresión es general: en cualquier región del espacio donde exista un campo eléctrico E en el vacío, hay asociada una densidad de energía proporcional al cuadrado del campo."
+    },
+    {
+      "question": "Describa el efecto microscópico de un campo eléctrico sobre un dieléctrico polar y cómo esto conduce a una reducción del campo neto dentro del material.",
+      "options": [
+        "Answer A: mirar explanation para la respuesta extensa",
+        "Answer B: no corresponde",
+        "Answer C: no corresponde",
+        "Answer D: no corresponde"
+      ],
+      "answer": 0,
+      "explanation": "En un dieléctrico polar, las moléculas poseen dipolos eléctricos permanentes. En ausencia de campo eléctrico, la orientación de esos dipolos es aleatoria y el momento dipolar macroscópico promedio es nulo. Cuando se aplica un campo eléctrico externo debido a las cargas en las placas del capacitor, cada dipolo experimenta un momento de torsión que tiende a alinearlo con el campo. La alineación parcial de muchos dipolos produce una polarización del dieléctrico y se genera una densidad de carga superficial inducida de signos opuestos en las caras del material. Estas cargas inducidas originan un campo eléctrico interno Ei opuesto al campo original E0, de modo que el campo neto dentro del dieléctrico es E = E0 - Ei = E0 / K. Al ser K > 1, el campo neto E resulta menor que el campo que existiría en ausencia del dieléctrico."
+    },
+    {
+      "question": "Compare cualitativamente lo que ocurre al insertar un dieléctrico en un capacitor en dos situaciones: a) capacitor cargado y desconectado de la batería, b) capacitor permanentemente conectado a una batería ideal.",
+      "options": [
+        "Answer A: mirar explanation para la respuesta extensa",
+        "Answer B: no corresponde",
+        "Answer C: no corresponde",
+        "Answer D: no corresponde"
+      ],
+      "answer": 0,
+      "explanation": "En el caso a) capacitor cargado y luego desconectado, la carga Q en las placas se mantiene constante. Al insertar el dieléctrico, la capacitancia pasa de C0 a C = K C0; como Q no cambia, la diferencia de potencial disminuye a ΔV = ΔV0 / K y la energía almacenada pasa a U = U0 / K, es decir, disminuye. El dieléctrico es atraído hacia el interior y la diferencia de energía se interpreta como trabajo negativo realizado por un agente externo que frena ese movimiento. En el caso b) capacitor conectado a una batería, la diferencia de potencial ΔV se mantiene fija por la fuente. Al introducir el dieléctrico la capacitancia aumenta a K C0 y la carga almacenada crece a Q = K Q0. En consecuencia la energía almacenada pasa a U = K U0, mayor que la inicial; la batería realiza trabajo positivo suministrando carga adicional al capacitor."
+    },
+    {
+      "question": "Explique cualitativamente por qué la capacitancia equivalente de un conjunto de capacitores en serie es siempre menor que la menor de las capacitancias individuales, mientras que en paralelo es mayor que la mayor.",
+      "options": [
+        "Answer A: mirar explanation para la respuesta extensa",
+        "Answer B: no corresponde",
+        "Answer C: no corresponde",
+        "Answer D: no corresponde"
+      ],
+      "answer": 0,
+      "explanation": "En una conexión en serie, todos los capacitores comparten la misma carga Q y la diferencia de potencial total se reparte como suma de las caídas individuales. Matemáticamente, la relación 1 / Ceq = 1 / C1 + 1 / C2 + ... implica que Ceq es menor que cada Ci. Físicamente, añadir capacitores en serie equivale a aumentar la distancia efectiva entre placas, lo cual reduce la capacidad de almacenar carga a un mismo voltaje. En la conexión en paralelo cada capacitor está sometido al mismo ΔV y las cargas se suman, por lo que Ceq = C1 + C2 + ...; esto incrementa la “superficie efectiva” del sistema, aumentando la capacidad total. Por eso en paralelo la capacitancia equivalente es mayor que la mayor de las individuales."
+    }
+  ]
+}

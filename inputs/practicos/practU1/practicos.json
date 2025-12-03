@@ -1,27 +1,37 @@
 {
   "moduleId": "u1",
-  "title": "Prácticos Unidad 1: Fundamentos de Termología",
+  "title": "Practicos Unidad 1",
   "exercises": [
     {
-      "id": "u1-e05",
-      "title": "Variación de Temperatura en °F",
-      "statement": "En un laboratorio de prueba de materiales se debe aumentar la temperatura de una muestra en $40^{\\circ}C$. Si la temperatura inicial de la muestra es de $68,2^{\\circ}F$ y el único termómetro disponible mide en grados Fahrenheit, ¿qué temperatura final ($T_f$) deberá registrar el termómetro en °F una vez que se ha producido el aumento requerido?",
-      "steps": [
-        "Calcular la variación de temperatura $\\Delta T$ en ${}^{\\circ}F$ que equivalen a los $40^{\\circ}C$.",
-        "Sumar la variación $\\Delta T ({}^{\\circ}F)$ a la temperatura inicial $T_i ({}^{\\circ}F)$ para obtener la temperatura final $T_f ({}^{\\circ}F)$."
-      ],
-      "hint": "Recuerda que una variación de $100^{\\circ}C$ equivale a una variación de $180^{\\circ}F$. La fórmula de conversión de la variación es: $\\Delta T ({}^{\\circ}F) = \\frac{9}{5} \\cdot \\Delta T ({}^{\\circ}C)$.",
-      "solution": "La variación de $40^{\\circ}C$ es: $\\Delta T ({}^{\\circ}F) = \\frac{9}{5} \\cdot 40^{\\circ}C = 72^{\\circ}F$. La temperatura final será: $T_f = T_i + \\Delta T = 68,2^{\\circ}F + 72^{\\circ}F = 140,2^{\\circ}F$.",
-      "tags": ["termologia", "conversion_temperatura", "escalas"],
+      "id": "u1-e01",
+      "title": "Variacion de temperatura en Fahrenheit",
+      "statement": "Se necesita elevar la temperatura de una muestra en 40 °C. Si parte de 68.2 °F, ¿que temperatura final en °F debe leerse en el termometro?",
+      "hint": "Solo importa la variacion: ΔT(°F) = 9/5 × ΔT(°C). Luego suma a la temperatura inicial en °F.",
+      "solution": "ΔT = 9/5 × 40 = 72 °F. Temperatura final: 68.2 + 72 = 140.2 °F.",
+      "tags": ["termologia", "conversion", "escalas"],
       "difficulty": "baja",
-      "images": [],
-      "attachments": [
-        "inputs/Practico Fisica 2 2023.pdf#page=6"
+      "images": [
+        "inputs/modulo1/filminas1/1.Intro_a_la_termodinamica.png"
       ],
       "source": {
         "pdf": "inputs/Practico Fisica 2 2023.pdf",
-        "section": "Capítulo 1",
+        "section": "Capitulo 1",
         "page": 6
+      }
+    },
+    {
+      "id": "u1-e02",
+      "title": "Calor para calentar cobre",
+      "statement": "Una barra de cobre de 0.8 kg se calienta de 22 °C a 80 °C. Con cp = 0.39 kJ/(kg·K), calcula el calor aportado en kJ.",
+      "hint": "Usa Q = m · c · ΔT, con ΔT en K (equivale a °C).",
+      "solution": "ΔT = 58 K. Q = 0.8 × 0.39 × 58 ≈ 18.1 kJ.",
+      "tags": ["calorimetria", "capacidad_termica"],
+      "difficulty": "media",
+      "images": [],
+      "source": {
+        "pdf": "inputs/Practico Fisica 2 2023.pdf",
+        "section": "Capitulo 1",
+        "page": 8
       }
     }
   ]

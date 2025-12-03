@@ -1,0 +1,413 @@
+{
+  "moduleId": "u7",
+  "title": "Quiz Unidad 7 - El circuito eléctrico",
+  "questions": [
+    {
+      "question": "¿Cómo se define la fuerza electromotriz (fem) de una batería?",
+      "options": [
+        "Como el trabajo realizado por unidad de carga que suministra la fuente.",
+        "Como la fuerza por unidad de longitud que actúa sobre el conductor.",
+        "Como la carga total almacenada en la batería.",
+        "Como la energía potencial por unidad de masa."
+      ],
+      "answer": 0,
+      "explanation": "La fem se define como el trabajo por unidad de carga que realiza la fuente sobre las cargas: ε = dW/dQ."
+    },
+    {
+      "question": "¿Cuál es la unidad de la fuerza electromotriz en el Sistema Internacional?",
+      "options": [
+        "newton (N)",
+        "volt (V)",
+        "coulomb (C)",
+        "watt (W)"
+      ],
+      "answer": 1,
+      "explanation": "La fem tiene unidades de joule por coulomb (J/C), que corresponden al volt (V)."
+    },
+    {
+      "question": "¿Por qué el término \"fuerza electromotriz\" es, estrictamente, un nombre incorrecto?",
+      "options": [
+        "Porque su valor siempre es nulo en un circuito abierto.",
+        "Porque no puede medirse experimentalmente.",
+        "Porque no se trata de una fuerza en el sentido mecánico y no se mide en newton.",
+        "Porque sólo existe en circuitos de corriente alterna."
+      ],
+      "answer": 2,
+      "explanation": "La fem no es una fuerza mecánica sino una diferencia de potencial; por eso no se mide en newton sino en volt."
+    },
+    {
+      "question": "En un circuito con una batería real de fem ε y resistencia interna r que entrega una corriente I, ¿cuál es la expresión para la diferencia de potencial entre sus terminales?",
+      "options": [
+        "ΔV = ε + I r",
+        "ΔV = ε - I r",
+        "ΔV = I r",
+        "ΔV = ε I r"
+      ],
+      "answer": 1,
+      "explanation": "La caída de potencial interna es I r, de modo que el voltaje en bornes resulta ΔV = ε − I r."
+    },
+    {
+      "question": "En una batería ideal (r = 0) o en un circuito abierto (I = 0), la diferencia de potencial entre las terminales de la batería es:",
+      "options": [
+        "igual a cero.",
+        "igual a I r.",
+        "igual a ε.",
+        "mayor que ε."
+      ],
+      "answer": 2,
+      "explanation": "Si r = 0 o I = 0 se anula el término I r y se cumple ΔV = ε; ese es el voltaje en circuito abierto."
+    },
+    {
+      "question": "En el circuito simple batería–resistencia, ¿cuál es la expresión de la corriente I en función de ε, R y r?",
+      "options": [
+        "I = ε (R + r)",
+        "I = (R + r)/ε",
+        "I = ε / (R + r)",
+        "I = R / (ε + r)"
+      ],
+      "answer": 2,
+      "explanation": "A partir de ε = I(R + r) se despeja I = ε / (R + r)."
+    },
+    {
+      "question": "¿En qué situación es razonable despreciar la resistencia interna de una batería?",
+      "options": [
+        "Cuando r es mucho mayor que R.",
+        "Cuando R es mucho mayor que r.",
+        "Siempre, en cualquier circuito.",
+        "Sólo cuando el circuito está en cortocircuito."
+      ],
+      "answer": 1,
+      "explanation": "Si R ≫ r, el término r aporta poco a la suma R + r y la resistencia interna puede despreciarse."
+    },
+    {
+      "question": "La potencia total que entrega una batería I ε se reparte entre:",
+      "options": [
+        "Sólo la resistencia externa.",
+        "La resistencia interna y la externa, como I²R en la carga e I²r dentro de la batería.",
+        "Únicamente la resistencia interna de la batería.",
+        "El campo magnético alrededor de los conductores."
+      ],
+      "answer": 1,
+      "explanation": "Multiplicando ε = I R + I r por I resulta I ε = I²R + I²r, que se reparte entre la carga y la resistencia interna."
+    },
+    {
+      "question": "En una combinación de resistores en serie, ¿qué magnitud es igual para todos los elementos?",
+      "options": [
+        "La diferencia de potencial en cada resistor.",
+        "La resistencia equivalente.",
+        "La corriente que circula por cada resistor.",
+        "La potencia disipada en cada resistor."
+      ],
+      "answer": 2,
+      "explanation": "En serie, la misma corriente I atraviesa todos los resistores: I = I1 = I2 = ...."
+    },
+    {
+      "question": "¿Cuál es la expresión general para la resistencia equivalente de resistores en serie?",
+      "options": [
+        "1/Req = 1/R1 + 1/R2 + 1/R3 + ...",
+        "Req = R1 + R2 + R3 + ...",
+        "Req = R1 R2 R3 ...",
+        "Req = (R1 + R2)/R3"
+      ],
+      "answer": 1,
+      "explanation": "Para resistores en serie, la resistencia equivalente es la suma algebraica de las resistencias: Req = R1 + R2 + R3 + ...."
+    },
+    {
+      "question": "Respecto de una combinación en serie de resistencias, la resistencia equivalente Req es:",
+      "options": [
+        "menor que cualquiera de las resistencias individuales.",
+        "igual a la menor resistencia del grupo.",
+        "siempre igual a cero.",
+        "mayor que cualquier resistencia individual."
+      ],
+      "answer": 3,
+      "explanation": "Al sumar resistencias positivas, Req resulta mayor que cada una de las resistencias individuales."
+    },
+    {
+      "question": "En una combinación de resistores en paralelo, ¿qué magnitud es igual para todos los resistores?",
+      "options": [
+        "La resistencia.",
+        "La corriente.",
+        "La diferencia de potencial entre sus extremos.",
+        "La potencia disipada."
+      ],
+      "answer": 2,
+      "explanation": "En paralelo, todos los resistores comparten la misma diferencia de potencial: ΔV = ΔV1 = ΔV2 = ...."
+    },
+    {
+      "question": "La relación correcta para la resistencia equivalente Req de resistores en paralelo es:",
+      "options": [
+        "Req = R1 + R2 + R3 + ...",
+        "1/Req = 1/R1 + 1/R2 + 1/R3 + ...",
+        "Req = R1 R2 R3 ...",
+        "Req = (R1 + R2)/R3"
+      ],
+      "answer": 1,
+      "explanation": "En paralelo se suma el inverso de cada resistencia: 1/Req = 1/R1 + 1/R2 + 1/R3 + ...."
+    },
+    {
+      "question": "En una combinación de resistencias en paralelo, la resistencia equivalente Req es:",
+      "options": [
+        "mayor que cualquier resistencia individual.",
+        "igual a la mayor resistencia del grupo.",
+        "menor que la resistencia más pequeña del grupo.",
+        "igual al promedio de todas las resistencias."
+      ],
+      "answer": 2,
+      "explanation": "Al sumar inversos, el inverso de Req es mayor que el inverso de la menor resistencia, por lo que Req es menor que la más pequeña."
+    },
+    {
+      "question": "En el contexto de redes eléctricas, se denomina unión o nodo a:",
+      "options": [
+        "Toda trayectoria cerrada del circuito.",
+        "El punto del circuito donde concurren tres o más corrientes.",
+        "La trayectoria entre dos fuentes de fem.",
+        "Un tramo de conductor sin elementos conectados."
+      ],
+      "answer": 1,
+      "explanation": "Un nodo es un punto del circuito donde se encuentran tres o más corrientes o ramas."
+    },
+    {
+      "question": "En una red eléctrica, una rama es:",
+      "options": [
+        "El punto donde se encuentran tres o más conductores.",
+        "Toda trayectoria cerrada que se puede establecer.",
+        "La trayectoria entre dos nodos.",
+        "Una combinación equivalente de resistencias."
+      ],
+      "answer": 2,
+      "explanation": "Una rama es la trayectoria entre dos nodos, a lo largo de la cual la corriente es la misma."
+    },
+    {
+      "question": "En una red eléctrica, una malla (o espira cerrada) es:",
+      "options": [
+        "Toda trayectoria cerrada que puede establecerse en la red.",
+        "El punto de conexión entre una batería y un resistor.",
+        "La trayectoria desde una fuente hasta tierra.",
+        "Todo conjunto de resistores en paralelo."
+      ],
+      "answer": 0,
+      "explanation": "Una malla o espira cerrada es cualquier trayectoria cerrada que recorre elementos del circuito y vuelve al punto de partida."
+    },
+    {
+      "question": "La ley de la unión de Kirchhoff establece que en cualquier nodo de un circuito:",
+      "options": [
+        "La suma de las tensiones es igual a cero.",
+        "La suma de las corrientes que entran es igual a la suma de las corrientes que salen.",
+        "La suma de las resistencias debe ser mínima.",
+        "La potencia total se conserva."
+      ],
+      "answer": 1,
+      "explanation": "La ley de la unión se expresa como ΣI = 0, lo que equivale a que la suma de corrientes entrantes iguala a la de corrientes salientes."
+    },
+    {
+      "question": "La ley de la espira de Kirchhoff establece que alrededor de cualquier espira cerrada de un circuito:",
+      "options": [
+        "La suma de las corrientes es igual a cero.",
+        "La suma de las diferencias de potencial es igual a cero.",
+        "La suma de las resistencias es constante.",
+        "La suma de las potencias es infinita."
+      ],
+      "answer": 1,
+      "explanation": "La suma algebraica de todas las diferencias de potencial a lo largo de una espira cerrada debe ser cero: ΣΔV = 0."
+    },
+    {
+      "question": "¿Qué se entiende por circuito RC según el apunte?",
+      "options": [
+        "Un circuito que sólo contiene resistores conectados en serie.",
+        "Un circuito que sólo contiene capacitores en paralelo.",
+        "Un circuito de corriente alterna con una bobina y un capacitor.",
+        "Un circuito de corriente directa que contiene un resistor y un capacitor en serie."
+      ],
+      "answer": 3,
+      "explanation": "Un circuito RC de corriente directa está formado por un resistor y un capacitor conectados en serie."
+    },
+    {
+      "question": "Al cerrar el interruptor en la posición de carga de un circuito RC, la ecuación de espira según Kirchhoff es:",
+      "options": [
+        "ε + q/C + I R = 0",
+        "ε - q/C - I R = 0",
+        "ε = q/C = I R",
+        "ε - I R = 0"
+      ],
+      "answer": 1,
+      "explanation": "Aplicando la ley de la espira se obtiene ε − q/C − I R = 0 para el circuito RC durante la carga."
+    },
+    {
+      "question": "En el instante inicial t = 0 de la carga de un capacitor en un circuito RC, la corriente inicial Ii es:",
+      "options": [
+        "Ii = 0",
+        "Ii = ε C",
+        "Ii = ε / R",
+        "Ii = R / ε"
+      ],
+      "answer": 2,
+      "explanation": "Como inicialmente q = 0, la ecuación de espira queda ε − I R = 0, de donde Ii = ε/R."
+    },
+    {
+      "question": "Cuando el capacitor en un circuito RC termina de cargarse (t → ∞), se cumple que:",
+      "options": [
+        "La corriente es máxima e igual a ε / R.",
+        "La carga en el capacitor es Q = C ε y la corriente es cero.",
+        "La carga es cero y la corriente se mantiene constante.",
+        "La fem deja de existir en el circuito."
+      ],
+      "answer": 1,
+      "explanation": "Al saturarse el capacitor, la corriente se anula (I = 0) y la carga alcanza su valor máximo Q = C ε."
+    },
+    {
+      "question": "La carga en el capacitor durante la carga en un circuito RC viene dada por q(t) = C ε (1 − e^(−t/(RC))). A partir de esta expresión, en t = τ = R C se tiene:",
+      "options": [
+        "q(τ) = 0",
+        "q(τ) = 0,5 C ε",
+        "q(τ) ≈ 0,632 C ε",
+        "q(τ) = C ε"
+      ],
+      "answer": 2,
+      "explanation": "Sustituyendo t = R C se obtiene q(τ) = C ε (1 − e^(−1)) ≈ 0,632 C ε, es decir, el 63 % de la carga máxima."
+    },
+    {
+      "question": "La constante de tiempo τ de un circuito RC se define como:",
+      "options": [
+        "τ = R / C",
+        "τ = C / R",
+        "τ = R C",
+        "τ = 1 / (R C)"
+      ],
+      "answer": 2,
+      "explanation": "La constante de tiempo del circuito RC viene dada por el producto de la resistencia por la capacidad: τ = R C."
+    },
+    {
+      "question": "La corriente durante la carga de un capacitor en un circuito RC se describe por I(t) = (ε/R) e^(−t/(RC)). Esto implica que:",
+      "options": [
+        "La corriente aumenta exponencialmente con el tiempo.",
+        "La corriente es constante e igual a ε/R.",
+        "La corriente disminuye exponencialmente desde Ii = ε/R hasta cero.",
+        "La corriente cambia de signo durante la carga."
+      ],
+      "answer": 2,
+      "explanation": "La expresión exponencial decreciente indica que la corriente parte de Ii = ε/R en t = 0 y tiende a cero cuando t aumenta."
+    },
+    {
+      "question": "Durante la descarga de un capacitor a través de un resistor, la carga q(t) en el capacitor se comporta como:",
+      "options": [
+        "q(t) = Q (1 − e^(−t/(RC))",
+        "q(t) = Q e^(−t/(RC))",
+        "q(t) = C ε constante",
+        "q(t) = 0 para todo t"
+      ],
+      "answer": 1,
+      "explanation": "En la descarga la solución es q(t) = Q e^(−t/(RC)), una función exponencial decreciente desde Q hasta 0."
+    },
+    {
+      "question": "En la descarga de un capacitor, la corriente I(t) = −Ii e^(−t/(RC)) tiene signo negativo porque:",
+      "options": [
+        "La corriente no existe durante la descarga.",
+        "El capacitor se comporta como una fuente ideal.",
+        "La dirección de la corriente es opuesta a la dirección que tenía durante la carga.",
+        "La resistencia se vuelve negativa."
+      ],
+      "answer": 2,
+      "explanation": "El signo negativo indica que, al descargarse, el sentido de circulación de la corriente se invierte respecto del proceso de carga."
+    },
+    {
+      "question": "El galvanómetro D’Arsonval es un dispositivo que:",
+      "options": [
+        "Almacena carga eléctrica en un campo eléctrico.",
+        "Genera energía eléctrica a partir de energía mecánica.",
+        "Permite medir corriente mediante la deflexión de una bobina en un campo magnético.",
+        "Convierte corriente alterna en corriente continua."
+      ],
+      "answer": 2,
+      "explanation": "En el galvanómetro D’Arsonval una bobina gira en un campo magnético y la deflexión de la aguja es proporcional a la corriente."
+    },
+    {
+      "question": "Un amperímetro ideal para medir la corriente en un circuito debe:",
+      "options": [
+        "Conectarse en paralelo con el elemento cuya corriente se desea medir y tener resistencia infinita.",
+        "Conectarse en serie con el circuito y tener resistencia interna muy pequeña.",
+        "Conectarse en paralelo y tener resistencia muy pequeña.",
+        "Conectarse en serie y tener resistencia muy grande."
+      ],
+      "answer": 1,
+      "explanation": "El amperímetro se conecta en serie con la rama cuya corriente se mide y debe tener resistencia interna muy baja para no alterar la corriente."
+    },
+    {
+      "question": "Un voltímetro ideal que mide la diferencia de potencial entre dos puntos de un circuito debe:",
+      "options": [
+        "Conectarse en serie y tener resistencia muy pequeña.",
+        "Conectarse en paralelo entre esos puntos y tener resistencia interna muy grande.",
+        "Conectarse en serie y tener resistencia muy grande.",
+        "Conectarse en paralelo y tener resistencia muy pequeña."
+      ],
+      "answer": 1,
+      "explanation": "El voltímetro se conecta en paralelo entre los puntos a medir y debe presentar una resistencia muy alta para no desviar corriente apreciable."
+    },
+    {
+      "question": "Pregunta de desarrollo: Explique el significado físico de la fuerza electromotriz (fem) de una batería y cómo se relaciona con el trabajo realizado sobre las cargas.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "La fuerza electromotriz de una batería es la energía que la fuente entrega por unidad de carga para mover las cargas desde un terminal al otro. Se define como ε = dW/dQ, donde dW es el trabajo realizado sobre una carga elemental dQ. Esa diferencia de energía por carga se manifiesta como una diferencia de potencial máxima disponible en circuito abierto, medida en volt (J/C)."
+    },
+    {
+      "question": "Pregunta de desarrollo: Distinga entre la resistencia interna de una batería y la resistencia de carga externa en un circuito, indicando cómo afectan a la corriente y a la potencia disipada.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "La resistencia interna r es propia de la batería y modela la oposición al movimiento de las cargas dentro de la fuente; produce una caída de tensión I r y una potencia disipada I²r en el interior de la batería. La resistencia de carga externa R representa el dispositivo o circuito alimentado, sobre el cual cae una tensión I R y se disipa una potencia útil I²R. La corriente del circuito viene dada por I = ε/(R + r); por tanto, si r aumenta o R disminuye, la corriente cambia y se modifica cómo se reparte la potencia entre la batería y la carga."
+    },
+    {
+      "question": "Pregunta de desarrollo: Enuncie y explique las dos leyes de Kirchhoff y describa el procedimiento general para usarlas en el análisis de una red con varias mallas y nodos.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "La primera ley de Kirchhoff o ley de la unión establece que en todo nodo la suma algebraica de las corrientes es cero, lo que equivale a que la suma de corrientes que entran es igual a la suma de corrientes que salen. La segunda ley o ley de la espira dice que en cualquier trayectoria cerrada la suma algebraica de las diferencias de potencial es cero. Para analizar una red, se asignan sentidos arbitrarios a las corrientes en cada rama, se aplica la ley de la unión a los nodos independientes y la ley de la espira a un conjunto de mallas independientes. Esto genera un sistema de ecuaciones simultáneas cuya solución da las corrientes y tensiones desconocidas."
+    },
+    {
+      "question": "Pregunta de desarrollo: Defina la constante de tiempo τ = R C en un circuito RC y explique su significado durante los procesos de carga y descarga del capacitor.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "La constante de tiempo τ = R C caracteriza la rapidez con que un circuito RC responde a un cambio. Durante la carga, la función q(t) = C ε (1 − e^(−t/τ)) indica que en t = τ la carga ha alcanzado aproximadamente el 63 % de su valor máximo C ε. De forma análoga, durante la descarga q(t) = Q e^(−t/τ) muestra que después de un tiempo τ la carga se redujo al 37 % del valor inicial. Valores grandes de τ implican procesos de carga y descarga más lentos, mientras que valores pequeños de τ corresponden a respuestas más rápidas."
+    },
+    {
+      "question": "Pregunta de desarrollo: Describa cualitativamente cómo evolucionan la carga en el capacitor y la corriente en el circuito durante la carga de un circuito RC.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "Al iniciar la carga (t = 0) el capacitor está descargado, por lo que q(0) = 0 y la corriente es máxima, Ii = ε/R. A medida que el capacitor se carga, su diferencia de potencial aumenta y se opone a la fem de la batería, de modo que la corriente disminuye gradualmente. Matemáticamente, la carga crece como q(t) = C ε (1 − e^(−t/(RC))), acercándose asintóticamente a C ε, mientras que la corriente decrece exponencialmente como I(t) = (ε/R) e^(−t/(RC)), tendiendo a cero cuando el capacitor alcanza su carga máxima."
+    },
+    {
+      "question": "Pregunta de desarrollo: Explique cómo deben conectarse un amperímetro y un voltímetro en un circuito para medir correctamente la corriente y la diferencia de potencial, respectivamente, y justifique en función de su resistencia interna.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "El amperímetro se conecta en serie con el elemento cuya corriente se desea medir, porque así toda la corriente de la rama pasa a través del instrumento. Para no modificar significativamente la corriente real del circuito, su resistencia interna debe ser muy pequeña. El voltímetro se conecta en paralelo entre los dos puntos entre los que se quiere medir la diferencia de potencial; para no desviar corriente apreciable y no alterar el circuito, su resistencia interna debe ser muy grande. De este modo, ambos instrumentos perturban lo menos posible las condiciones originales del circuito."
+    }
+  ]
+}

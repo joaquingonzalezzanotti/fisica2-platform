@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fisica II - Learning Dashboard</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <!-- KaTeX para renderizar formulas en quizzes y practicos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
@@ -139,6 +140,16 @@
     .quiz-item {
       border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fdfefe;
     }
+    .quiz-question {
+      margin-bottom: 8px;
+      padding: 10px 12px;
+      background: #fff7c2;
+      border: 1px solid #f4e28e;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: #f1c40f;
+    }
     .options { display: grid; gap: 8px; margin-top: 8px; }
     .option {
       border: 1px solid var(--border); border-radius: 10px; padding: 10px;
@@ -155,10 +166,11 @@
       border: 1px solid var(--border);
       background: #f1f5f9;
       color: var(--text);
-      padding: 8px 12px;
-      border-radius: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
       cursor: pointer;
       font-weight: 700;
+      font-size: 15px;
     }
     .tab-btn.active {
       background: var(--accent);
@@ -213,8 +225,9 @@
       color: var(--text);
     }
     .practice-grid {
-      display: grid;
-      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
     .practice-card {
       border: 1px solid var(--border);
@@ -629,6 +642,50 @@
       }
     ];
 
+    const PRACTICO_PDF = 'inputs/Practico Fisica 2 2023.pdf';
+    const practiceChapterMap = {
+      u1: [
+        { title: 'Cap. 1 - Fundamentos de Termologia', page: 4 },
+        { title: 'Cap. 2 - Calorimetria', page: 9 }
+      ],
+      u2: [
+        { title: 'Cap. 3 - Transformaciones en Gases', page: 20 },
+        { title: 'Cap. 4 - 1er Principio de la Termodinamica', page: 28 },
+        { title: 'Cap. 5 - 2do Principio de la Termodinamica', page: 33 }
+      ],
+      u3: [
+        { title: 'Cap. 6 - Carga y Campo Electrico', page: 36 }
+      ],
+      u4: [
+        { title: 'Cap. 7 - Trabajo y Energia Potencial Electrostatica', page: 51 }
+      ],
+      u5: [
+        { title: 'Cap. 8 - Dielectrico y Condensadores', page: 58 }
+      ],
+      u6: [
+        { title: 'Cap. 9 - La Corriente Electrica', page: 68 }
+      ],
+      u7: [
+        { title: 'Cap. 10 - Circuitos de Corriente Continua', page: 78 }
+      ],
+      u8: [
+        { title: 'Cap. 11 - Campo de Induccion Magnetica', page: 88 }
+      ],
+      u9: [
+        { title: 'Cap. 12 - Induccion Electromagnetica', page: 101 }
+      ],
+      u10: [],
+      u11: [
+        { title: 'Cap. 13 - Corriente Alterna', page: 110 }
+      ],
+      u12: [
+        { title: 'Cap. 14 - Ondas Electromagneticas y Ecuaciones de Maxwell', page: 118 }
+      ],
+      u13: [
+        { title: 'Cap. 15 - Optica Ondulatoria', page: 121 }
+      ]
+    };
+
     const moduleList = document.getElementById('moduleList');
     const titleEl = document.getElementById('moduleTitle');
     const subtitleEl = document.getElementById('moduleSubtitle');
@@ -642,7 +699,6 @@
     const slidesViewer = document.getElementById('slidesViewer');
     const slidesStatus = document.getElementById('slidesStatus');
     const slidesHint = document.getElementById('slidesHint');
-    let practiceExercises = [];
     const summaryImageWrap = document.getElementById('summaryImageWrap');
     const folderHintEl = document.getElementById('folderHint');
     const pdfSelect = document.getElementById('pdfSelect');
@@ -652,7 +708,6 @@
     const quizZone = document.getElementById('quizZone');
     const quizBtn = document.getElementById('quizBtn');
     const gradeBtn = document.getElementById('gradeBtn'); // legacy (oculto)
-    let practiceExercisesMount = null;
 
     let currentModule = null;
     let currentQuiz = [];
@@ -690,7 +745,6 @@
       renderConcepts();
       renderPractices();
       loadSummaryImage();
-      loadPracticeExercises();
       switchTab('teorico');
       renderSlides();
       pdfVisible = false;
@@ -733,190 +787,71 @@
       const head = document.createElement('div');
       head.className = 'practice-head';
       const h = document.createElement('h4');
-      h.textContent = 'Guía práctica';
+      h.textContent = 'Guía práctica en PDF';
       head.appendChild(h);
       const count = document.createElement('span');
       count.className = 'pill';
-      const total = currentModule.practices ? currentModule.practices.length : 0;
-      count.textContent = total ? `${total} recursos` : 'Sin recursos';
+      count.id = 'practiceCount';
+      const chapters = practiceChapterMap[currentModule.id] || [];
+      count.textContent = chapters.length ? `${chapters.length} capítulo(s)` : 'Sin capítulos asignados';
       head.appendChild(count);
       wrapper.appendChild(head);
 
       const grid = document.createElement('div');
       grid.className = 'practice-grid';
-      if (!currentModule.practices || !currentModule.practices.length) {
+
+      if (!chapters.length) {
         const empty = document.createElement('p');
         empty.className = 'practice-empty';
-        empty.textContent = 'No hay prácticos asociados para este módulo.';
+        empty.textContent = 'No hay capítulos prácticos asociados a este módulo.';
         grid.appendChild(empty);
       } else {
-        currentModule.practices.forEach(pr => {
+        chapters.forEach((ch, idx) => {
           const card = document.createElement('div');
           card.className = 'practice-card';
 
           const t = document.createElement('p');
           t.className = 'practice-title';
-          t.textContent = `${pr.title} (${pr.section})`;
+          t.textContent = ch.title;
           card.appendChild(t);
 
           const sub = document.createElement('p');
           sub.className = 'practice-sub';
-          sub.textContent = pr.note || '';
+          sub.textContent = `Página inicial: ${ch.page}`;
           card.appendChild(sub);
 
-          const link = document.createElement('a');
-          link.href = pr.ref;
-          link.target = '_blank';
-          link.rel = 'noopener';
-          link.className = 'practice-link';
-          link.textContent = 'Ver en guía práctica';
-          card.appendChild(link);
+          const toggle = document.createElement('button');
+          toggle.className = 'practice-cta';
+          toggle.textContent = idx === 0 ? 'Ocultar' : 'Mostrar';
+          card.appendChild(toggle);
+
+          const iframeWrap = document.createElement('div');
+          iframeWrap.style.marginTop = '10px';
+          iframeWrap.className = idx === 0 ? '' : 'hidden';
+
+          const iframe = document.createElement('iframe');
+          iframe.src = `${PRACTICO_PDF}#page=${ch.page}`;
+          iframe.title = ch.title;
+          iframe.style.width = '100%';
+          iframe.style.height = '520px';
+          iframe.style.border = '1px solid var(--border)';
+          iframe.style.borderRadius = '10px';
+          iframe.style.background = '#f8fafc';
+          iframeWrap.appendChild(iframe);
+
+          toggle.addEventListener('click', () => {
+            const hidden = iframeWrap.classList.toggle('hidden');
+            toggle.textContent = hidden ? 'Mostrar' : 'Ocultar';
+          });
+
+          card.appendChild(iframeWrap);
 
           grid.appendChild(card);
         });
       }
+
       wrapper.appendChild(grid);
-
-      const exercisesBlock = document.createElement('div');
-      exercisesBlock.id = 'practiceExercisesMount';
-      wrapper.appendChild(exercisesBlock);
       practicesEl.appendChild(wrapper);
-      practiceExercisesMount = exercisesBlock;
-    }
-
-    async function loadPracticeExercises() {
-      practiceExercises = [];
-      const num = currentModule.id.replace('u', '');
-      const path = `inputs/practicos/practU${num}/practicos.json`;
-      try {
-        const res = await fetch(path);
-        if (!res.ok) throw new Error('No encontrado');
-        const data = await res.json();
-        practiceExercises = data.exercises || [];
-        renderPracticeExercises();
-      } catch (e) {
-        // Si no hay JSON, mostramos mensaje
-        if (practiceExercisesMount) {
-          const notice = document.createElement('p');
-          notice.className = 'practice-empty';
-          notice.textContent = 'No se encontraron ejercicios cargados. Agrega practicos.json en ' + path + '.';
-          practiceExercisesMount.appendChild(notice);
-        }
-      }
-    }
-
-    function renderPracticeExercises() {
-      if (!practiceExercisesMount) return;
-      practiceExercisesMount.innerHTML = '';
-      const head = document.createElement('div');
-      head.className = 'practice-head';
-      const h = document.createElement('h4');
-      h.textContent = 'Ejercicios interactivos';
-      head.appendChild(h);
-      const badge = document.createElement('span');
-      badge.className = 'pill';
-      badge.textContent = practiceExercises.length ? `${practiceExercises.length} ejercicios` : 'Sin ejercicios';
-      head.appendChild(badge);
-      practiceExercisesMount.appendChild(head);
-
-      if (!practiceExercises.length) {
-        const empty = document.createElement('p');
-        empty.className = 'practice-empty';
-        empty.textContent = 'Carga ejercicios en inputs/practicos/practU#/practicos.json para mostrarlos aquí.';
-        practiceExercisesMount.appendChild(empty);
-        return;
-      }
-
-      practiceExercises.forEach(ex => {
-        const card = document.createElement('div');
-        card.className = 'exercise-card';
-
-        const title = document.createElement('div');
-        title.className = 'title';
-        title.textContent = ex.title || 'Ejercicio';
-        card.appendChild(title);
-
-        const meta = document.createElement('div');
-        meta.className = 'meta';
-        if (ex.difficulty) {
-          const pill = document.createElement('span');
-          pill.className = 'exercise-chip accent';
-          pill.textContent = `dificultad: ${ex.difficulty}`;
-          meta.appendChild(pill);
-        }
-        if (ex.tags && ex.tags.length) {
-          ex.tags.slice(0, 4).forEach(t => {
-            const pill = document.createElement('span');
-            pill.className = 'exercise-chip';
-            pill.textContent = t;
-            meta.appendChild(pill);
-          });
-        }
-        card.appendChild(meta);
-
-        if (ex.statement) {
-          const st = document.createElement('div');
-          st.className = 'exercise-body';
-          st.textContent = ex.statement;
-          card.appendChild(st);
-        }
-
-        if (ex.images && ex.images.length) {
-          ex.images.forEach(img => {
-            const im = document.createElement('img');
-            im.src = img;
-            im.alt = ex.title || 'Ejercicio';
-            card.appendChild(im);
-          });
-        }
-
-        const actions = document.createElement('div');
-        actions.className = 'exercise-actions';
-        const hintBtn = document.createElement('button');
-        hintBtn.textContent = 'Pista';
-        const solBtn = document.createElement('button');
-        solBtn.textContent = 'Solución';
-        actions.appendChild(hintBtn);
-        actions.appendChild(solBtn);
-        card.appendChild(actions);
-
-        if (ex.source && ex.source.pdf) {
-          const link = document.createElement('a');
-          link.href = ex.source.pdf + (ex.source.page ? `#page=${ex.source.page}` : '');
-          link.textContent = ex.source.section ? `Abrir ${ex.source.section}` : 'Abrir PDF';
-          link.target = '_blank';
-          link.style.fontWeight = '700';
-          link.style.color = '#006d77';
-          link.style.display = 'inline-block';
-          link.style.marginTop = '4px';
-          card.appendChild(link);
-        }
-
-        let hintDiv, solDiv;
-        if (ex.hint) {
-          hintDiv = document.createElement('div');
-          hintDiv.className = 'exercise-body hidden';
-          hintDiv.textContent = ex.hint;
-          hintDiv.style.color = '#0f172a';
-          card.appendChild(hintDiv);
-        }
-        if (ex.solution) {
-          solDiv = document.createElement('div');
-          solDiv.className = 'exercise-body hidden';
-          solDiv.textContent = ex.solution;
-          solDiv.style.fontWeight = '700';
-          card.appendChild(solDiv);
-        }
-
-        hintBtn.addEventListener('click', () => {
-          if (hintDiv) hintDiv.classList.toggle('hidden');
-        });
-        solBtn.addEventListener('click', () => {
-          if (solDiv) solDiv.classList.toggle('hidden');
-        });
-
-        practiceExercisesMount.appendChild(card);
-      });
     }
 
     async function loadSummaryImage() {
@@ -1128,16 +1063,16 @@
       }
       const item = currentQuiz[currentQuestionIndex];
       const total = currentQuiz.length;
-      const progress = `Pregunta ${currentQuestionIndex + 1} de ${total}`;
-      const btnNextLabel = currentQuestionIndex === total - 1 ? 'Terminar' : 'Siguiente';
-      const feedbackText = item.revealed
-        ? (item.correct ? 'Correcta. ' : (item.selected === null ? 'Mostrada sin respuesta. ' : 'Incorrecta. ')) + (item.explanation || '')
-        : '';
+        const progress = `Pregunta ${currentQuestionIndex + 1} de ${total}`;
+        const btnNextLabel = currentQuestionIndex === total - 1 ? 'Terminar' : 'Siguiente';
+        const feedbackText = item.revealed
+          ? (item.correct ? 'Correcta. ' : (item.selected === null ? 'Mostrada sin respuesta. ' : 'Incorrecta. ')) + (item.explanation || '')
+          : '';
 
-      quizZone.innerHTML = `
-        <div class="quiz-item">
-          <div style="font-weight:700;color:var(--accent);margin-bottom:6px;">${progress}</div>
-          <div style="margin-bottom:8px;">${item.q}</div>
+        quizZone.innerHTML = `
+          <div class="quiz-item">
+            <div style="font-weight:700;color:var(--accent);margin-bottom:6px;">${progress}</div>
+          <div class="quiz-question">${item.q}</div>
           <div class="options" id="optionsBox"></div>
           <div id="feedback" class="${item.revealed ? '' : 'hidden'}" style="margin-top:8px;font-weight:700;color:${item.correct ? '#15803d' : '#dc2626'};">
             ${feedbackText}
@@ -1214,8 +1149,8 @@
     });
     slidesSelect.addEventListener('change', (e) => loadSlide(e.target.value));
 
-    renderModules();
-    selectModule(modules[0].id);
+      renderModules();
+      selectModule(modules[0].id);
   </script>
 </body>
 </html>

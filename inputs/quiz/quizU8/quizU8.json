@@ -1,0 +1,436 @@
+{
+  "moduleId": "u8",
+  "title": "Quiz Unidad 8 - Magnetostática e interacción magnética",
+  "questions": [
+    {
+      "question": "Respecto a los polos magnéticos de un imán, ¿cuál de las siguientes afirmaciones es correcta?",
+      "options": [
+        "Es posible aislar un polo norte sin un polo sur asociado.",
+        "Es posible aislar un polo sur sin un polo norte asociado.",
+        "No es posible aislar un solo polo magnético; los polos aparecen siempre en pares norte-sur.",
+        "Los imanes pueden tener un solo polo si se los corta en pedazos suficientemente pequeños."
+      ],
+      "answer": 2,
+      "explanation": "Experimentalmente nunca se ha observado un monopolo magnético; al cortar un imán se obtienen imanes más pequeños, cada uno con polos norte y sur."
+    },
+    {
+      "question": "¿Cuál fue la observación fundamental de Oersted que relacionó electricidad y magnetismo?",
+      "options": [
+        "Una carga en reposo ejerce fuerza sobre otra carga en reposo.",
+        "Una corriente eléctrica en un alambre desvía la aguja de una brújula cercana.",
+        "Un imán en reposo produce una corriente en un circuito cerrado.",
+        "La fuerza entre polos magnéticos sigue una ley de cuadrado inverso."
+      ],
+      "answer": 1,
+      "explanation": "Oersted observó que una corriente en un conductor desviaba la aguja de una brújula, mostrando que una corriente genera un campo magnético."
+    },
+    {
+      "question": "Operacionalmente, el campo magnético B en un punto se puede definir como:",
+      "options": [
+        "B = FB / (|q| v senθ), usando la fuerza FB sobre una carga de prueba q que se mueve con velocidad v.",
+        "B = FE / q, usando la fuerza eléctrica FE sobre una carga en reposo.",
+        "B = FB / q, usando la fuerza magnética sobre una carga en reposo.",
+        "B = Fg / m, usando la fuerza gravitatoria sobre una masa de prueba m."
+      ],
+      "answer": 0,
+      "explanation": "Se define B a partir de la fuerza magnética FB que actúa sobre una carga de prueba q en movimiento con rapidez v formando un ángulo θ con el campo: B = FB / (|q| v senθ)."
+    },
+    {
+      "question": "En la expresión FB = |q| v B senθ, la fuerza magnética sobre una carga móvil es nula cuando:",
+      "options": [
+        "La velocidad es perpendicular al campo magnético.",
+        "La velocidad es paralela o antiparalela al campo magnético.",
+        "La carga se mueve con cualquier orientación respecto al campo magnético.",
+        "El campo magnético es muy intenso."
+      ],
+      "answer": 1,
+      "explanation": "La fuerza magnética depende de senθ; si θ = 0° o 180°, la velocidad es paralela o antiparalela a B y senθ = 0, por lo que FB = 0."
+    },
+    {
+      "question": "¿Cuál es la unidad del Sistema Internacional para el campo magnético B?",
+      "options": [
+        "Tesla (T).",
+        "Coulomb (C).",
+        "Newton por coulomb (N/C).",
+        "Gauss (G)."
+      ],
+      "answer": 0,
+      "explanation": "La unidad SI del campo magnético es el tesla (T); el gauss se usa en el sistema cgs y 1 T = 10^4 G."
+    },
+    {
+      "question": "La relación correcta entre el tesla (T) y el gauss (G) es:",
+      "options": [
+        "1 T = 10 G.",
+        "1 T = 10^2 G.",
+        "1 T = 10^3 G.",
+        "1 T = 10^4 G."
+      ],
+      "answer": 3,
+      "explanation": "Por definición, 1 tesla equivale a 10^4 gauss."
+    },
+    {
+      "question": "¿Cuál de las siguientes afirma correctamente una diferencia entre la fuerza eléctrica y la fuerza magnética sobre una partícula cargada?",
+      "options": [
+        "La fuerza eléctrica solo actúa sobre cargas en movimiento, la magnética sobre cargas en reposo.",
+        "La fuerza magnética actúa solo sobre cargas en movimiento, mientras que la fuerza eléctrica también actúa sobre cargas en reposo.",
+        "Ambas fuerzas solo actúan sobre cargas en reposo.",
+        "Ambas fuerzas realizan trabajo sobre la carga en movimiento."
+      ],
+      "answer": 1,
+      "explanation": "La fuerza eléctrica puede actuar sobre cargas en reposo o en movimiento, mientras que la magnética solo actúa sobre cargas en movimiento."
+    },
+    {
+      "question": "¿Por qué una fuerza magnética debida a un campo magnético estacionario no realiza trabajo sobre una partícula cargada?",
+      "options": [
+        "Porque su dirección es siempre nula.",
+        "Porque es siempre paralela al desplazamiento de la partícula.",
+        "Porque es siempre perpendicular al desplazamiento de la partícula.",
+        "Porque su módulo es independiente de la velocidad de la partícula."
+      ],
+      "answer": 2,
+      "explanation": "En un campo magnético estático la fuerza magnética es perpendicular a la velocidad y al desplazamiento, de modo que el producto escalar fuerza por desplazamiento, y por tanto el trabajo, es cero."
+    },
+    {
+      "question": "Una partícula de carga positiva entra en un campo magnético uniforme con velocidad inicial perpendicular a B. Despreciando otros campos, la trayectoria que describe es:",
+      "options": [
+        "Una línea recta paralela a B.",
+        "Una circunferencia en un plano perpendicular a B.",
+        "Una parábola en el plano de B.",
+        "Una elipse arbitraria."
+      ],
+      "answer": 1,
+      "explanation": "La fuerza magnética es centrípeta y perpendicular a la velocidad, lo que produce un movimiento circular uniforme en un plano perpendicular a B."
+    },
+    {
+      "question": "Asumiendo que la velocidad de una partícula es perpendicular al campo magnético uniforme B, el radio r de la órbita circular viene dado por:",
+      "options": [
+        "r = q B / (m v).",
+        "r = m v / (|q| B).",
+        "r = m v^2 / (q B).",
+        "r = |q| B v."
+      ],
+      "answer": 1,
+      "explanation": "De q v B = m v^2 / r se obtiene r = m v / (|q| B)."
+    },
+    {
+      "question": "El período T del movimiento circular de una partícula cargada en un campo magnético uniforme, con velocidad perpendicular a B, es:",
+      "options": [
+        "T = 2π m / (|q| B).",
+        "T = 2π |q| B / m.",
+        "T = m v / (|q| B).",
+        "T = 2π r / v, que depende de la velocidad y del radio de órbita."
+      ],
+      "answer": 0,
+      "explanation": "La rapidez angular es ω = |q| B / m y el período T = 2π / ω = 2π m / (|q| B), independiente de r y de v."
+    },
+    {
+      "question": "Si la velocidad inicial de una partícula tiene una componente paralela y otra perpendicular a un campo magnético uniforme, la trayectoria resultante es:",
+      "options": [
+        "Una hélice alrededor de las líneas de campo magnético.",
+        "Una circunferencia en un plano perpendicular a B.",
+        "Una línea recta paralela a B.",
+        "Una trayectoria parabólica."
+      ],
+      "answer": 0,
+      "explanation": "La componente perpendicular produce un movimiento circular y la componente paralela un movimiento rectilíneo uniforme; superpuestos dan una hélice alrededor de B."
+    },
+    {
+      "question": "La fuerza total sobre una partícula de carga q que se mueve con velocidad v en presencia simultánea de un campo eléctrico E y un campo magnético B está dada por:",
+      "options": [
+        "F = q E + q v × B.",
+        "F = q E - q v × B.",
+        "F = q E + q B.",
+        "F = q v B."
+      ],
+      "answer": 0,
+      "explanation": "La fuerza total es la fuerza de Lorentz: F = q E + q v × B."
+    },
+    {
+      "question": "En un selector de velocidades con campos E y B perpendiculares entre sí y a la velocidad, la condición para que una partícula cargada atraviese la región sin desviarse es:",
+      "options": [
+        "v = E B.",
+        "v = E / B.",
+        "v = B / E.",
+        "v = E + B."
+      ],
+      "answer": 1,
+      "explanation": "En equilibrio, la fuerza eléctrica q E se equilibra con la magnética q v B, de modo que E = v B y v = E / B."
+    },
+    {
+      "question": "Para un conductor recto de longitud L que transporta una corriente I en un campo magnético uniforme B perpendicular al conductor, la magnitud de la fuerza magnética es:",
+      "options": [
+        "F = I L B.",
+        "F = I B / L.",
+        "F = I L / B.",
+        "F = L B / I."
+      ],
+      "answer": 0,
+      "explanation": "A partir de la fuerza sobre las cargas en movimiento se obtiene F = I L B cuando la corriente es perpendicular al campo."
+    },
+    {
+      "question": "La expresión diferencial dFB = I ds × B se utiliza para:",
+      "options": [
+        "Calcular el trabajo realizado por un campo eléctrico sobre una carga de prueba.",
+        "Calcular la fuerza magnética sobre un elemento de longitud ds de un conductor que lleva corriente I en un campo B.",
+        "Calcular el potencial magnético de una distribución de corrientes.",
+        "Definir el campo gravitatorio de una distribución de masas."
+      ],
+      "answer": 1,
+      "explanation": "dFB = I ds × B es la fuerza magnética diferencial sobre un pequeño elemento de conductor; integrando a lo largo del conductor se obtiene la fuerza total."
+    },
+    {
+      "question": "¿Cuál es la expresión del momento de torsión máximo τ_max sobre una espira plana de área A que lleva una corriente I en un campo magnético uniforme de magnitud B?",
+      "options": [
+        "τ_max = I A B.",
+        "τ_max = I B / A.",
+        "τ_max = A B / I.",
+        "τ_max = I^2 A B."
+      ],
+      "answer": 0,
+      "explanation": "El momento de torsión es τ = I A B senθ; su valor máximo se da para senθ = 1 y es τ_max = I A B."
+    },
+    {
+      "question": "Si la normal al plano de una espira de área A que conduce una corriente I forma un ángulo θ con un campo magnético uniforme B, el momento de torsión sobre la espira es:",
+      "options": [
+        "τ = I A B senθ.",
+        "τ = I A B cosθ.",
+        "τ = I A B / senθ.",
+        "τ = 0 para cualquier θ."
+      ],
+      "answer": 0,
+      "explanation": "La expresión general para el momento de torsión es τ = μ B senθ, con μ = I A, por lo que τ = I A B senθ."
+    },
+    {
+      "question": "El momento dipolar magnético μ de una espira de corriente se define como:",
+      "options": [
+        "μ = I A, vector perpendicular al plano de la espira.",
+        "μ = B A, vector paralelo al campo magnético.",
+        "μ = q v r, vector tangente a la trayectoria.",
+        "μ = I / A, vector paralelo a la corriente."
+      ],
+      "answer": 0,
+      "explanation": "Para una espira de corriente, el momento dipolar magnético es μ = I A y su dirección es perpendicular al plano de la espira según la regla de la mano derecha."
+    },
+    {
+      "question": "Para una bobina con N espiras idénticas de área A que transportan la misma corriente I, el momento magnético total es:",
+      "options": [
+        "μ = N I A.",
+        "μ = I A / N.",
+        "μ = N^2 I A.",
+        "μ = N I / A."
+      ],
+      "answer": 0,
+      "explanation": "Cada espira aporta un momento μ = I A; para N espiras en la misma dirección el momento total es μ = N I A."
+    },
+    {
+      "question": "Según la ley de Biot-Savart, la magnitud del campo diferencial dB producido en un punto P por un elemento de corriente I ds es:",
+      "options": [
+        "dB = (μ0 / 4π) (I ds senθ / r^2).",
+        "dB = (μ0 / 4π) (I ds cosθ / r).",
+        "dB = (μ0 / 4π) (I ds / r).",
+        "dB = (μ0 / 4π) (I ds / r^3)."
+      ],
+      "answer": 0,
+      "explanation": "La ley de Biot-Savart establece que dB = (μ0 / 4π) (I ds × r̂ / r^2); para la magnitud se tiene dB = (μ0 / 4π) (I ds senθ / r^2)."
+    },
+    {
+      "question": "El campo magnético producido por un conductor recto infinitamente largo que conduce una corriente I, a una distancia a del conductor, tiene magnitud:",
+      "options": [
+        "B = μ0 I / (4π a^2).",
+        "B = μ0 I / (2π a).",
+        "B = μ0 I a / (2π).",
+        "B = μ0 I / (2 a)."
+      ],
+      "answer": 1,
+      "explanation": "Integrando la ley de Biot-Savart para un conductor recto infinito se obtiene B = μ0 I / (2π a)."
+    },
+    {
+      "question": "El campo magnético en el centro de una espira circular de radio a que lleva una corriente I es:",
+      "options": [
+        "B = μ0 I / (2 a).",
+        "B = μ0 I a / 2.",
+        "B = μ0 I / (4π a^2).",
+        "B = μ0 I / (2π a)."
+      ],
+      "answer": 0,
+      "explanation": "La expresión para el campo magnético en el eje de una espira se reduce en el centro a B = μ0 I / (2 a)."
+    },
+    {
+      "question": "La fuerza magnética por unidad de longitud entre dos conductores largos, paralelos, separados una distancia a y que llevan corrientes I1 e I2 es:",
+      "options": [
+        "FB / l = μ0 I1 I2 / (2π a).",
+        "FB / l = μ0 I1 I2 / a^2.",
+        "FB / l = μ0 I1 I2 / (4π a^2).",
+        "FB / l = μ0 I1 I2 a / (2π)."
+      ],
+      "answer": 0,
+      "explanation": "Usando la expresión del campo de un conductor recto infinito y la fuerza F = I l B se obtiene FB / l = μ0 I1 I2 / (2π a)."
+    },
+    {
+      "question": "¿En qué caso dos conductores largos y paralelos se atraen entre sí?",
+      "options": [
+        "Cuando las corrientes van en sentidos contrarios.",
+        "Cuando las corrientes tienen el mismo sentido.",
+        "Cuando al menos uno de los conductores no lleva corriente.",
+        "Nunca se atraen, solo se repelen."
+      ],
+      "answer": 1,
+      "explanation": "Si las corrientes tienen el mismo sentido, el campo creado por uno ejerce sobre el otro una fuerza atractiva; si circulan en sentidos opuestos, la fuerza es repulsiva."
+    },
+    {
+      "question": "Según la definición clásica, 1 ampere es la corriente que:",
+      "options": [
+        "Circula por cada uno de dos conductores largos, rectos y paralelos separados 1 m en el vacío, de modo que la fuerza entre ellos sea de 2 × 10^-7 N por metro de longitud.",
+        "Produce un campo magnético de 1 tesla a 1 m de distancia en el vacío.",
+        "Transporta 1 coulomb de carga en 1 segundo.",
+        "Hace que por un conductor pase 1 volt de potencial."
+      ],
+      "answer": 0,
+      "explanation": "La definición original de ampere se basa en la fuerza magnética por unidad de longitud de 2 × 10^-7 N/m entre dos conductores paralelos separados 1 m en el vacío."
+    },
+    {
+      "question": "La forma integral de la ley de Ampère en magnetostática se escribe como:",
+      "options": [
+        "∮ B · ds = μ0 I_enc.",
+        "∮ E · ds = Q_enc / ε0.",
+        "∮ B · ds = 0 para cualquier trayectoria cerrada.",
+        "∮ E · ds = 0 para cualquier trayectoria cerrada."
+      ],
+      "answer": 0,
+      "explanation": "La ley de Ampère establece que la integral de línea de B alrededor de cualquier trayectoria cerrada es igual a μ0 por la corriente total que atraviesa la superficie delimitada por esa trayectoria."
+    },
+    {
+      "question": "El campo magnético en el interior de un toroide ideal de N vueltas por el que circula una corriente I, a una distancia r del centro del toro, es:",
+      "options": [
+        "B = μ0 N I / (2π r).",
+        "B = μ0 I / (2π r^2).",
+        "B = μ0 N I / (2π).",
+        "B = μ0 I / (2π N r)."
+      ],
+      "answer": 0,
+      "explanation": "Aplicando la ley de Ampère sobre una circunferencia interior al toroide se obtiene B (2π r) = μ0 N I, por lo que B = μ0 N I / (2π r)."
+    },
+    {
+      "question": "En el interior de un solenoide largo con N espiras en una longitud L, por el que circula una corriente I, el campo magnético aproximado en la región central tiene magnitud:",
+      "options": [
+        "B = μ0 n I, donde n = N / L.",
+        "B = μ0 I / (2π L).",
+        "B = μ0 N I L.",
+        "B = μ0 I / n."
+      ],
+      "answer": 0,
+      "explanation": "Para un solenoide largo ideal, aplicando la ley de Ampère se obtiene B L = μ0 N I, de donde B = μ0 (N / L) I = μ0 n I."
+    },
+    {
+      "question": "Para un solenoide largo ideal que lleva corriente, ¿cuál de las siguientes afirmaciones describe mejor el campo magnético?",
+      "options": [
+        "El campo es aproximadamente uniforme y paralelo al eje en el interior, y prácticamente nulo en el exterior.",
+        "El campo es máximo en el exterior y nulo en el interior.",
+        "El campo es uniforme en todo el espacio alrededor del solenoide.",
+        "El campo solo existe en las espiras de alambre y es nulo en el interior y en el exterior."
+      ],
+      "answer": 0,
+      "explanation": "En el modelo ideal de solenoide largo, el campo se concentra en el interior, donde es casi uniforme y paralelo al eje; en el exterior es muy pequeño y se suele considerar nulo."
+    },
+    {
+      "question": "La dirección del campo magnético alrededor de un conductor rectilíneo que lleva corriente se determina mediante:",
+      "options": [
+        "La regla de la mano izquierda.",
+        "La regla de la mano derecha, colocando el pulgar en la dirección de la corriente y los dedos en la dirección del campo B.",
+        "La regla del sacacorchos para cargas negativas.",
+        "No existe una regla mnemotécnica para este caso."
+      ],
+      "answer": 1,
+      "explanation": "La regla de la mano derecha indica que, al apuntar el pulgar en la dirección de la corriente, los dedos rodean al conductor en el sentido de las líneas de campo magnético."
+    },
+
+    {
+      "question": "Pregunta de desarrollo: Describa las principales diferencias entre la fuerza eléctrica y la fuerza magnética que actúan sobre una partícula cargada.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "La fuerza eléctrica puede actuar sobre cargas en reposo o en movimiento y apunta en la dirección del campo eléctrico. Realiza trabajo cuando tiene componente en la dirección del desplazamiento y puede cambiar la energía cinética de la partícula. En cambio, la fuerza magnética solo actúa sobre cargas en movimiento, es proporcional a la rapidez y al seno del ángulo entre la velocidad y el campo magnético, y es siempre perpendicular a la velocidad. Por ello, en un campo magnético estacionario la fuerza magnética no realiza trabajo neto ni cambia la energía cinética de la partícula, sino que modifica su dirección de movimiento."
+    },
+    {
+      "question": "Pregunta de desarrollo: Explique la trayectoria de una partícula cargada en un campo magnético uniforme para los casos velocidad perpendicular a B, velocidad paralela a B y velocidad con componentes paralela y perpendicular.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "Si la velocidad es perpendicular al campo magnético uniforme, la fuerza magnética es centrípeta y la partícula describe un movimiento circular uniforme en un plano perpendicular a B, con radio r = m v / (|q| B) y período T = 2π m / (|q| B). Si la velocidad es paralela a B, la fuerza magnética es nula y la partícula se mueve en línea recta uniforme. Si la velocidad tiene una componente perpendicular y otra paralela, la componente perpendicular genera el movimiento circular y la paralela un movimiento rectilíneo uniforme; la superposición de ambos origina una trayectoria helicoidal alrededor de las líneas de campo."
+    },
+    {
+      "question": "Pregunta de desarrollo: Describa el funcionamiento de un selector de velocidades y deduzca la condición v = E / B para las partículas que no se desvían.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "Un selector de velocidades utiliza campos eléctrico y magnético perpendiculares entre sí y a la velocidad de las partículas. Una partícula cargada positiva que entra en la región experimenta una fuerza eléctrica q E en la dirección del campo eléctrico y una fuerza magnética q v B perpendicular a la velocidad y al campo magnético. Si las fuerzas tienen sentidos opuestos, la partícula puede no desviarse si están en equilibrio, es decir, si q E = q v B. De esta condición se obtiene v = E / B. Solo las partículas cuya rapidez satisface esta expresión atraviesan la región sin desviarse, mientras que las demás son desviadas y pueden ser bloqueadas."
+    },
+    {
+      "question": "Pregunta de desarrollo: Defina la fuerza de Lorentz e indique cómo se combinan las contribuciones eléctrica y magnética. Comente un ejemplo de aplicación.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "La fuerza de Lorentz es la fuerza total que actúa sobre una partícula de carga q en presencia de campos eléctrico E y magnético B y se expresa como F = q E + q v × B. El primer término q E es la fuerza eléctrica, que puede actuar sobre cargas en reposo o en movimiento, mientras que el segundo término q v × B es la fuerza magnética, que requiere que la partícula esté en movimiento. Un ejemplo de aplicación es el movimiento de electrones en un tubo de rayos catódicos, donde se usan campos eléctricos para acelerar y desviar el haz y campos magnéticos para enfocar o curvar su trayectoria según se desee."
+    },
+    {
+      "question": "Pregunta de desarrollo: Defina el momento dipolar magnético de una espira de corriente y explique el origen del momento de torsión sobre la espira en un campo magnético uniforme.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "El momento dipolar magnético μ de una espira plana que lleva una corriente I se define como μ = I A, donde A es el área de la espira, y su dirección es perpendicular al plano de la espira según la regla de la mano derecha. Cuando la espira se coloca en un campo magnético uniforme B, cada tramo de conductor que no es paralelo a B sufre una fuerza magnética; las fuerzas en lados opuestos forman un par que tiende a girar la espira alineando μ con B. El momento de torsión resultante es τ = μ B senθ, donde θ es el ángulo entre μ y B. Este efecto se utiliza en instrumentos de medida y en motores eléctricos, donde la corriente en las espiras genera un torque que produce movimiento de rotación."
+    },
+    {
+      "question": "Pregunta de desarrollo: Enuncie la ley de Biot-Savart y discuta su analogía con la ley de Coulomb en electrostática.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "La ley de Biot-Savart establece que la contribución diferencial dB al campo magnético en un punto P debida a un elemento de corriente I ds es dB = (μ0 / 4π) (I ds × r̂ / r^2), donde r es la distancia entre el elemento y el punto de observación y r̂ es el vector unitario que apunta desde el elemento hacia P. Para obtener el campo total se integra sobre toda la trayectoria de la corriente. Es análoga a la ley de Coulomb en electrostática porque ambas describen campos que decrecen como 1 / r^2 y se superponen linealmente; sin embargo, en Biot-Savart la fuente es una corriente (carga en movimiento) y la dirección del campo se obtiene mediante un producto vectorial, por lo que B es perpendicular al plano definido por la corriente y la posición del punto."
+    },
+    {
+      "question": "Pregunta de desarrollo: Explique cómo se obtiene la expresión del campo magnético en el interior de un solenoide largo usando la ley de Ampère y comente las características del campo dentro y fuera del solenoide.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "Para un solenoide largo con N espiras en una longitud L se elige una trayectoria amperiana rectangular, con un lado paralelo al eje en el interior y otro en el exterior donde el campo se considera despreciable. La ley de Ampère establece que ∮ B · ds = μ0 I_enc; como el campo es aproximadamente uniforme y paralelo al eje en el interior, la integral se reduce a B l en el tramo interior, mientras que en los otros lados es cero o muy pequeña. La corriente enlazada es N I, por lo que B l = μ0 N I y B = μ0 (N / L) I = μ0 n I, donde n es el número de espiras por unidad de longitud. En el modelo ideal, el campo en el interior es casi uniforme y paralelo al eje, mientras que en el exterior es muy pequeño y se suele considerar nulo."
+    },
+    {
+      "question": "Pregunta de desarrollo: Explique la fuerza magnética entre dos conductores largos paralelos que transportan corriente y cómo se utiliza este resultado para definir el ampere.",
+      "options": [
+        "Answer A: ver explicación completa.",
+        "Answer B: sin uso.",
+        "Answer C: sin uso.",
+        "Answer D: sin uso."
+      ],
+      "answer": 0,
+      "explanation": "Cada conductor largo que lleva una corriente I genera un campo magnético alrededor suyo dado por B = μ0 I / (2π a) a una distancia a. El otro conductor, que lleva una corriente I1, experimenta una fuerza magnética por unidad de longitud FB / l = I1 B senθ; cuando los conductores son paralelos, la corriente es perpendicular al campo y senθ = 1, de modo que FB / l = μ0 I1 I2 / (2π a). Si las corrientes tienen el mismo sentido, la fuerza es atractiva; si son opuestas, es repulsiva. La definición clásica de ampere se basa en este fenómeno: 1 A es la corriente que, al circular por cada uno de dos conductores largos paralelos separados 1 m en el vacío, produce una fuerza de 2 × 10^-7 N por metro entre ellos."
+    }
+  ]
+}

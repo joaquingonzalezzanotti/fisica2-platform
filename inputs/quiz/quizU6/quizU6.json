@@ -1,0 +1,314 @@
+{
+  "moduleId": "u6",
+  "title": "Quiz Unidad 6 - Corriente eléctrica",
+  "questions": [
+    {
+      "question": "¿Cómo se define la corriente eléctrica en un conductor?",
+      "options": [
+        "Como la fuerza eléctrica por unidad de carga.",
+        "Como el flujo de carga que atraviesa una superficie por unidad de tiempo.",
+        "Como la energía potencial eléctrica almacenada en un conductor.",
+        "Como la diferencia de potencial entre los extremos de un conductor."
+      ],
+      "answer": 1,
+      "explanation": "La corriente eléctrica se define como el flujo de carga eléctrica que atraviesa una superficie de área A por unidad de tiempo, es decir I = ΔQ/Δt."
+    },
+    {
+      "question": "¿Cuál es la expresión matemática de la corriente promedio?",
+      "options": [
+        "I = dQ/dt",
+        "I = Q · t",
+        "I = ΔQ/Δt",
+        "I = Q/Δt^2"
+      ],
+      "answer": 2,
+      "explanation": "La corriente promedio se define como I_prom = ΔQ/Δt, donde ΔQ es la carga que atraviesa una sección en el intervalo de tiempo Δt."
+    },
+    {
+      "question": "¿Cuál es la expresión de la corriente instantánea?",
+      "options": [
+        "I = dQ/dt",
+        "I = Q/t",
+        "I = ΔQ/Δt",
+        "I = dQ/dt^2"
+      ],
+      "answer": 0,
+      "explanation": "Cuando el flujo de carga varía en el tiempo, la corriente instantánea se define como I = lim(Δt→0) ΔQ/Δt = dQ/dt."
+    },
+    {
+      "question": "¿Cuál es la unidad del Sistema Internacional (SI) para la corriente eléctrica?",
+      "options": [
+        "Volt (V)",
+        "Coulomb (C)",
+        "Ohm (Ω)",
+        "Ampere (A)"
+      ],
+      "answer": 3,
+      "explanation": "La unidad de corriente en el SI es el ampere (A), definido como 1 A = 1 C/s."
+    },
+    {
+      "question": "En un conductor metálico, ¿cuál es la relación entre el sentido convencional de la corriente y el movimiento real de los electrones?",
+      "options": [
+        "Coinciden: ambos tienen la misma dirección.",
+        "La corriente convencional es opuesta al movimiento de los electrones.",
+        "La corriente convencional es el doble de rápida que los electrones.",
+        "No hay relación entre el sentido de la corriente y el movimiento de los electrones."
+      ],
+      "answer": 1,
+      "explanation": "Por convención, el sentido de la corriente se define como el del flujo de carga positiva, por lo que en un metal es opuesto al movimiento de los electrones, que tienen carga negativa."
+    },
+    {
+      "question": "En el modelo microscópico, ¿cuál es la expresión de la corriente en función de magnitudes microscópicas?",
+      "options": [
+        "I = E · A",
+        "I = ρ · A · vd",
+        "I = nqvdA",
+        "I = σE/A"
+      ],
+      "answer": 2,
+      "explanation": "En el modelo microscópico de conducción en metales, la corriente se escribe como I = nqvdA, donde n es la densidad de portadores, q la carga de cada portador, vd la velocidad de arrastre y A el área de sección."
+    },
+    {
+      "question": "¿Cómo se define la densidad de corriente J?",
+      "options": [
+        "J = I/A",
+        "J = A/I",
+        "J = E/I",
+        "J = ρI"
+      ],
+      "answer": 0,
+      "explanation": "La densidad de corriente se define como corriente por unidad de área, J = I/A. En el modelo microscópico también se cumple J = nqvd."
+    },
+    {
+      "question": "¿Cuáles son las unidades de la densidad de corriente J en el SI?",
+      "options": [
+        "V/m",
+        "A/m^2",
+        "C/m",
+        "Ω·m"
+      ],
+      "answer": 1,
+      "explanation": "La densidad de corriente J es corriente por unidad de área, por lo que sus unidades en el SI son A/m^2."
+    },
+    {
+      "question": "Si un conductor está aislado y no existe diferencia de potencial entre sus extremos, ¿qué ocurre con los electrones?",
+      "options": [
+        "Se mueven con velocidad de arrastre constante en una dirección fija.",
+        "Permanecen completamente inmóviles dentro del conductor.",
+        "Realizan un movimiento aleatorio sin producir corriente neta.",
+        "Se acumulan en un extremo del conductor produciendo una carga neta."
+      ],
+      "answer": 2,
+      "explanation": "Sin diferencia de potencial, los electrones tienen movimiento térmico aleatorio y no hay corriente neta a través del conductor."
+    },
+    {
+      "question": "La relación J = σE corresponde a:",
+      "options": [
+        "La definición de potencia eléctrica.",
+        "La ley de Ohm en forma microscópica.",
+        "La definición de resistividad.",
+        "La definición de energía potencial eléctrica."
+      ],
+      "answer": 1,
+      "explanation": "La ley de Ohm en forma microscópica se escribe como J = σE, donde σ es la conductividad del material."
+    },
+    {
+      "question": "Un material óhmico se caracteriza por:",
+      "options": [
+        "Presentar una relación no lineal entre J y E.",
+        "Tener una conductividad nula.",
+        "Obedecer la relación J = σE con σ constante.",
+        "No depender de la temperatura."
+      ],
+      "answer": 2,
+      "explanation": "Un material óhmico obedece la ley de Ohm, J = σE, con una conductividad σ independiente del campo eléctrico aplicado dentro de cierto rango."
+    },
+    {
+      "question": "Si se considera un alambre recto óhmico de longitud l y área de sección A, la resistencia R viene dada por:",
+      "options": [
+        "R = σlA",
+        "R = ρl/A",
+        "R = A/(ρl)",
+        "R = l/(σA^2)"
+      ],
+      "answer": 1,
+      "explanation": "Para un conductor óhmico, la resistencia es R = ρl/A, donde ρ es la resistividad del material, l la longitud y A el área de sección transversal."
+    },
+    {
+      "question": "Según la ley de Ohm macroscópica, la resistencia R de un elemento de circuito se define como:",
+      "options": [
+        "R = ΔV · I",
+        "R = I/ΔV",
+        "R = ΔV/I",
+        "R = 1/(ΔV · I)"
+      ],
+      "answer": 2,
+      "explanation": "La forma macroscópica de la ley de Ohm establece que R = ΔV/I, donde ΔV es la diferencia de potencial entre los extremos y I la corriente que circula."
+    },
+    {
+      "question": "¿Cuál es la unidad de resistencia eléctrica en el SI?",
+      "options": [
+        "1 Ω = 1 V/A",
+        "1 Ω = 1 A/V",
+        "1 Ω = 1 C/s",
+        "1 Ω = 1 J/C"
+      ],
+      "answer": 0,
+      "explanation": "La resistencia se mide en ohmios (Ω), definidos como 1 Ω = 1 V/A."
+    },
+    {
+      "question": "La resistividad ρ de un material se relaciona con la conductividad σ mediante:",
+      "options": [
+        "ρ = σ",
+        "ρ = 1/σ",
+        "ρ = σ^2",
+        "ρ = 1/σ^2"
+      ],
+      "answer": 1,
+      "explanation": "La resistividad ρ es el recíproco de la conductividad: ρ = 1/σ."
+    },
+    {
+      "question": "En un conductor óhmico, ¿cómo varía la resistencia R con la geometría del conductor?",
+      "options": [
+        "R es proporcional al área A e inversamente proporcional a la longitud l.",
+        "R es independiente de l y A.",
+        "R es proporcional a l e inversamente proporcional a A.",
+        "R es proporcional a l · A."
+      ],
+      "answer": 2,
+      "explanation": "La resistencia de un conductor óhmico cumple R = ρl/A, de modo que aumenta con la longitud l y disminuye al aumentar el área A."
+    },
+    {
+      "question": "¿Cómo varía la resistividad ρ de un conductor metálico con la temperatura T en un intervalo limitado?",
+      "options": [
+        "ρ = ρ0[1 + α(T − T0)]",
+        "ρ = ρ0/(1 + αT)",
+        "ρ = ρ0T^2",
+        "ρ es constante e independiente de T"
+      ],
+      "answer": 0,
+      "explanation": "En un rango de temperaturas, la resistividad de muchos metales puede aproximarse como ρ = ρ0[1 + α(T − T0)], donde ρ0 es la resistividad a una temperatura de referencia T0 y α es el coeficiente de temperatura de la resistividad."
+    },
+    {
+      "question": "La relación R = R0[1 + α(T − T0)] describe:",
+      "options": [
+        "La variación de la resistencia con la potencia disipada.",
+        "La variación de la resistencia con la carga total.",
+        "La variación de la resistencia de un conductor con la temperatura.",
+        "La variación de la resistencia con la longitud del conductor."
+      ],
+      "answer": 2,
+      "explanation": "La expresión R = R0[1 + α(T − T0)] describe cómo cambia la resistencia de una muestra con la temperatura, siendo R0 la resistencia a la temperatura de referencia T0."
+    },
+    {
+      "question": "Cuando el coeficiente de temperatura α es negativo, el material se comporta típicamente como:",
+      "options": [
+        "Un metal óhmico",
+        "Un aislador ideal",
+        "Un semiconductor",
+        "Un superconductor"
+      ],
+      "answer": 2,
+      "explanation": "Si α < 0, la resistividad disminuye al aumentar la temperatura, lo cual es característico de materiales semiconductores."
+    },
+    {
+      "question": "Un superconductor se caracteriza por:",
+      "options": [
+        "Tener una resistencia constante a cualquier temperatura.",
+        "Alcanzar resistencia nula por debajo de una cierta temperatura crítica Tc.",
+        "Aumentar su resistividad linealmente con la temperatura.",
+        "No permitir en absoluto el paso de corriente."
+      ],
+      "answer": 1,
+      "explanation": "Un superconductor es un material cuya resistencia eléctrica cae prácticamente a cero cuando se lo enfría por debajo de una temperatura crítica Tc."
+    },
+    {
+      "question": "La expresión P = IΔV para un resistor representa:",
+      "options": [
+        "La energía almacenada en el campo eléctrico.",
+        "La rapidez de transferencia de energía al resistor (potencia).",
+        "La carga total que atraviesa el resistor.",
+        "La energía potencial química de la batería."
+      ],
+      "answer": 1,
+      "explanation": "P = IΔV es la potencia eléctrica entregada al resistor, es decir la rapidez con la que se transforma energía eléctrica en energía interna (calor) en el elemento."
+    },
+    {
+      "question": "La potencia disipada en un resistor también puede escribirse como:",
+      "options": [
+        "P = I^2R = (ΔV)^2/R",
+        "P = IR^2 = (ΔV)^2I",
+        "P = R/I^2",
+        "P = ΔV/I"
+      ],
+      "answer": 0,
+      "explanation": "Usando la ley de Ohm ΔV = IR, la potencia P = IΔV puede escribirse como P = I(IR) = I^2R o P = (ΔV)^2/R."
+    },
+    {
+      "question": "El calentamiento Joule en un conductor se refiere a:",
+      "options": [
+        "La emisión de radiación electromagnética por el conductor.",
+        "La conversión de energía eléctrica en energía interna (calor) debida a las colisiones de los portadores.",
+        "La generación de un campo magnético que enfría el conductor.",
+        "La pérdida de electrones del material por efecto térmico."
+      ],
+      "answer": 1,
+      "explanation": "El efecto Joule describe la transformación de energía eléctrica en calor dentro de un conductor, asociada a las colisiones de los portadores de carga con la red cristalina, y se cuantifica a través de las pérdidas I^2R."
+    },
+    {
+      "question": "Pregunta de desarrollo: describa el modelo microscópico de la corriente eléctrica en un metal.",
+      "options": [
+        "Ver respuesta esperada",
+        "Opción no válida",
+        "Opción no válida",
+        "Opción no válida"
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada: Explicar que en un conductor metálico existen n portadores de carga móvil por unidad de volumen, cada uno con carga q, que bajo la acción de un campo eléctrico E adquieren una velocidad de arrastre promedio vd superpuesta a un movimiento aleatorio de tipo zigzagueante debido a colisiones con los átomos del metal. En un segmento de longitud Δx y área A la cantidad de carga que atraviesa la sección es ΔQ = nqAΔx; usando Δx = vdΔt se llega a ΔQ = nqvdAΔt y por definición de corriente I = ΔQ/Δt se obtiene I = nqvdA. Definir también densidad de corriente J = I/A = nqvd."
+    },
+    {
+      "question": "Pregunta de desarrollo: explique la diferencia entre materiales óhmicos y no óhmicos y cómo se representa en una gráfica I-ΔV.",
+      "options": [
+        "Ver respuesta esperada",
+        "Opción no válida",
+        "Opción no válida",
+        "Opción no válida"
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada: Indicar que los materiales óhmicos obedecen la ley de Ohm con una relación lineal entre la corriente y la diferencia de potencial aplicada: I es proporcional a ΔV, con una resistencia R constante en el rango considerado. En una gráfica I-ΔV esto se ve como una recta cuya pendiente es 1/R. En cambio, los materiales no óhmicos presentan una relación no lineal entre I y ΔV, de manera que la resistencia efectiva depende de la tensión aplicada; la curva I-ΔV no es una recta y la ley de Ohm simple R = ΔV/I no se cumple con R constante."
+    },
+    {
+      "question": "Pregunta de desarrollo: analice cómo influye la temperatura en la resistividad de un metal y defina el coeficiente de temperatura α.",
+      "options": [
+        "Ver respuesta esperada",
+        "Opción no válida",
+        "Opción no válida",
+        "Opción no válida"
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada: Señalar que en muchos metales, en un cierto intervalo de temperaturas, la resistividad ρ aumenta aproximadamente de forma lineal con la temperatura. Esto se modela mediante ρ = ρ0[1 + α(T − T0)], donde ρ0 es la resistividad a una temperatura de referencia T0 y α es el coeficiente de temperatura de la resistividad. α mide cuánto cambia ρ por grado de temperatura; si α > 0, al aumentar T crece la resistividad y la resistencia del conductor, debido a un incremento en las colisiones entre electrones y la red cristalina."
+    },
+    {
+      "question": "Pregunta de desarrollo: describa el balance energético en un circuito simple con una batería y un resistor, y relacione este análisis con la expresión P = IΔV.",
+      "options": [
+        "Ver respuesta esperada",
+        "Opción no válida",
+        "Opción no válida",
+        "Opción no válida"
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada: Explicar que al recorrer un circuito sencillo formado por una batería y un resistor, una carga positiva Q que pasa por la batería gana energía potencial eléctrica QΔV a costa de la energía química almacenada en la batería. Luego, al atravesar el resistor, esa energía potencial eléctrica se pierde y se transforma en energía interna del resistor (calor) debido a las colisiones de los portadores con la red. La rapidez de pérdida de energía potencial al pasar por el resistor es dU/dt = IΔV, que se identifica con la potencia P entregada al resistor. A partir de la ley de Ohm ΔV = IR se obtienen las formas equivalentes P = IΔV = I^2R = (ΔV)^2/R."
+    },
+    {
+      "question": "Pregunta de desarrollo: defina superconductor y comente brevemente su comportamiento de resistencia en función de la temperatura.",
+      "options": [
+        "Ver respuesta esperada",
+        "Opción no válida",
+        "Opción no válida",
+        "Opción no válida"
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada: Definir superconductor como un material cuya resistencia eléctrica disminuye abruptamente hasta prácticamente cero al ser enfriado por debajo de una cierta temperatura crítica Tc. Comentar que por encima de Tc el material se comporta como un conductor normal con cierta resistividad dependiente de la temperatura, mientras que por debajo de Tc la resistividad es prácticamente nula, permitiendo el paso de corrientes sin disipación Joule. Mencionar ejemplos como el mercurio a aproximadamente 4,15 K o el aluminio a alrededor de 1,19 K."
+    }
+  ]
+}

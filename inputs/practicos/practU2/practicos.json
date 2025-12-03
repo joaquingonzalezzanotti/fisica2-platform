@@ -1,0 +1,38 @@
+{
+  "moduleId": "u2",
+  "title": "Practicos Unidad 2",
+  "exercises": [
+    {
+      "id": "u2-e01",
+      "title": "Trabajo y calor en expansion isobarica",
+      "statement": "Un gas ideal (1.5 mol) se expande isobaricamente de 2.0 L a 5.0 L a 1 atm. La temperatura aumenta 45 K. Calcula: (a) trabajo hecho por el gas en kJ, (b) calor absorbido si Cp = 5/2 R.",
+      "hint": "W = P · ΔV (pasa atm·L a kJ). Para Q usa primera ley: ΔE = n Cv ΔT y Q = ΔE + W, con Cv = Cp - R.",
+      "solution": "W ≈ 1 atm × 3 L ≈ 303 J ≈ 0.30 kJ (por el gas). Cv = 3/2 R. ΔE = 1.5 × (3/2 R) × 45 ≈ 840 J. Q = ΔE + W ≈ 1.14 kJ.",
+      "tags": ["primera_ley", "isobarico", "trabajo", "calor"],
+      "difficulty": "media",
+      "images": [
+        "inputs/modulo2/filminas2/2.Segunda_Ley_termo.png"
+      ],
+      "source": {
+        "pdf": "inputs/Practico Fisica 2 2023.pdf",
+        "section": "Transformaciones en gases",
+        "page": 20
+      }
+    },
+    {
+      "id": "u2-e02",
+      "title": "Rendimiento de Carnot",
+      "statement": "Una maquina de Carnot opera entre TH = 650 K y TC = 310 K. (a) Calcula su rendimiento ideal. (b) Si entrega 480 J de trabajo por ciclo, ¿cuanto calor toma de la fuente caliente?",
+      "hint": "e = 1 - Tc/Th. Trabajo = e · Qh ⇒ Qh = W/e.",
+      "solution": "e = 1 - 310/650 ≈ 0.523. Con W = 480 J, Qh ≈ 480 / 0.523 ≈ 918 J por ciclo.",
+      "tags": ["carnot", "segunda_ley", "rendimiento"],
+      "difficulty": "baja",
+      "images": [],
+      "source": {
+        "pdf": "inputs/Practico Fisica 2 2023.pdf",
+        "section": "Segundo Principio",
+        "page": 28
+      }
+    }
+  ]
+}
