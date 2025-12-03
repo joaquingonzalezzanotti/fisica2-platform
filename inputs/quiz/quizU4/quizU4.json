@@ -1,0 +1,336 @@
+{
+"moduleId": "u4",
+"title": "Quiz Unidad 4 - Potencial eléctrico",
+"questions": [
+{
+"question": "¿Cuál de las siguientes expresiones define correctamente el potencial eléctrico V en un punto de un campo electrostático?",
+"options": [
+"V = U/q0",
+"V = q0/U",
+"V = W · q0",
+"V = U · q0"
+],
+"answer": 0,
+"explanation": "El potencial eléctrico V se define como la energía potencial eléctrica U del sistema carga-campo dividida por la carga de prueba q0: V = U/q0. Depende solo de la distribución de carga fuente y no del valor de la carga de prueba."
+},
+{
+"question": "¿Cuál es la unidad del Sistema Internacional (SI) para el potencial eléctrico?",
+"options": [
+"newton (N)",
+"coulomb (C)",
+"joule (J)",
+"volt (V)"
+],
+"answer": 3,
+"explanation": "La unidad de potencial eléctrico en el SI es el volt (V), que equivale a un joule por coulomb: 1 V = 1 J/C."
+},
+{
+"question": "La diferencia de potencial eléctrico ΔV entre dos puntos A y B de un campo eléctrico se define como:",
+"options": [
+"ΔV = ΔU/q0",
+"ΔV = q0 · ΔU",
+"ΔV = Wext",
+"ΔV = −ΔU/q0"
+],
+"answer": 0,
+"explanation": "La diferencia de potencial entre A y B se define como el cambio de energía potencial ΔU del sistema al mover una carga de prueba q0 entre esos puntos, dividido por q0: ΔV = ΔU/q0."
+},
+{
+"question": "La relación general entre la diferencia de potencial V_B − V_A y el campo eléctrico E⃗ entre A y B es:",
+"options": [
+"V_B − V_A = −∫_A^B E⃗ · ds",
+"V_B − V_A = ∫_A^B E⃗ · ds",
+"V_B − V_A = −∫_A^B F⃗ · ds",
+"V_B − V_A = q0 ∫_A^B E⃗ · ds"
+],
+"answer": 0,
+"explanation": "Por definición en un campo electrostático, la diferencia de potencial entre dos puntos A y B viene dada por V_B − V_A = −∫_A^B E⃗ · ds, donde la integral de línea no depende de la trayectoria por tratarse de una fuerza conservativa."
+},
+{
+"question": "Si un agente externo traslada una carga q de A a B sin modificar su energía cinética, el trabajo realizado por dicho agente se relaciona con la diferencia de potencial ΔV mediante:",
+"options": [
+"W = q · ΔV",
+"W = ΔV/q",
+"W = −q · ΔV",
+"W = 0"
+],
+"answer": 0,
+"explanation": "Si la carga se mueve cuasiestáticamente sin cambio de energía cinética, el trabajo del agente externo es W = ΔU y como ΔU = q · ΔV, entonces W = q · ΔV."
+},
+{
+"question": "El electrón-volt (eV) se define como:",
+"options": [
+"La energía que adquiere una carga e al moverse a través de una diferencia de potencial de 1 V",
+"La carga de un electrón",
+"El potencial de 1 V aplicado a cualquier carga",
+"El trabajo de 1 N·m sobre cualquier carga"
+],
+"answer": 0,
+"explanation": "Un electrón-volt es la energía que gana o pierde una carga elemental e (como un electrón o un protón) al atravesar una diferencia de potencial de 1 V: 1 eV = 1,60 × 10^-19 J."
+},
+{
+"question": "En un campo eléctrico uniforme E, para un desplazamiento d paralelo a E desde A hasta B, la diferencia de potencial V_B − V_A vale:",
+"options": [
+"V_B − V_A = E · d",
+"V_B − V_A = −E · d",
+"V_B − V_A = 0",
+"V_B − V_A = E · d · cos θ con θ = 90°"
+],
+"answer": 1,
+"explanation": "En un campo uniforme, si el desplazamiento es paralelo al campo, se cumple V_B − V_A = −E · d. El signo menos indica que el potencial disminuye en la dirección del campo eléctrico."
+},
+{
+"question": "Una carga de prueba positiva se libera en reposo en un campo eléctrico uniforme y se mueve espontáneamente en la dirección de E⃗. ¿Qué ocurre con la energía potencial del sistema carga-campo?",
+"options": [
+"La energía potencial aumenta",
+"La energía potencial disminuye",
+"La energía potencial permanece constante",
+"La energía potencial depende solo de la trayectoria y no del campo"
+],
+"answer": 1,
+"explanation": "Si q0 > 0 y se mueve en el sentido del campo, el trabajo del campo es positivo y la energía potencial disminuye (ΔU < 0) mientras la energía cinética de la partícula aumenta."
+},
+{
+"question": "Una superficie equipotencial se define como la superficie formada por:",
+"options": [
+"Puntos donde el campo eléctrico es nulo",
+"Puntos con igual densidad de carga",
+"Puntos con el mismo potencial eléctrico V",
+"Puntos donde la energía potencial es máxima"
+],
+"answer": 2,
+"explanation": "Por definición, una superficie equipotencial está formada por todos los puntos del espacio que tienen el mismo valor de potencial eléctrico V."
+},
+{
+"question": "¿Cuál es la relación correcta entre las superficies equipotenciales y las líneas de campo eléctrico?",
+"options": [
+"El campo eléctrico es siempre tangente a las superficies equipotenciales",
+"El campo eléctrico es siempre perpendicular a las superficies equipotenciales",
+"El campo eléctrico es paralelo a las superficies equipotenciales solo si V es constante",
+"El campo eléctrico no tiene ninguna relación con las superficies equipotenciales"
+],
+"answer": 1,
+"explanation": "Al desplazarse sobre una superficie equipotencial se cumple dV = 0 y, como dV = −E⃗ · ds, entonces E⃗ · ds = 0. Esto implica que el campo eléctrico es perpendicular a las superficies equipotenciales."
+},
+{
+"question": "El potencial eléctrico debido a una carga puntual q a una distancia r (tomando V = 0 en el infinito) viene dado por:",
+"options": [
+"V = ke · q / r",
+"V = ke · q / r^2",
+"V = ke · q · r",
+"V = ke · q^2 / r"
+],
+"answer": 0,
+"explanation": "Integrando la relación entre el campo eléctrico de una carga puntual y el potencial, se obtiene que el potencial en un punto a distancia r es V = ke · q / r, eligiendo V = 0 cuando r → ∞."
+},
+{
+"question": "Para una carga puntual negativa −|q|, el potencial eléctrico V en un punto a distancia r (tomando V = 0 en el infinito) es:",
+"options": [
+"Positivo y proporcional a 1/r",
+"Negativo y proporcional a 1/r",
+"Siempre cero",
+"Independiente del signo de la carga"
+],
+"answer": 1,
+"explanation": "La expresión general V = ke · q / r también se aplica a cargas negativas. Si q < 0, el potencial V es negativo y su magnitud decrece como 1/r."
+},
+{
+"question": "El potencial eléctrico en un punto debido a varias cargas puntuales q_i situadas a distancias r_i se obtiene como:",
+"options": [
+"V = ke · Σ (q_i / r_i)",
+"V = ke · Σ (q_i / r_i^2)",
+"V = Σ (E_i · r_i)",
+"V = ke · q_total / r^2"
+],
+"answer": 0,
+"explanation": "El potencial eléctrico es una magnitud escalar, por lo que la contribución de varias cargas se obtiene sumando algebraicamente los potenciales individuales: V = ke · Σ (q_i / r_i)."
+},
+{
+"question": "La energía potencial electrostática U de un sistema formado por dos cargas puntuales q1 y q2 separadas una distancia r12 es:",
+"options": [
+"U = ke · q1 · q2 / r12",
+"U = ke · (q1 + q2) / r12",
+"U = ke · q1 · q2 / r12^2",
+"U = q1 · q2 · r12"
+],
+"answer": 0,
+"explanation": "El trabajo que debe realizar un agente externo para traer una carga q1 desde el infinito hasta la vecindad de otra carga q2 se almacena como energía potencial U = ke · q1 · q2 / r12."
+},
+{
+"question": "La expresión correcta para la energía potencial de un sistema de tres cargas q1, q2 y q3 es:",
+"options": [
+"U = ke · (q1 q2 / r12 + q1 q3 / r13 + q2 q3 / r23)",
+"U = ke · (q1 + q2 + q3) / r",
+"U = ke · q_total^2 / r",
+"U = Σ q_i"
+],
+"answer": 0,
+"explanation": "Para más de dos cargas, la energía potencial del sistema se obtiene sumando las contribuciones de todos los pares de cargas: U = ke · (q1 q2 / r12 + q1 q3 / r13 + q2 q3 / r23)."
+},
+{
+"question": "Si el campo eléctrico solo tiene componente en la dirección x, la relación correcta entre E_x y el potencial eléctrico V(x) es:",
+"options": [
+"E_x = dV/dx",
+"E_x = −dV/dx",
+"E_x = V/x",
+"E_x = −x · dV/dx"
+],
+"answer": 1,
+"explanation": "En una dimensión, la componente del campo eléctrico se relaciona con el potencial mediante E_x = −dV/dx, es decir, el campo es el negativo de la derivada espacial del potencial."
+},
+{
+"question": "La relación vectorial general entre el campo eléctrico E⃗ y el potencial eléctrico V(x, y, z) se expresa como:",
+"options": [
+"E⃗ = ∇V",
+"E⃗ = −∇V",
+"E⃗ = V · ∇",
+"∇ · E⃗ = 0"
+],
+"answer": 1,
+"explanation": "En forma vectorial, el campo eléctrico se obtiene como el negativo del gradiente del potencial eléctrico: E⃗ = −∇V, lo que refleja cómo cambia V en el espacio."
+},
+{
+"question": "Cuando una carga de prueba se desplaza sobre una superficie equipotencial en un campo electrostático:",
+"options": [
+"La diferencia de potencial es distinta de cero y el trabajo del campo es no nulo",
+"La diferencia de potencial es cero y el trabajo neto del campo es cero (si no cambia la energía cinética)",
+"El campo eléctrico es tangente al desplazamiento",
+"La energía potencial siempre aumenta"
+],
+"answer": 1,
+"explanation": "En una superficie equipotencial se cumple ΔV = 0; por tanto, el cambio de energía potencial ΔU = q · ΔV es cero y el trabajo neto asociado al cambio de energía potencial también es nulo si no hay cambio en la energía cinética."
+},
+{
+"question": "Para una distribución continua de carga con elementos diferenciales dq, el potencial eléctrico en un punto P se calcula mediante:",
+"options": [
+"V = ke · ∫ (dq / r)",
+"V = ke · ∫ (dq / r^2)",
+"V = ∫ E⃗ · ds",
+"V = ke · ∫ E dA"
+],
+"answer": 0,
+"explanation": "Si se conoce la distribución de carga, se considera cada elemento diferencial dq como una carga puntual y se integra su contribución: V = ke · ∫ (dq / r), sumando así el aporte de todos los elementos de la distribución."
+},
+{
+"question": "En un conductor en equilibrio electrostático, es correcto afirmar que:",
+"options": [
+"El campo eléctrico en el interior es distinto de cero",
+"La carga se distribuye uniformemente en todo el volumen",
+"El campo eléctrico justo en el exterior es paralelo a la superficie",
+"El campo eléctrico en el interior es cero y la carga reside en la superficie externa"
+],
+"answer": 3,
+"explanation": "En equilibrio electrostático se cumple E_interior = 0, las cargas libres se redistribuyen hasta quedar en la superficie externa y el campo justo fuera del conductor es perpendicular a dicha superficie."
+},
+{
+"question": "Respecto al potencial eléctrico de un conductor en equilibrio electrostático, señale la afirmación correcta:",
+"options": [
+"El potencial es mayor en el interior que en la superficie",
+"El potencial es menor en el interior que en la superficie",
+"El potencial es constante en todo el volumen y en la superficie del conductor",
+"El potencial solo está definido en la superficie"
+],
+"answer": 2,
+"explanation": "Como el campo eléctrico interior es nulo, no hay diferencias de potencial dentro del conductor; por tanto, el potencial eléctrico es constante en todo su volumen y en la superficie."
+},
+{
+"question": "El potencial eléctrico V de una esfera conductora de radio R que posee una carga total Q (tomando V = 0 en el infinito) en un punto de su superficie es:",
+"options": [
+"V = ke · Q / R",
+"V = ke · Q / R^2",
+"V = ke · Q · R",
+"V = Q / (4π ε0 R^2)"
+],
+"answer": 0,
+"explanation": "Para una esfera conductora, el potencial en la superficie es el mismo que el de una carga puntual Q situada en el centro: V = ke · Q / R, mientras que el campo en la superficie es E = ke · Q / R^2."
+},
+{
+"question": "Dos esferas conductoras de radios r1 y r2 están conectadas por un alambre conductor y en equilibrio electrostático. Si sus potenciales son iguales (V1 = V2), la relación entre las cargas q1 y q2 es:",
+"options": [
+"q1/q2 = r1/r2",
+"q1/q2 = r2/r1",
+"q1/q2 = (r1/r2)^2",
+"q1/q2 = (r2/r1)^2"
+],
+"answer": 0,
+"explanation": "Como V = ke · q/r, al igualar V1 = V2 se tiene ke · q1/r1 = ke · q2/r2, de donde resulta q1/q2 = r1/r2."
+},
+{
+"question": "En la situación anterior, la relación entre las densidades de carga superficial σ1 y σ2 de las dos esferas es:",
+"options": [
+"σ1/σ2 = r1/r2",
+"σ1/σ2 = r2/r1",
+"σ1/σ2 = (r1/r2)^2",
+"σ1/σ2 = (r2/r1)^2"
+],
+"answer": 1,
+"explanation": "La densidad superficial es σ = q/A con A = 4π r^2. Usando q1/q2 = r1/r2 se obtiene σ1/σ2 = (q1/q2) · (r2^2/r1^2) = (r1/r2) · (r2^2/r1^2) = r2/r1."
+},
+{
+"question": "En un conductor con forma irregular en equilibrio electrostático, la densidad de carga superficial es máxima en:",
+"options": [
+"Las zonas donde el radio de curvatura es mayor (superficies más planas)",
+"Las zonas donde el radio de curvatura es menor (puntas o regiones muy curvas)",
+"Todas las zonas de la superficie por igual",
+"El interior del conductor"
+],
+"answer": 1,
+"explanation": "En conductores de forma irregular, la densidad de carga superficial es máxima en las zonas donde el radio de curvatura es menor (puntas), lo que también implica campos eléctricos más intensos en esas regiones."
+},
+{
+"question": "Pregunta de desarrollo: Explique la diferencia entre potencial eléctrico y energía potencial eléctrica en un sistema carga-campo.",
+"options": [
+"Answer A: ver explicación detallada en el campo 'explanation'",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "La energía potencial eléctrica U es la energía asociada a la configuración de un sistema de cargas y depende tanto de la distribución de carga fuente como de la posición de la carga de prueba. Se interpreta como el trabajo que debe realizar un agente externo para ensamblar el sistema o mover una carga desde una referencia (habitualmente el infinito) hasta un punto, sin cambiar su energía cinética. El potencial eléctrico V, en cambio, es una magnitud escalar que se define como la energía potencial por unidad de carga de prueba: V = U/q0. De este modo, V depende solo de la distribución de carga fuente y del punto del espacio considerado, pero no del valor específico de la carga de prueba. U describe la energía total del sistema para una carga dada, mientras que V caracteriza el “nivel energético por coulomb” en cada punto del campo."
+},
+{
+"question": "Pregunta de desarrollo: Describa qué son las superficies equipotenciales y explique su relación con las líneas de campo eléctrico, incluyendo qué ocurre con el trabajo del campo cuando una carga se mueve sobre una de estas superficies.",
+"options": [
+"Answer A: ver explicación detallada en el campo 'explanation'",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "Una superficie equipotencial es el conjunto de puntos del espacio que comparten un mismo valor de potencial eléctrico V. En un campo uniforme, estas superficies son planos paralelos perpendiculares a las líneas de campo; en campos más complejos, adoptan geometrías que reflejan la distribución de carga. La relación con el campo eléctrico se expresa en que E⃗ es siempre perpendicular a las superficies equipotenciales, ya que al desplazarse tangencialmente a ellas se cumple dV = 0 y, por tanto, E⃗ · ds = 0. Si una carga se mueve sobre una superficie equipotencial sin cambiar su energía cinética, la diferencia de potencial ΔV es nula, por lo que el cambio de energía potencial ΔU = q · ΔV también es cero. En consecuencia, el trabajo neto asociado al cambio de energía potencial realizado por el campo eléctrico sobre la carga es nulo a lo largo de cualquier desplazamiento puramente equipotencial."
+},
+{
+"question": "Pregunta de desarrollo: Justifique por qué el interior de un conductor en equilibrio electrostático es una región de campo eléctrico nulo y de potencial constante. Incluya el argumento basado en el movimiento de las cargas libres.",
+"options": [
+"Answer A: ver explicación detallada en el campo 'explanation'",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "En un conductor existen cargas libres (generalmente electrones) que pueden moverse en respuesta a un campo eléctrico. Si dentro del conductor existiera un campo eléctrico distinto de cero, estas cargas se acelerarían y se redistribuirían hasta generar un campo interno que se oponga al existente. El proceso continúa hasta que el campo neto en el interior se anula (E_interior = 0), condición de equilibrio electrostático. Una vez que el campo interior es nulo, no hay fuerzas eléctricas que sigan moviendo las cargas libres. Al ser E⃗ = −∇V, si E⃗ = 0 en el interior, el gradiente de potencial es nulo y el potencial eléctrico debe ser constante en todo el volumen del conductor. Además, como el campo solo puede existir fuera del conductor y es perpendicular a la superficie, esta superficie resulta ser equipotencial, compartiendo el mismo valor de V que el interior."
+},
+{
+"question": "Pregunta de desarrollo: Describa el procedimiento general para obtener el potencial eléctrico de una distribución continua de carga y cómo puede luego obtenerse el campo eléctrico a partir de ese potencial.",
+"options": [
+"Answer A: ver explicación detallada en el campo 'explanation'",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "Si se conoce la distribución continua de carga, se divide en elementos diferenciales dq, cada uno de los cuales se trata como una carga puntual. El potencial elemental en un punto P a distancia r de dq es dV = ke · dq/r. El potencial total se obtiene integrando sobre toda la distribución: V(P) = ke · ∫ (dq/r), donde la integral puede expresarse en coordenadas adecuadas (cartesianas, cilíndricas, esféricas, etc.) según la simetría del problema. Una vez conocido V(x, y, z), el campo eléctrico E⃗ se obtiene mediante el gradiente: E⃗ = −∇V, es decir, calculando las derivadas parciales E_x = −∂V/∂x, E_y = −∂V/∂y y E_z = −∂V/∂z. Así, primero se integra sobre la distribución de carga para hallar V y luego se derivan espacialmente esas expresiones para obtener el campo eléctrico asociado."
+},
+{
+"question": "Pregunta de desarrollo: Explique el significado físico del signo de la energía potencial electrostática U = ke · q1 · q2 / r12 para cargas de igual signo y de signo opuesto, y qué implicancias tiene sobre el trabajo que debe realizar un agente externo para acercar o separar las cargas.",
+"options": [
+"Answer A: ver explicación detallada en el campo 'explanation'",
+"Answer B",
+"Answer C",
+"Answer D"
+],
+"answer": 0,
+"explanation": "La energía potencial electrostática U = ke · q1 · q2 / r12 refleja la interacción entre dos cargas puntuales. Si q1 y q2 tienen el mismo signo, el producto q1 · q2 es positivo y U > 0; esto significa que el sistema almacena energía al acercar las cargas, ya que un agente externo debe realizar trabajo positivo contra la repulsión eléctrica para disminuir r12. Por el contrario, si q1 y q2 son de signos opuestos, el producto q1 · q2 es negativo y U < 0; en este caso, al acercar las cargas la fuerza eléctrica es atractiva y el agente externo debe realizar trabajo negativo (el campo hace parte del trabajo por él), es decir, el sistema libera energía. El signo de U indica así si el sistema tiende espontáneamente a acercar o separar las cargas y determina la dirección del trabajo mínimo que debe efectuar un agente externo para modificar la distancia entre ellas. "
+}
+]
+}

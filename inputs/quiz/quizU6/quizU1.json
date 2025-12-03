@@ -1,0 +1,424 @@
+{
+"moduleId": "u1",
+"title": "Quiz Unidad 1 - Fundamentos de termología",
+"questions": [
+{
+"question": "¿Qué estudia la termodinámica según la definición dada en la unidad?",
+"options": [
+"Las situaciones en las que cambian la temperatura o el estado de un sistema debido a transferencias de energía.",
+"Únicamente el movimiento de los planetas y estrellas.",
+"Solo las transformaciones químicas de los materiales.",
+"Exclusivamente la generación de energía eléctrica en centrales."
+],
+"answer": 0,
+"explanation": "La termodinámica se define como la parte de la física que estudia situaciones en las que la temperatura o el estado (sólido, líquido o gas) de un sistema cambian debido a transferencias de energía. "
+},
+{
+"question": "¿Qué se entiende por contacto térmico entre dos cuerpos?",
+"options": [
+"Que los cuerpos están en contacto mecánico y pueden realizar trabajo entre sí.",
+"Que los cuerpos pueden intercambiar energía como consecuencia de una diferencia de temperatura.",
+"Que los cuerpos tienen la misma masa y volumen.",
+"Que los cuerpos están separados por un aislante perfecto."
+],
+"answer": 1,
+"explanation": "Dos cuerpos están en contacto térmico cuando pueden intercambiar energía entre sí debido a una diferencia de temperatura, por ejemplo en forma de calor o radiación."
+},
+{
+"question": "¿Qué condición define el equilibrio térmico entre dos sistemas A y B?",
+"options": [
+"Que ambos tengan la misma masa.",
+"Que ambos estén formados por la misma sustancia.",
+"Que, al ponerse en contacto térmico, no haya transferencia neta de energía entre ellos.",
+"Que se encuentren a la misma presión independientemente de la temperatura."
+],
+"answer": 2,
+"explanation": "Dos sistemas están en equilibrio térmico cuando, al ponerse en contacto térmico, dejan de intercambiar energía neta y comparten la misma temperatura."
+},
+{
+"question": "¿Qué afirma la ley cero de la termodinámica?",
+"options": [
+"Que la energía no se crea ni se destruye.",
+"Que toda máquina térmica tiene un rendimiento limitado.",
+"Que si A y B están en equilibrio térmico con C, entonces A y B están en equilibrio térmico entre sí.",
+"Que el calor fluye siempre del cuerpo frío al caliente."
+],
+"answer": 2,
+"explanation": "La ley cero establece que si dos sistemas A y B están por separado en equilibrio térmico con un tercer sistema C, entonces A y B están en equilibrio térmico entre sí; esto permite fundamentar el concepto de temperatura. "
+},
+{
+"question": "¿Cuál es el papel de un termómetro en la medición de temperatura?",
+"options": [
+"Intercambiar calor y modificar el estado del sistema medido.",
+"Actuar como una fuente de energía para calentar el sistema.",
+"Proporcionar una lectura de una propiedad física que varía con la temperatura y está en equilibrio térmico con el sistema.",
+"Medir directamente la energía interna del sistema."
+],
+"answer": 2,
+"explanation": "Un termómetro es un instrumento que, al ponerse en equilibrio térmico con el sistema, mide una propiedad física (propiedad termométrica) que varía con la temperatura, como volumen, presión o resistencia."
+},
+{
+"question": "¿Qué propiedad física se utiliza como propiedad termométrica en los termómetros líquidos comunes (mercurio, alcohol)?",
+"options": [
+"La presión del gas contenido en el bulbo.",
+"El volumen del líquido contenido en el tubo capilar.",
+"La conductividad eléctrica del vidrio.",
+"La masa del líquido en función de la temperatura."
+],
+"answer": 1,
+"explanation": "En los termómetros líquidos típicos la propiedad termométrica es el volumen del líquido; si la sección del tubo es constante, la longitud de la columna es proporcional al volumen y por tanto a la temperatura."
+},
+{
+"question": "¿Cuáles son los dos puntos fijos usados tradicionalmente para calibrar la escala Celsius en termómetros de líquido?",
+"options": [
+"0 °C: punto de fusión del hielo; 100 °C: punto de ebullición del agua, ambos a presión atmosférica.",
+"0 °C: congelación del alcohol; 100 °C: solidificación del mercurio.",
+"−273,15 °C: cero absoluto; 100 °C: punto triple del agua.",
+"0 °C: temperatura ambiente; 100 °C: temperatura del cuerpo humano."
+],
+"answer": 0,
+"explanation": "La escala Celsius se calibra fijando 0 °C en la mezcla hielo-agua en equilibrio a presión atmosférica y 100 °C en la mezcla agua-vapor de agua en equilibrio a presión atmosférica. "
+},
+{
+"question": "¿Cuál es la principal característica del termómetro de gas a volumen constante?",
+"options": [
+"Su lectura depende fuertemente del tipo de gas utilizado.",
+"Solo sirve para medir temperaturas entre 0 °C y 100 °C.",
+"Utiliza la presión del gas a volumen constante como propiedad termométrica y las lecturas son prácticamente independientes de la sustancia usada.",
+"Solo funciona con gases monoatómicos."
+],
+"answer": 2,
+"explanation": "En el termómetro de gas a volumen constante se mantiene fijado el volumen del gas y se usa la presión como propiedad termométrica; para presiones bajas las lecturas son prácticamente independientes del gas empleado. "
+},
+{
+"question": "¿Cómo se define el cero absoluto de temperatura en la escala Kelvin?",
+"options": [
+"La temperatura de congelación del agua.",
+"La temperatura a la cual la presión de un gas ideal se anula al extrapolar linealmente.",
+"La temperatura a la cual el agua hierve a presión atmosférica.",
+"La temperatura del punto triple del agua."
+],
+"answer": 1,
+"explanation": "El cero absoluto se define como la temperatura a la que la presión de un gas ideal tendería a cero al extrapolar la relación lineal presión–temperatura; en la escala Kelvin corresponde a 0 K. "
+},
+{
+"question": "¿Cuál es la relación correcta entre la temperatura en grados Celsius y en Kelvin?",
+"options": [
+"T(°C) = T(K) + 273,15",
+"T(°C) = T(K) − 273,15",
+"T(K) = T(°C) − 273,15",
+"T(K) = 9/5 · T(°C) + 32"
+],
+"answer": 1,
+"explanation": "Por definición de la escala Kelvin, la relación es T(°C) = T(K) − 273,15 y por lo tanto T(K) = T(°C) + 273,15."
+},
+{
+"question": "¿Cuál de las siguientes expresiones relaciona correctamente las escalas Celsius y Fahrenheit?",
+"options": [
+"T(°F) = 5/9 · T(°C) + 32",
+"T(°F) = 9/5 · T(°C) + 32",
+"T(°C) = 9/5 · T(°F) + 32",
+"T(°C) = T(°F) + 273,15"
+],
+"answer": 1,
+"explanation": "La conversión correcta es T(°F) = (9/5)·T(°C) + 32; las escalas Celsius y Fahrenheit tienen ceros arbitrarios y solo la escala Kelvin es verdaderamente absoluta."
+},
+{
+"question": "¿Cómo se define el coeficiente de expansión lineal promedio α de un sólido?",
+"options": [
+"α = ΔT / (Li · ΔL)",
+"α = Li · ΔT / ΔL",
+"α = ΔL / (Li · ΔT)",
+"α = ΔV / (Vi · ΔT)"
+],
+"answer": 2,
+"explanation": "El coeficiente de expansión lineal promedio se define como α = ΔL / (Li · ΔT), donde Li es la longitud inicial y ΔL el cambio de longitud para un cambio de temperatura ΔT. "
+},
+{
+"question": "En la teoría de la expansión térmica, ¿cuál es la relación aproximada entre los coeficientes de expansión volumétrica y lineal para sólidos isotrópicos?",
+"options": [
+"β = α / 3 y γ = 2α",
+"β = 3α y γ = 2α",
+"β = 2α y γ = 3α",
+"β = α y γ = 3α"
+],
+"answer": 1,
+"explanation": "Para un sólido isotrópico, el coeficiente de expansión volumétrica promedio cumple β ≈ 3α y el de expansión superficial γ ≈ 2α. "
+},
+{
+"question": "¿Qué comportamiento inusual presenta el agua líquida en el intervalo de 0 °C a 4 °C?",
+"options": [
+"Su volumen aumenta linealmente con la temperatura.",
+"Su densidad permanece exactamente constante.",
+"Se contrae al aumentar la temperatura de 0 °C a 4 °C, por lo que su densidad aumenta hasta alcanzar un máximo a 4 °C.",
+"Se solidifica gradualmente en ese intervalo."
+],
+"answer": 2,
+"explanation": "Entre 0 °C y 4 °C, el agua se contrae al aumentar la temperatura, de modo que su densidad aumenta y alcanza un máximo de aproximadamente 1 g/cm³ a 4 °C; por encima de 4 °C se expande con la temperatura. "
+},
+{
+"question": "¿Qué se entiende por energía interna de un sistema?",
+"options": [
+"La energía potencial gravitatoria del sistema respecto del suelo.",
+"La energía asociada a los componentes microscópicos (átomos y moléculas): energías cinéticas (traslacional, rotacional, vibracional) y potenciales internas.",
+"Solo la energía cinética de traslación del centro de masa.",
+"La suma de trabajo y calor intercambiados con el entorno."
+],
+"answer": 1,
+"explanation": "La energía interna es la energía asociada a los componentes microscópicos del sistema (energías cinéticas y potenciales microscópicas) medida en un marco en reposo con respecto al sistema. "
+},
+{
+"question": "¿Cómo se define el calor en el contexto de la termodinámica?",
+"options": [
+"La energía total almacenada en un sistema.",
+"La energía transferida entre sistema y entorno como consecuencia exclusiva de una diferencia de temperatura.",
+"La energía transferida por cualquier mecanismo, incluyendo trabajo mecánico.",
+"El producto de la presión por el volumen de un gas."
+],
+"answer": 1,
+"explanation": "El calor es el mecanismo de transferencia de energía entre un sistema y su entorno debido únicamente a una diferencia de temperatura; no tiene sentido hablar de calor si no hay transferencia."
+},
+{
+"question": "¿Cómo se define la caloría (cal) clásica?",
+"options": [
+"La energía necesaria para elevar 1 kg de agua de 0 °C a 100 °C.",
+"La energía necesaria para elevar 1 g de agua de 0 °C a 100 °C.",
+"La energía necesaria para elevar 1 g de agua de 14,5 °C a 15,5 °C.",
+"La energía necesaria para elevar 1 mol de agua de 0 °C a 100 °C."
+],
+"answer": 2,
+"explanation": "La caloría se define como la cantidad de energía necesaria para elevar la temperatura de 1 g de agua de 14,5 °C a 15,5 °C. "
+},
+{
+"question": "¿Cuál es el valor del equivalente mecánico del calor establecido por Joule?",
+"options": [
+"1 cal = 1,00 J",
+"1 cal = 2,00 J",
+"1 cal = 3,14 J",
+"1 cal ≈ 4,186 J"
+],
+"answer": 3,
+"explanation": "Joule estableció la equivalencia entre caloría y joule: 1 cal ≈ 4,186 J, conocida como equivalente mecánico del calor. "
+},
+{
+"question": "La capacidad térmica C de una muestra y el calor específico c de una sustancia se relacionan mediante:",
+"options": [
+"C = c · m y c = Q / (m · ΔT)",
+"C = c / m y c = Q · m · ΔT",
+"C = Q · ΔT y c = C · m",
+"C = Q / (m · ΔT) y c = C / ΔT"
+],
+"answer": 0,
+"explanation": "La capacidad térmica de una muestra es C = Q / ΔT; el calor específico es c = C/m, por lo que Q = m · c · ΔT."
+},
+{
+"question": "¿Qué criterio de signos se usa para la cantidad de calor Q en la expresión Q = m · c · ΔT?",
+"options": [
+"Q es siempre positivo, independientemente de ΔT.",
+"Q es positivo si el sistema pierde energía.",
+"Q es positivo cuando la temperatura del sistema aumenta (ΔT > 0) y negativo cuando disminuye.",
+"Q es negativo solo si el sistema está aislado."
+],
+"answer": 2,
+"explanation": "Cuando la temperatura aumenta, ΔT > 0 y se toma Q > 0 (energía que entra al sistema); cuando la temperatura disminuye, ΔT < 0 y Q < 0 (energía que sale del sistema). "
+},
+{
+"question": "En una experiencia de calorimetría simple, despreciando pérdidas, ¿qué relación expresa la conservación de la energía en el sistema aislado agua + muestra caliente?",
+"options": [
+"Qfrío + Qcaliente = 0",
+"Qfrío − Qcaliente = 0",
+"Qfrío = Qcaliente",
+"Qfrío = 0 y Qcaliente = 0"
+],
+"answer": 0,
+"explanation": "En un calorímetro ideal se tiene Qfrío + Qcaliente = 0, o equivalentemente Qfrío = −Qcaliente, ya que la energía que pierde la sustancia caliente la gana la fría."
+},
+{
+"question": "¿Qué representa el equivalente en agua del calorímetro (π)?",
+"options": [
+"La masa real de agua contenida en el calorímetro.",
+"Una masa hipotética de agua que absorbe la misma cantidad de calor que el propio calorímetro y sus accesorios.",
+"La capacidad térmica total del sistema agua + muestra.",
+"La densidad del líquido en el calorímetro."
+],
+"answer": 1,
+"explanation": "El equivalente en agua π es una masa ficticia de agua que absorbería el mismo calor que los componentes no acuosos del calorímetro (recipiente, agitador, termómetro, etc.). "
+},
+{
+"question": "¿Qué es el calor latente L de una sustancia?",
+"options": [
+"El calor necesario para elevar su temperatura en 1 °C.",
+"La energía interna total del sistema.",
+"La energía por unidad de masa necesaria para producir un cambio de fase sin cambio de temperatura.",
+"La energía asociada al movimiento traslacional de las moléculas."
+],
+"answer": 2,
+"explanation": "El calor latente L se define como L = Q/m y representa la energía necesaria por unidad de masa para producir un cambio de fase (fusión, vaporización, etc.) a temperatura constante. "
+},
+{
+"question": "En la expresión Q = ± m · L para un cambio de fase, ¿cómo se elige el signo?",
+"options": [
+"Siempre positivo, independientemente del proceso.",
+"Positivo cuando la energía entra al sistema (por ejemplo, fusión o vaporización) y negativo cuando sale (solidificación o condensación).",
+"Negativo solo en la vaporización.",
+"Negativo solo en la fusión."
+],
+"answer": 1,
+"explanation": "Se toma Q positiva cuando se suministra energía al sistema (fusión, vaporización) y Q negativa cuando el sistema cede energía al entorno (solidificación, condensación). "
+},
+{
+"question": "¿Cuál de las siguientes descripciones corresponde al modelo de gas ideal?",
+"options": [
+"Un conjunto de moléculas que interactúan fuertemente y ocupan todo el volumen disponible.",
+"Un conjunto de átomos o moléculas que se mueven aleatoriamente, sin fuerzas mutuas apreciables y con volumen propio despreciable frente al del recipiente.",
+"Un gas que solo puede estar a temperatura ambiente.",
+"Un gas que siempre se comporta igual, incluso a presiones muy altas."
+],
+"answer": 1,
+"explanation": "Un gas ideal se modela como un conjunto de partículas puntuales sin interacción mutua (salvo colisiones) y cuyo volumen propio es despreciable respecto del volumen del recipiente, válido para gases de baja densidad. "
+},
+{
+"question": "¿Cuál es la ecuación de estado de un gas ideal en términos de número de moles n?",
+"options": [
+"P V = n R T",
+"P V = n k_B T",
+"P V / T = constante · m",
+"P = V / (n R T)"
+],
+"answer": 0,
+"explanation": "La ecuación de estado macroscópica de un gas ideal es P V = n R T, donde n es el número de moles, R la constante universal de los gases y T la temperatura absoluta. "
+},
+{
+"question": "Si N es el número total de moléculas del gas y N_A el número de Avogadro, ¿qué relación vincula las constantes R y k_B?",
+"options": [
+"k_B = R · N_A",
+"k_B = R / N_A",
+"R = k_B / N_A",
+"R = 1 / (k_B N_A)"
+],
+"answer": 1,
+"explanation": "Partiendo de PV = nRT y n = N / N_A, se obtiene PV = N (R / N_A) T, por lo que k_B = R / N_A."
+},
+{
+"question": "En termodinámica, ¿cuáles son ejemplos de variables de estado y de variables de transferencia?",
+"options": [
+"Variables de estado: P, V, T, E_int; variables de transferencia: Q, W.",
+"Variables de estado: Q, W; variables de transferencia: P, V.",
+"Variables de estado: solo la temperatura; variables de transferencia: P y V.",
+"Todas las magnitudes termodinámicas son siempre variables de estado."
+],
+"answer": 0,
+"explanation": "P, V, T y la energía interna E_int caracterizan el estado de equilibrio del sistema; Q (calor) y W (trabajo) solo se definen durante un proceso y son variables de transferencia."
+},
+{
+"question": "Para un gas contenido en un cilindro con émbolo móvil, ¿qué expresión diferencial describe el trabajo realizado sobre el gas en un proceso cuasiestático?",
+"options": [
+"dW = P dV",
+"dW = −P dV",
+"dW = V dP",
+"dW = −V dP"
+],
+"answer": 1,
+"explanation": "Con la convención tomada en el apunte, el trabajo realizado sobre el gas es dW = −P dV: si el gas se comprime (dV < 0), dW > 0; si se expande (dV > 0), dW < 0. "
+},
+{
+"question": "En un diagrama P–V, ¿a qué corresponde el área bajo la curva entre un estado inicial y uno final en un proceso cuasiestático?",
+"options": [
+"A la variación de energía interna del gas.",
+"A la cantidad de calor intercambiado.",
+"Al trabajo realizado sobre el gas, con signo negativo.",
+"A la variación de temperatura absoluta."
+],
+"answer": 2,
+"explanation": "El trabajo total realizado sobre el gas entre Vi y Vf es W = −∫ P dV; geométricamente es el área (con signo) bajo la curva P(V) entre esos volúmenes."
+},
+{
+"question": "¿Cuál es la forma general de la primera ley de la termodinámica para un sistema que puede intercambiar calor y trabajo con el entorno?",
+"options": [
+"ΔE_int = Q − W",
+"ΔE_int = Q + W",
+"ΔE_int = 0 siempre",
+"ΔE_int = W − Q"
+],
+"answer": 1,
+"explanation": "Con la convención usada en los apuntes, la primera ley se expresa como ΔE_int = Q + W, donde Q > 0 si entra calor al sistema y W > 0 si se realiza trabajo sobre el sistema. "
+},
+{
+"question": "¿Qué caracteriza a un proceso adiabático ideal en un sistema termodinámico?",
+"options": [
+"Se realiza a temperatura constante.",
+"Se realiza a volumen constante.",
+"Se realiza sin intercambio de calor: Q = 0.",
+"Se realiza a presión constante."
+],
+"answer": 2,
+"explanation": "En un proceso adiabático no hay intercambio de energía en forma de calor (Q = 0); cualquier cambio en la energía interna se debe solo al trabajo realizado."
+},
+{
+"question": "En un proceso isobárico (presión constante) de un gas ideal, ¿qué expresión da el trabajo realizado sobre el gas?",
+"options": [
+"W = 0",
+"W = −P (Vf − Vi)",
+"W = −n R (Tf − Ti)",
+"W = P (Vf − Vi)"
+],
+"answer": 1,
+"explanation": "A presión constante, el trabajo sobre el gas es W = −P (Vf − Vi); si el volumen aumenta, el trabajo sobre el gas es negativo (el gas realiza trabajo sobre el entorno). "
+},
+{
+"question": "¿Qué condición cumple un proceso isovolumétrico (isocórico) y qué consecuencia tiene para el trabajo W?",
+"options": [
+"Temperatura constante; W = 0.",
+"Volumen constante; W = 0.",
+"Presión constante; W = 0.",
+"Calor nulo; W = 0."
+],
+"answer": 1,
+"explanation": "En un proceso isovolumétrico el volumen es constante (dV = 0), por lo que no hay desplazamiento del émbolo y el trabajo es W = 0; la primera ley queda ΔE_int = Q."
+},
+{
+"question": "Para un gas ideal en un proceso isotérmico (T constante), ¿qué puede decirse acerca de la variación de energía interna ΔE_int?",
+"options": [
+"ΔE_int = 0, ya que en un gas ideal la energía interna depende solo de la temperatura.",
+"ΔE_int > 0 siempre.",
+"ΔE_int < 0 siempre.",
+"ΔE_int depende únicamente del volumen inicial."
+],
+"answer": 0,
+"explanation": "En un gas ideal la energía interna depende solo de la temperatura; en un proceso isotérmico (T constante) se cumple ΔE_int = 0 y, por la primera ley, Q = −W."
+},
+{
+"question": "Para un gas ideal, ¿qué relación liga los calores específicos molares a presión y volumen constantes?",
+"options": [
+"C_P = C_V",
+"C_P − C_V = R",
+"C_P + C_V = R",
+"C_P · C_V = R"
+],
+"answer": 1,
+"explanation": "Analizando procesos a volumen y presión constantes y aplicando la primera ley se obtiene la relación general para un gas ideal: C_P − C_V = R. "
+},
+{
+"question": "En un gas ideal, el índice adiabático γ se define como:",
+"options": [
+"γ = C_V / C_P",
+"γ = R / C_P",
+"γ = C_P / C_V",
+"γ = R / C_V"
+],
+"answer": 2,
+"explanation": "El índice adiabático o razón de calores específicos se define como γ = C_P / C_V; para gases monoatómicos típicamente γ ≈ 1,67 y para diatómicos γ ≈ 1,40. "
+},
+{
+"question": "Para un gas diatómico ideal (en el rango de temperatura indicado en el apunte), ¿qué valor típico se menciona para γ?",
+"options": [
+"γ ≈ 1,20",
+"γ ≈ 1,40",
+"γ ≈ 1,67",
+"γ ≈ 2,00"
+],
+"answer": 1,
+"explanation": "En el resumen de transformaciones termodinámicas se indica como valor típico γ ≈ 1,40 para gases diatómicos ideales. "
+}
+]
+}

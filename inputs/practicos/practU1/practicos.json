@@ -1,0 +1,28 @@
+{
+  "moduleId": "u1",
+  "title": "Prácticos Unidad 1: Fundamentos de Termología",
+  "exercises": [
+    {
+      "id": "u1-e05",
+      "title": "Variación de Temperatura en °F",
+      "statement": "En un laboratorio de prueba de materiales se debe aumentar la temperatura de una muestra en $40^{\\circ}C$. Si la temperatura inicial de la muestra es de $68,2^{\\circ}F$ y el único termómetro disponible mide en grados Fahrenheit, ¿qué temperatura final ($T_f$) deberá registrar el termómetro en °F una vez que se ha producido el aumento requerido?",
+      "steps": [
+        "Calcular la variación de temperatura $\\Delta T$ en ${}^{\\circ}F$ que equivalen a los $40^{\\circ}C$.",
+        "Sumar la variación $\\Delta T ({}^{\\circ}F)$ a la temperatura inicial $T_i ({}^{\\circ}F)$ para obtener la temperatura final $T_f ({}^{\\circ}F)$."
+      ],
+      "hint": "Recuerda que una variación de $100^{\\circ}C$ equivale a una variación de $180^{\\circ}F$. La fórmula de conversión de la variación es: $\\Delta T ({}^{\\circ}F) = \\frac{9}{5} \\cdot \\Delta T ({}^{\\circ}C)$.",
+      "solution": "La variación de $40^{\\circ}C$ es: $\\Delta T ({}^{\\circ}F) = \\frac{9}{5} \\cdot 40^{\\circ}C = 72^{\\circ}F$. La temperatura final será: $T_f = T_i + \\Delta T = 68,2^{\\circ}F + 72^{\\circ}F = 140,2^{\\circ}F$.",
+      "tags": ["termologia", "conversion_temperatura", "escalas"],
+      "difficulty": "baja",
+      "images": [],
+      "attachments": [
+        "inputs/Practico Fisica 2 2023.pdf#page=6"
+      ],
+      "source": {
+        "pdf": "inputs/Practico Fisica 2 2023.pdf",
+        "section": "Capítulo 1",
+        "page": 6
+      }
+    }
+  ]
+}

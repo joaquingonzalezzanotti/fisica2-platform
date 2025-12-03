@@ -1,0 +1,281 @@
+{
+  "moduleId": "u3",
+  "title": "Quiz Unidad 3 - Electrostática y campo eléctrico",
+  "questions": [
+    {
+      "question": "¿Cuál de las siguientes afirmaciones sobre la carga eléctrica es correcta?",
+      "options": [
+        "La carga eléctrica solo puede ser positiva y no se puede transferir entre cuerpos.",
+        "La carga eléctrica no se conserva en un sistema eléctricamente aislado.",
+        "La carga eléctrica se conserva en un sistema aislado y está cuantizada en múltiplos de la carga elemental.",
+        "La carga eléctrica no está relacionada con protones y electrones."
+      ],
+      "answer": 2,
+      "explanation": "La carga eléctrica aparece asociada a partículas como protones y electrones, se puede transferir entre cuerpos pero en un sistema eléctricamente aislado la carga neta se conserva y solo puede tomar valores discretos múltiplos de la carga elemental e."
+    },
+    {
+      "question": "La unidad de carga eléctrica en el Sistema Internacional (SI) es:",
+      "options": [
+        "El coulomb (C).",
+        "El newton (N).",
+        "El joule (J).",
+        "El ampere (A)."
+      ],
+      "answer": 0,
+      "explanation": "En el Sistema Internacional la unidad de carga es el coulomb; el newton es unidad de fuerza, el joule de energía y el ampere de corriente eléctrica."
+    },
+    {
+      "question": "El valor aproximado de la carga elemental e (módulo de la carga del electrón) es:",
+      "options": [
+        "e ≈ 1,6 × 10⁻¹⁹ C.",
+        "e ≈ 8,99 × 10⁹ C.",
+        "e ≈ 1 C.",
+        "e ≈ 9,11 × 10⁻³¹ C."
+      ],
+      "answer": 0,
+      "explanation": "La carga de un electrón o un protón en módulo es aproximadamente e ≈ 1,6 × 10⁻¹⁹ C; 8,99 × 10⁹ es el valor aproximado de la constante de Coulomb y 9,11 × 10⁻³¹ kg es la masa del electrón."
+    },
+    {
+      "question": "Según la ley de Coulomb, la magnitud de la fuerza eléctrica entre dos cargas puntuales q1 y q2 separadas una distancia r en el vacío es:",
+      "options": [
+        "Proporcional a q1 + q2 e inversamente proporcional a r.",
+        "Proporcional al producto q1 q2 e inversamente proporcional al cuadrado de la distancia r.",
+        "Proporcional al cociente q1/q2 e independiente de la distancia r.",
+        "Independiente de las cargas y solo dependiente de la distancia r."
+      ],
+      "answer": 1,
+      "explanation": "La ley de Coulomb establece que la fuerza eléctrica entre dos cargas puntuales en el vacío tiene módulo Fe = k_e |q1||q2| / r², es decir, crece con el producto de las cargas y decrece con el cuadrado de la distancia entre ellas."
+    },
+    {
+      "question": "El principio de superposición para las fuerzas eléctricas establece que:",
+      "options": [
+        "La fuerza resultante sobre una carga es la suma vectorial de las fuerzas ejercidas por cada una de las otras cargas presentes, consideradas de a una.",
+        "La fuerza resultante es la suma escalar de los módulos de todas las fuerzas, sin considerar su dirección.",
+        "La fuerza resultante solo depende de la carga más próxima y se desprecia el resto.",
+        "La fuerza resultante es siempre nula si hay más de dos cargas."
+      ],
+      "answer": 0,
+      "explanation": "Según el principio de superposición, la fuerza neta sobre una carga se obtiene sumando vectorialmente las contribuciones de cada carga individual como si las demás no estuvieran presentes."
+    },
+    {
+      "question": "El campo eléctrico E⃗ en un punto del espacio se define como:",
+      "options": [
+        "El cociente entre la fuerza eléctrica sobre una carga de prueba positiva y el valor de esa carga, E = Fe / q0.",
+        "El producto de la fuerza eléctrica por la carga de prueba, E = Fe q0.",
+        "El cociente entre la carga de prueba y la fuerza eléctrica, E = q0 / Fe.",
+        "El producto entre la constante de Coulomb y la carga de prueba, E = k_e q0."
+      ],
+      "answer": 0,
+      "explanation": "Por definición, el campo eléctrico en un punto es E = Fe / q0, donde Fe es la fuerza que actuaría sobre una carga de prueba positiva q0 colocada en ese punto sin perturbar significativamente la distribución de carga."
+    },
+    {
+      "question": "La relación correcta entre la fuerza eléctrica Fe⃗ que actúa sobre una carga puntual q y el campo eléctrico E⃗ es:",
+      "options": [
+        "Fe⃗ = q E⃗.",
+        "Fe⃗ = E⃗ / q.",
+        "Fe⃗ = q / E⃗.",
+        "Fe⃗ es independiente del campo eléctrico E⃗."
+      ],
+      "answer": 0,
+      "explanation": "Una vez conocido el campo eléctrico E⃗, la fuerza sobre una carga q se obtiene como Fe⃗ = q E⃗; el signo de q determina si la fuerza tiene el mismo sentido (q > 0) u opuesto (q < 0) al campo."
+    },
+    {
+      "question": "La dirección del vector campo eléctrico E⃗ en un punto se define como:",
+      "options": [
+        "La dirección y sentido de la fuerza sobre una carga de prueba positiva colocada en ese punto.",
+        "La dirección y sentido de la fuerza sobre una carga de prueba negativa.",
+        "Siempre vertical hacia abajo, independientemente de las cargas.",
+        "No tiene dirección definida porque es una magnitud escalar."
+      ],
+      "answer": 0,
+      "explanation": "Por convenio se considera una carga de prueba positiva, por lo que el vector campo eléctrico tiene la misma dirección y sentido que la fuerza que actuaría sobre ella."
+    },
+    {
+      "question": "El campo eléctrico producido por una carga puntual positiva +q en los puntos del espacio circundante es:",
+      "options": [
+        "Radial y dirigido hacia afuera, alejándose de la carga.",
+        "Radial y dirigido hacia adentro, acercándose a la carga.",
+        "Tangencial a circunferencias centradas en la carga.",
+        "Nulo en todos los puntos del espacio."
+      ],
+      "answer": 0,
+      "explanation": "Las líneas de campo de una carga positiva salen radialmente de la carga, lo que indica que una carga de prueba positiva sería repelida."
+    },
+    {
+      "question": "Para una distribución continua de carga, el campo eléctrico en un punto se expresa en forma general como:",
+      "options": [
+        "E⃗ = k_e ∫ (dq / r²) r̂, integrando sobre toda la distribución.",
+        "E⃗ = k_e ∫ r² dq, integrando sobre toda la distribución.",
+        "E⃗ = ∫ q dq, integrando sobre toda la distribución.",
+        "E⃗ = k_e ∫ dq, independientemente de la distancia."
+      ],
+      "answer": 0,
+      "explanation": "En el límite continuo se reemplaza la suma de contribuciones de cargas puntuales por una integral E⃗ = k_e ∫ (dq / r²) r̂, donde r es la distancia desde cada elemento de carga dq al punto de observación."
+    },
+    {
+      "question": "La densidad superficial de carga σ de una distribución uniforme se define como:",
+      "options": [
+        "σ = Q / A, donde Q es la carga total distribuida sobre un área A.",
+        "σ = Q / V, donde Q es la carga total y V el volumen.",
+        "σ = Q / ℓ, donde Q es la carga total y ℓ la longitud.",
+        "σ = A / Q, donde A es el área y Q la carga."
+      ],
+      "answer": 0,
+      "explanation": "Cuando una carga Q se distribuye homogéneamente sobre una superficie de área A, la densidad superficial de carga se define como σ = Q/A."
+    },
+    {
+      "question": "¿Cuál de las siguientes magnitudes NO corresponde a un tipo de densidad de carga utilizada habitualmente en electrostática?",
+      "options": [
+        "Densidad lineal de carga λ (carga por unidad de longitud).",
+        "Densidad temporal de carga τ (carga por unidad de tiempo).",
+        "Densidad volumétrica de carga ρ (carga por unidad de volumen).",
+        "Densidad superficial de carga σ (carga por unidad de área)."
+      ],
+      "answer": 1,
+      "explanation": "En electrostática se utilizan usualmente densidades lineal λ, superficial σ y volumétrica ρ; una densidad temporal de carga τ no se define como magnitud estándar en este contexto."
+    },
+    {
+      "question": "La densidad de líneas de campo eléctrico que atraviesan una superficie dada es proporcional a:",
+      "options": [
+        "La magnitud del campo eléctrico en esa región.",
+        "El cuadrado de la masa de las partículas cargadas.",
+        "La distancia entre la superficie y el origen de coordenadas.",
+        "El cuadrado del área de la superficie."
+      ],
+      "answer": 0,
+      "explanation": "Gráficamente se representa un campo más intenso mediante una mayor cantidad de líneas de campo por unidad de área, es decir, con una mayor densidad de líneas."
+    },
+    {
+      "question": "Respecto de las líneas de campo eléctrico, ¿cuál de las siguientes afirmaciones es correcta?",
+      "options": [
+        "Dos líneas de campo eléctrico nunca se cruzan.",
+        "Las líneas de campo pueden cruzarse si el campo es muy intenso.",
+        "Las líneas de campo siempre forman lazos cerrados como en el caso de un imán.",
+        "Las líneas de campo solo existen para cargas negativas."
+      ],
+      "answer": 0,
+      "explanation": "Si dos líneas de campo se cruzaran, en el punto de cruce el campo eléctrico debería tener simultáneamente dos direcciones distintas, lo cual es imposible; por ello las líneas de campo eléctrico nunca se cruzan."
+    },
+    {
+      "question": "El flujo eléctrico Φ_E debido a un campo eléctrico uniforme E⃗ que atraviesa una superficie plana de área A formando un ángulo θ con la normal a la superficie es:",
+      "options": [
+        "Φ_E = E A cos θ.",
+        "Φ_E = E A sin θ.",
+        "Φ_E = E A / cos θ.",
+        "Φ_E = 0 para cualquier valor de θ."
+      ],
+      "answer": 0,
+      "explanation": "El flujo eléctrico se define como Φ_E = E A_⊥, donde A_⊥ es el área proyectada perpendicularmente al campo; esto lleva a Φ_E = E A cos θ, con θ el ángulo entre el campo y la normal a la superficie."
+    },
+    {
+      "question": "La ley de Gauss en forma integral establece que:",
+      "options": [
+        "El flujo eléctrico neto a través de cualquier superficie cerrada es igual a la carga neta encerrada en su interior dividida por ε0.",
+        "El flujo eléctrico neto a través de cualquier superficie cerrada es siempre cero.",
+        "El flujo magnético neto a través de cualquier superficie cerrada es igual a la carga neta encerrada.",
+        "La circulación del campo eléctrico alrededor de una curva cerrada es igual a la carga neta encerrada dividida por ε0."
+      ],
+      "answer": 0,
+      "explanation": "La ley de Gauss se expresa como Φ_E = ∮ E⃗ · dA⃗ = Q_in / ε0 y relaciona el flujo del campo eléctrico a través de una superficie cerrada con la carga neta encerrada por dicha superficie."
+    },
+    {
+      "question": "Si una superficie cerrada no encierra carga neta (Q_in = 0), el flujo eléctrico neto a través de ella es:",
+      "options": [
+        "Φ_E = 0, aunque el campo eléctrico pueda ser distinto de cero en puntos de la superficie.",
+        "Siempre positivo.",
+        "Siempre negativo.",
+        "Distinto de cero solo si el campo es uniforme."
+      ],
+      "answer": 0,
+      "explanation": "Por la ley de Gauss, si la carga neta encerrada es nula se cumple que Φ_E = Q_in / ε0 = 0; esto no implica que el campo eléctrico sea nulo en cada punto de la superficie, solo que el flujo neto total es cero."
+    },
+    {
+      "question": "El módulo del campo eléctrico debido a un plano infinito de carga superficial uniforme con densidad σ es:",
+      "options": [
+        "E = σ / (2 ε0), independiente de la distancia al plano.",
+        "E = σ / (4 π ε0 r²), donde r es la distancia al plano.",
+        "E = σ r / (2 ε0), proporcional a la distancia al plano.",
+        "E = 0 a ambos lados del plano."
+      ],
+      "answer": 0,
+      "explanation": "Aplicando la ley de Gauss a un plano infinito con densidad de carga superficial uniforme σ se obtiene un campo eléctrico uniforme de módulo E = σ / (2 ε0) a cada lado del plano, independiente de la distancia."
+    },
+    {
+      "question": "En un conductor ideal en equilibrio electrostático, el campo eléctrico en el interior del material conductor es:",
+      "options": [
+        "Nulo (E = 0) en todos los puntos del interior.",
+        "Igual al campo aplicado externamente en cualquier punto.",
+        "Muy grande pero finito, determinado por la densidad de carga.",
+        "Siempre tangencial a la superficie interior."
+      ],
+      "answer": 0,
+      "explanation": "Si existiera un campo eléctrico distinto de cero en el interior del conductor, las cargas libres se moverían hasta redistribuirse; en equilibrio electrostático el campo interno debe anularse, por lo que E = 0 en el interior."
+    },
+    {
+      "question": "En un conductor aislado con exceso de carga que se encuentra en equilibrio electrostático, la carga neta se distribuye:",
+      "options": [
+        "Solo sobre la superficie del conductor.",
+        "Uniformemente en todo el volumen del conductor.",
+        "Concentrada únicamente en el centro geométrico del conductor.",
+        "Alternando periódicamente entre superficie y volumen."
+      ],
+      "answer": 0,
+      "explanation": "Dado que en el interior del conductor el campo es nulo, la ley de Gauss implica que la carga neta encerrada en cualquier superficie gaussiana completamente contenida en el volumen del conductor debe ser cero; por tanto, todo el exceso de carga reside en su superficie."
+    },
+    {
+      "question": "[ORAL] Explique las propiedades fundamentales de la carga eléctrica: tipos de carga, conservación, cuantización y mecanismos de transferencia entre cuerpos.",
+      "options": [
+        "Respuesta larga: ver explicación.",
+        "La carga siempre es positiva y no se conserva.",
+        "La carga no está cuantizada y puede tomar cualquier valor continuo.",
+        "La carga no se puede transferir entre cuerpos por ningún proceso físico."
+      ],
+      "answer": 0,
+      "explanation": "Se espera que el estudiante indique que existen dos tipos de carga (positiva y negativa), que las cargas de igual signo se repelen y las de signo opuesto se atraen, que en un sistema eléctricamente aislado la carga neta se conserva y que la carga está cuantizada en múltiplos de la carga elemental e; además debe mencionar que la electrización de un cuerpo se interpreta como transferencia de carga entre cuerpos (por frotamiento, contacto o inducción)."
+    },
+    {
+      "question": "[ORAL] Enuncie y explique la ley de Coulomb para cargas puntuales, indicando el significado de cada término y las condiciones bajo las cuales es válida.",
+      "options": [
+        "Respuesta larga: ver explicación.",
+        "La ley de Coulomb afirma que la fuerza es independiente de las cargas.",
+        "La ley de Coulomb solo es válida para cuerpos neutros.",
+        "La ley de Coulomb establece que la fuerza crece linealmente con la distancia."
+      ],
+      "answer": 0,
+      "explanation": "La respuesta esperada es que el estudiante enuncie que la fuerza eléctrica entre dos cargas puntuales en el vacío tiene módulo Fe = k_e |q1||q2| / r², actúa a lo largo de la recta que une las cargas y es atractiva para cargas de signo opuesto y repulsiva para cargas de igual signo; debe explicar qué representan q1, q2, r y la constante k_e, y mencionar que la ley es válida para cargas puntuales estacionarias y medios donde pueda aproximarse el vacío o una permitividad conocida."
+    },
+    {
+      "question": "[ORAL] Defina campo eléctrico y describa cómo se representa mediante líneas de campo alrededor de cargas puntuales positivas y negativas.",
+      "options": [
+        "Respuesta larga: ver explicación.",
+        "El campo eléctrico es solo un número que indica la carga total del sistema.",
+        "El campo eléctrico no se puede representar gráficamente.",
+        "El campo eléctrico es siempre uniforme y no depende de la distribución de carga."
+      ],
+      "answer": 0,
+      "explanation": "El estudiante debe definir el campo eléctrico en un punto como E⃗ = Fe⃗ / q0 y explicar que se trata de un campo vectorial generado por cargas fuente; además debe describir que las líneas de campo salen de las cargas positivas y terminan en las negativas (o en el infinito), que son tangentes al vector E⃗ en cada punto y que la densidad de líneas es mayor donde el campo es más intenso, mostrando un patrón radial saliente para una carga positiva y radial entrante para una carga negativa."
+        },
+        {
+          "question": "[ORAL] Defina flujo eléctrico y enuncie la ley de Gauss, comentando su utilidad para el cálculo del campo eléctrico en distribuciones con simetría.",
+          "options": [
+            "Respuesta larga: ver explicación.",
+            "El flujo eléctrico es la cantidad de carga total encerrada por una superficie.",
+            "El flujo eléctrico no depende del campo eléctrico.",
+            "El flujo eléctrico es siempre cero."
+          ],
+          "answer": 0,
+          "explanation": "El flujo eléctrico se define como Φ_E = ∮ E⃗ · dA⃗ y la ley de Gauss relaciona el flujo neto a través de una superficie cerrada con la carga neta encerrada Q_in mediante Φ_E = Q_in / ε0; es útil para calcular el campo eléctrico en distribuciones con simetría."
+        },
+    {
+      "question": "[ORAL] Describa las propiedades de los conductores en equilibrio electrostático y cómo se justifica que la carga neta se ubique en la superficie.",
+      "options": [
+        "Respuesta larga: ver explicación.",
+        "En un conductor en equilibrio el campo interno es muy grande y la carga permanece en el volumen.",
+        "En un conductor en equilibrio la carga neta desaparece.",
+        "En un conductor en equilibrio el campo interno es arbitrario y no afecta a las cargas."
+      ],
+      "answer": 0,
+      "explanation": "La respuesta esperada es que el alumno indique que en un conductor en equilibrio electrostático el campo eléctrico en el interior del material es nulo, que cualquier exceso de carga reside en la superficie, que el campo justo fuera de la superficie es perpendicular y de módulo E = σ / ε0 y que en zonas de mayor curvatura la densidad de carga superficial es mayor; debe justificar que, si existiera un campo interno distinto de cero, las cargas libres se moverían hasta redistribuirse sobre la superficie anulando el campo en el interior, en concordancia con la ley de Gauss."
+    }
+  ]
+}

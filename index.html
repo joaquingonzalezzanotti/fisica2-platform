@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fisica II - Learning Dashboard</title>
+  <!-- KaTeX para renderizar formulas en quizzes y practicos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --muted: #5b6475;
+      --text: #131722;
+      --accent: #006d77;
+      --accent-soft: rgba(0, 109, 119, 0.1);
+      --border: #e3e7ef;
+      --shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(0,109,119,0.05), transparent 35%),
+                  radial-gradient(circle at 80% 10%, rgba(0,109,119,0.08), transparent 30%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
+    }
+    aside {
+      background: linear-gradient(160deg, #0d1b2a, #1b263b);
+      color: #e9edf5;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-icon {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, #38bdf8, #22d3ee);
+      display: grid; place-items: center; font-weight: 700; color: #0b132b;
+    }
+    .brand h1 { margin: 0; font-size: 18px; line-height: 1.2; }
+    .sidebar-section h2 {
+      font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em;
+      color: #94a3b8; margin: 0 0 8px 0;
+    }
+    .module-list { display: flex; flex-direction: column; gap: 8px; }
+    .module-item {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.04);
+      color: #e9edf5;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .module-item:hover { background: rgba(255,255,255,0.08); }
+    .module-item.active {
+      background: #e0fbfc; color: #0b132b; border-color: transparent;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+    main {
+      padding: 28px 32px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 85%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .header-left h2 { margin: 0; font-size: 26px; }
+    .header-left p { margin: 4px 0 0 0; color: var(--muted); font-size: 14px; }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .card h3 { margin: 0; font-size: 17px; color: var(--text); }
+    .card p, .card li {
+      margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5;
+    }
+    details { margin-bottom: 10px; }
+    .card li + li { margin-top: 4px; }
+    details summary { cursor: pointer; font-weight: 700; color: var(--text); list-style: none; }
+    details summary::marker { display: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: #f8fafc; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .section-stack { display: flex; flex-direction: column; gap: 12px; }
+    .theory-stack { display: flex; flex-direction: column; gap: 12px; }
+    .toggle-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    button {
+      border: none; background: var(--accent); color: #fff; font-weight: 700;
+      padding: 10px 14px; border-radius: 12px; cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,109,119,0.2);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    button:hover { transform: translateY(-1px); }
+    .quiz { display: grid; gap: 12px; }
+    .quiz-item {
+      border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fdfefe;
+    }
+    .options { display: grid; gap: 8px; margin-top: 8px; }
+    .option {
+      border: 1px solid var(--border); border-radius: 10px; padding: 10px;
+      cursor: pointer; transition: all 0.15s ease; background: #fff;
+    }
+    .option:hover { border-color: var(--accent); }
+    .option.selected { border-color: var(--accent); background: var(--accent-soft); }
+    .option.correct { border-color: #22c55e; background: #e8f8ef; }
+    .option.incorrect { border-color: #ef4444; background: #fdecec; }
+    .status { font-weight: 700; font-size: 13px; margin-top: 6px; }
+    .hidden { display: none !important; }
+    .tab-row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .tab-btn {
+      border: 1px solid var(--border);
+      background: #f1f5f9;
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      box-shadow: 0 8px 20px rgba(0,109,119,0.2);
+    }
+    .practice-item {
+      display: none;
+    }
+    .slides-status { color: var(--muted); font-size: 13px; margin: 0; }
+    .exercise-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 12px;
+      background: linear-gradient(145deg, #f8fbff, #f2f6fb);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    }
+    .exercise-card .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .exercise-card .meta .pill { background: #e0f2fe; color: #0f172a; }
+    .exercise-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .exercise-body { margin-top: 8px; line-height: 1.55; color: var(--text); }
+    .exercise-body img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); margin-top: 10px; }
+    .summary-img {
+      width: 100%;
+      max-width: 1200px;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      padding: 12px;
+      margin: 12px auto 0 auto;
+      display: block;
+    }
+    /* Nueva UI de prácticos */
+    .practice-section {
+      display: grid;
+      gap: 14px;
+      padding: 4px 2px 0 2px;
+    }
+    .practice-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .practice-head h4 {
+      margin: 0;
+      font-size: 16px;
+      color: var(--text);
+    }
+    .practice-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .practice-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #ffffff;
+      box-shadow: 0 8px 18px rgba(17, 24, 39, 0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .practice-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(17, 24, 39, 0.08);
+    }
+    .practice-title {
+      margin: 0;
+      font-weight: 800;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .practice-sub {
+      margin: 4px 0 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .practice-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+    .practice-link::after {
+      content: '↗';
+      font-size: 12px;
+    }
+    .practice-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 8px;
+      box-shadow: 0 8px 18px rgba(0,109,119,0.25);
+    }
+    .exercise-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: lowercase;
+    }
+    .exercise-chip.accent {
+      background: rgba(0,109,119,0.14);
+      color: var(--accent);
+    }
+    .practice-empty {
+      color: var(--muted);
+      margin: 0;
+    }
+    .exercise-actions button {
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      box-shadow: none;
+    }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: relative; height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <div class="brand-icon">F2</div>
+        <div>
+          <h1>Fisica II 2025</h1>
+          <div style="color:#cbd5e1;font-size:12px;">Vista dinamica • Programa y Unidades</div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <h2>Modulos</h2>
+        <div class="module-list" id="moduleList"></div>
+      </div>
+    </aside>
+    <main>
+      <div class="header">
+        <div class="header-left">
+          <h2 id="moduleTitle">Selecciona un modulo</h2>
+          <p id="moduleSubtitle">Basado en Programa de Fisica II 2025.</p>
+        </div>
+        <div class="toggle-row">
+          <span class="pill" id="folderHint">Estructura: inputs/modulo#/</span>
+          <button id="quizBtn">Quiz rapido (3 preg.)</button>
+        </div>
+      </div>
+
+      <div class="section-stack">
+        <div class="card" id="summaryCard">
+          <h3>Resumen</h3>
+          <p id="moduleSummary">Usa la barra lateral para explorar las unidades del programa.</p>
+          <div class="chips" id="moduleSources"></div>
+          <div id="summaryImageWrap"></div>
+          <div id="moduleConcepts" style="margin-top:8px;"></div>
+        </div>
+
+        <div class="card" id="conceptsCard">
+          <div class="tab-row">
+            <button class="tab-btn active" data-tab="teorico">Teorico</button>
+            <button class="tab-btn" data-tab="practicos">Prácticos</button>
+          </div>
+          <div id="theoryPanel" class="theory-stack">
+            <div id="slidesCard" class="card" style="box-shadow:none;border:1px solid var(--border);">
+              <div class="toggle-row">
+                <h3 style="margin:0;">Filminas del modulo</h3>
+                <span class="pill" id="slidesHint">inputs/modulo#/filminas#</span>
+                <select id="slidesSelect" style="padding:8px 10px;border-radius:10px;border:1px solid var(--border);font-weight:600;background:#f8fafc;min-width:220px;"></select>
+              </div>
+              <p id="slidesStatus" class="slides-status">Cargando...</p>
+              <div id="slidesViewer" style="border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#f8fafc;color:var(--muted);">
+                <div style="padding:12px;">Selecciona una filmina para ver el PDF.</div>
+              </div>
+            </div>
+
+            <div id="pdfCard" class="card" style="box-shadow:none;border:1px solid var(--border);">
+              <div class="toggle-row">
+                <h3 style="margin:0;">Ver PDFs del modulo</h3>
+                <button id="pdfToggleBtn" style="background:#0f172a;">Mostrar/Ocultar</button>
+                <select id="pdfSelect" style="padding:8px 10px;border-radius:10px;border:1px solid var(--border);font-weight:600;background:#f8fafc;">
+                  <option>Selecciona modulo</option>
+                </select>
+              </div>
+              <div id="pdfViewer" class="hidden" style="border:1px solid var(--border);border-radius:12px;overflow:hidden;min-height:320px;background:#f8fafc;display:grid;place-items:center;color:var(--muted);">
+                Selecciona un PDF y haz clic en Mostrar/Ocultar.
+              </div>
+            </div>
+
+            <div id="quizCard" class="card" style="box-shadow:none;border:1px solid var(--border);">
+              <div class="toggle-row">
+                <h3 style="margin:0;">Repaso • Quiz rapido</h3>
+                <span class="pill" id="quizTitle">Selecciona modulo</span>
+              </div>
+              <div class="quiz" id="quizZone"></div>
+              <button id="gradeBtn" style="display:none;">Calificar</button>
+            </div>
+          </div>
+          <div id="modulePractices" class="hidden"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Datos con ruta actual y sugerencia de carpeta inputs/modulo#
+    const modules = [
+      {
+        id: 'u1',
+        title: 'Unidad 1: Introduccion a la termodinamica',
+        summary: 'Calor, temperatura, calorimetria y equivalente mecanico del calor.',
+        sources: ['Programa 2025 - Unidad 1'],
+        concepts: [
+          { title: 'Temperatura y medicion', points: ['Escalas termometricas (Celsius, Fahrenheit, Kelvin) y cero absoluto.', 'Termometros como dispositivos de equilibrio termico y propiedades termometricas (volumen, presion, resistencia).'] },
+          { title: 'Calor y energia interna', points: ['Calor como transferencia de energia; calorimetria (Q = m c ΔT).', 'Energia interna: suma de energias microscopicas; variables de estado vs transferencia.'] },
+          { title: 'Dilatacion y comportamiento del agua', points: ['Coeficientes de dilatacion lineal/superficial/volumetrica; agua 0–4 °C aumenta densidad.'] },
+          { title: 'Equivalente mecanico', points: ['Relacion trabajo-energia termica; 1 cal ≈ 4,186 J.'] }
+        ],
+        folder: 'inputs/modulo1/',
+        slidesFolder: 'inputs/modulo1/filminas1/',
+        pdfs: [
+          { label: 'Unidad 1 C1 - Fundamentos de termologia', file: 'inputs/modulo1/Unidad 1 C1-Fundamentos de termolog\u00eda.pdf' },
+          { label: 'Unidad 1 C2 - Energia interna', file: 'inputs/modulo1/Unidad 1-C2- Concepto de energ\u00eda interna.pdf' },
+          { label: 'Unidad 1 C3 - Transformaciones en gases', file: 'inputs/modulo1/Unidad 1-C3-Transformaciones en gases.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 1 - Fundamentos de Termología', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 1', note: 'Temperatura, contacto térmico y equilibrio.' },
+          { title: 'Práctico 2 - Calorimetría', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 2', note: 'Capacidad térmica, mezclas y equilibrio.' }
+        ]
+      },
+      {
+        id: 'u2',
+        title: 'Unidad 2: Principios de la termodinamica',
+        summary: 'Primera y segunda ley, ciclos de Carnot e invertido, entropia y rendimiento.',
+        sources: ['Programa 2025 - Unidad 2'],
+        concepts: [
+          { title: 'Primera ley', points: ['dE = Q + W; signo Q>0 hacia el sistema, W>0 sobre el sistema.', 'Trabajo como área bajo la curva P-V; casos isobárico, isocórico, isotérmico, adiabático.'] },
+          { title: 'Procesos adiabáticos', points: ['Q = 0; relaciones PV^γ = cte y T·V^(γ-1) = cte; γ = Cp/Cv.', 'En expansión adiabática E_int disminuye, en compresión aumenta.'] },
+          { title: 'Segunda ley y máquinas térmicas', points: ['Enunciados Kelvin-Planck y Clausius; imposibilidad de eficiencia 100%.', 'Máquina de Carnot: dos isotermas + dos adiabáticas; eficiencia e = 1 - Tc/Th.'] },
+          { title: 'Entropía', points: ['dS = δQ_rev / T; variable de estado.', 'En procesos reales ΔS_universo > 0; en reversibles ΔS_universo = 0.'] }
+        ],
+        folder: 'inputs/modulo2/',
+        slidesFolder: 'inputs/modulo2/filminas2/',
+        pdfs: [
+          { label: 'Unidad 2 C4 - Los principios de la termodinamica', file: 'inputs/modulo2/Unidad 2- C4 Los principios de la termodin\u00e1mica.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 3 - Transformaciones en gases', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 3', note: 'Trabajo y calor en isoterma, isobara, isocora, adiabática.' },
+          { title: 'Práctico 4 - Primer Principio', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 4', note: 'Balances de energía en procesos simples.' },
+          { title: 'Práctico 5 - Segundo Principio', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 5', note: 'Carnot, rendimiento y entropía.' }
+        ]
+      },
+      {
+        id: 'u3',
+        title: 'Unidad 3: Electrostatica y campo electrico',
+        summary: 'Carga electrica, Ley de Coulomb, campo electrico y flujo (Gauss).',
+        sources: ['Programa 2025 - Unidad 3'],
+        concepts: [
+          { title: 'Carga electrica', points: ['Signo, cuantizacion y conservacion; interacción atractiva/repulsiva.', 'Distribuciones discretas y continuas; superposición.'] },
+          { title: 'Campo electrico', points: ['Definición, líneas de campo y magnitud de cargas puntuales.', 'Flujo eléctrico y simetría (Gauss); superficies plana, cilíndrica, esférica.'] }
+        ],
+        folder: 'inputs/modulo3/',
+        slidesFolder: 'inputs/modulo3/filminas3/',
+        pdfs: [
+          { label: 'Unidad 3 C5 - Ley de Coulomb y Campo electrico', file: 'inputs/modulo3/Unidad 3-C5- Ley de Coulomb-Campo E\u00e9ctrico.pdf' },
+          { label: 'Unidad 3 C6 - Electrostatica y campos electricos 2', file: 'inputs/modulo3/Unidad 3-C6- Electrost\u00e1tica y campos el\u00e9ctricos 2\u00b0 parte.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 6 - Carga y Campo Eléctrico', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 6', note: 'Cálculo de campo por cargas discretas y continuas.' },
+          { title: 'Práctico 7 - Trabajo y Energía Potencial', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 7', note: 'Relación campo-potencial y energía almacenada.' }
+        ]
+      },
+      {
+        id: 'u4',
+        title: 'Unidad 4: Potencial electrico',
+        summary: 'Trabajo en campo electrostatico, potencial, gradiente y aplicaciones.',
+        sources: ['Programa 2025 - Unidad 4'],
+        concepts: [
+          { title: 'Trabajo y potencial', points: ['Trabajo en campo electrostatico; potencial de cargas puntuales y distribuciones.', 'Relación entre energía potencial y diferencia de potencial.'] },
+          { title: 'Campo desde potencial', points: ['E = -grad V; uso de simetría para derivar campos.', 'Equipotenciales y líneas de campo; aplicaciones básicas.'] }
+        ],
+        folder: 'inputs/modulo4/',
+        slidesFolder: 'inputs/modulo4/filminas4/',
+        pdfs: [
+          { label: 'Unidad 4 C7 - El potencial electrico', file: 'inputs/modulo4/Unidad 4-C7- El potencial el\u00e9ctrico.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 7 - Trabajo y Potencial', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 7', note: 'Potencial de cargas puntuales y distribuciones.' }
+        ]
+      },
+      {
+        id: 'u5',
+        title: 'Unidad 5: Capacidad y capacitores',
+        summary: 'Capacitancia, conexiones serie/paralelo, energia en capacitores y propiedades electricas de la materia.',
+        sources: ['Programa 2025 - Unidad 5'],
+        concepts: [
+          { title: 'Capacitancia', points: ['Dependencia geometrica y diel\u00e9ctrico.', 'Serie y paralelo para capacidad equivalente.', 'Capacidad en geometrías plana, cilindrica, esférica.'] },
+          { title: 'Energia', points: ['E = 1/2 C V^2; densidad de energia.', 'Descarga y riesgos.', 'Rol del diel\u00e9ctrico y ruptura.'] }
+        ],
+        folder: 'inputs/modulo5/',
+        slidesFolder: 'inputs/modulo5/filminas5/',
+        pdfs: [
+          { label: 'Unidad 5 - Propiedades electricas y capacidad', file: 'inputs/modulo5/Unidad 5 Propiedades el\u00e9ctricas de la materia y la capacidad el\u00e9ctrica.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 8 - Dieléctrico y Condensadores', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 8', note: 'Capacitores planos, cilindricos, esféricos y con dieléctrico.' }
+        ]
+      },
+      {
+        id: 'u6',
+        title: 'Unidad 6: La corriente electrica',
+        summary: 'Corriente electrica, modelo de conduccion, ley de Ohm y variacion de la resistencia con la temperatura.',
+        sources: ['Programa 2025 - Unidad 6'],
+        concepts: [
+          { title: 'Corriente y carga', points: ['Flujo de carga por unidad de tiempo.', 'Relacion con densidad de corriente.', 'Sentido convencional vs movimiento de electrones.'] },
+          { title: 'Ley de Ohm y potencia', points: ['I = V/R en conductores ohmicos.', 'Potencia P = I^2 R y variacion con temperatura.', 'Modelo microscopico de conduccion.'] }
+        ],
+        folder: 'inputs/modulo6/',
+        slidesFolder: 'inputs/modulo6/filminas6/',
+        pdfs: [
+          { label: 'Unidad 6 - La corriente electrica', file: 'inputs/modulo6/unidad 6 La corriente el\u00e9ctrica.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 9 - Corriente Eléctrica', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 9', note: 'Ley de Ohm, potencia de Joule y conductividad.' }
+        ]
+      },
+      {
+        id: 'u7',
+        title: 'Unidad 7: Circuito de corriente continua',
+        summary: 'Circuitos de CC con fem, resistencias en serie/paralelo y reglas de Kirchhoff.',
+        sources: ['Programa 2025 - Unidad 7'],
+        concepts: [
+          { title: 'Analisis de redes', points: ['Kirchhoff de corrientes y tensiones.', 'Puente de Wheatstone y potenciometro.', 'Potencia disipada en redes.'] },
+          { title: 'Conexiones', points: ['Serie y paralelo para resistencias y fuentes.', 'Caida de tension y division de corriente.', 'FEM internas y mallas.'] }
+        ],
+        folder: 'inputs/modulo7/',
+        slidesFolder: 'inputs/modulo7/filminas7/',
+        pdfs: [
+          { label: 'Unidad 7 - El circuito electrico', file: 'inputs/modulo7/Unidad 7 El circuito el\u00e9ctrico.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 10 - Circuitos de Corriente Continua', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 10', note: 'Mallas, nodos y división de corriente/tensión.' }
+        ]
+      },
+      {
+        id: 'u8',
+        title: 'Unidad 8: Magnetostatica',
+        summary: 'Ley de Biot-Savart y Ampere; campo de conductores y fuerzas sobre cargas/corrientes.',
+        sources: ['Programa 2025 - Unidad 8'],
+        concepts: [
+          { title: 'Fuentes de B', points: ['Corrientes rectas, espiras, solenoides y toroides.', 'Integral de Ampere en casos simetricos.', 'Superposición de campos.'] },
+          { title: 'Fuerzas magneticas', points: ['q v B sen(theta).', 'Momento sobre espiras y razon e/m.', 'Aplicaciones: espectrometría, motores simples.'] }
+        ],
+        folder: 'inputs/modulo8/',
+        slidesFolder: 'inputs/modulo8/filminas8/',
+        pdfs: [
+          { label: 'Unidad 8-1 - Magnetostatica e interaccion', file: 'inputs/modulo8/Unidad 8-1 Magnetost\u00e1tica e interacci\u00f3n magn\u00e9tica.pdf' },
+          { label: 'Unidad 8-2 - Biot-Savart y Ampere', file: 'inputs/modulo8/Unidad 8-2 Ley de Biot-Savart-Ley de Ampere.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 11 - Campo de Inducción Magnética', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 11', note: 'Aplicaciones de Biot-Savart y Ampere a geometrías simples.' }
+        ]
+      },
+      {
+        id: 'u9',
+        title: 'Unidad 9: Induccion electromagnetica',
+        summary: 'Ley de Faraday, fem inducida, auto/mutua induccion y energia en bobinas.',
+        sources: ['Programa 2025 - Unidad 9'],
+        concepts: [
+          { title: 'Fem inducida', points: ['Depende de d(flux)/dt.', 'Bobinas giratorias y conductores moviles.', 'Regla de Lenz y sentido de la corriente inducida.'] },
+          { title: 'Inductancia', points: ['Constante de tiempo L/R.', 'Energia almacenada 1/2 L I^2.', 'Auto vs mutua induccion.'] }
+        ],
+        folder: 'inputs/modulo9/',
+        slidesFolder: 'inputs/modulo9/filminas9/',
+        pdfs: [
+          { label: 'Unidad 9 - Induccion electromagnetica', file: 'inputs/modulo9/Unidad 9 Inducci\u00f3n electromagn\u00e9tica (1).pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 12 - Inducción Electromagnética', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 12', note: 'Circuitos RL, FEM inducida, constante de tiempo.' }
+        ]
+      },
+      {
+        id: 'u10',
+        title: 'Unidad 10: Propiedades magneticas de la materia',
+        summary: 'Paramagnetismo, diamagnetismo, ferromagnetismo y ciclo de histeresis.',
+        sources: ['Programa 2025 - Unidad 10'],
+        concepts: [
+          { title: 'Materiales magneticos', points: ['Respuesta a campos: para, dia y ferro.', 'Permeabilidad relativa y absoluta.', 'Dominios magnéticos.'] },
+          { title: 'Histeresis', points: ['Curva B-H y energia disipada.', 'Retentividad y coercitividad.', 'Ciclos y pérdidas.'] }
+        ],
+        folder: 'inputs/modulo10/',
+        slidesFolder: 'inputs/modulo10/filminas10/',
+        pdfs: [
+          { label: 'Unidad 10 - Propiedades magneticas de la materia', file: 'inputs/modulo10/Unidad 10 Propiedades magneticas de la materia.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 11 - Campo de Inducción Magnética (extensión cualitativa)', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 11', note: 'Propiedades magnéticas de materiales (apoyo conceptual).' }
+        ]
+      },
+      {
+        id: 'u11',
+        title: 'Unidad 11: Corriente alterna',
+        summary: 'Generadores de CA, fasores, respuesta de R, L y C, potencia e impedancia en RLC serie.',
+        sources: ['Programa 2025 - Unidad 11'],
+        concepts: [
+          { title: 'Fasores y ondas', points: ['Representacion senoidal de voltajes y corrientes.', 'Fase y frecuencia angular omega.', 'Voltaje RMS y corriente RMS.'] },
+          { title: 'Impedancia', points: ['Z_R = R, Z_L = j omega L, Z_C = 1/(j omega C).', 'Resonancia cuando omega L = 1/omega C.', 'Factor de potencia y corrección.'] }
+        ],
+        folder: 'inputs/modulo11/',
+        slidesFolder: 'inputs/modulo11/filminas11/',
+        pdfs: [
+          { label: 'Unidad 11 - Corriente Alterna', file: 'inputs/modulo11/Unidad 11 Corriente Alterna.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 13 - Corriente Alterna', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 13', note: 'Impedancias, potencia y resonancia en RLC.' }
+        ]
+      },
+      {
+        id: 'u12',
+        title: 'Unidad 12: Ondas EM y ecuaciones de Maxwell',
+        summary: 'Ecuacion de ondas viajeras; Maxwell integral/diferencial; velocidad y espectro EM.',
+        sources: ['Programa 2025 - Unidad 12'],
+        concepts: [
+          { title: 'Ecuacion de onda', points: ['Relacion laplaciano-tiempo.', 'Ondas viajeras y velocidad de fase.', 'Longitud de onda y frecuencia.'] },
+          { title: 'Maxwell', points: ['Unificacion de electricidad y magnetismo.', 'Corriente de desplazamiento en Ampere-Maxwell.', 'Ecuaciones en forma integral y diferencial.'] }
+        ],
+        folder: 'inputs/modulo12/',
+        slidesFolder: 'inputs/modulo12/filminas12/',
+        pdfs: [
+          { label: 'Unidad 12 - Fundamentos de ondas y ecuaciones de Maxwell', file: 'inputs/modulo12/Unidad 12 Fundamentos de ondas y ecuaciones de Maxwell.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 14 - Ondas EM y Maxwell', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 14', note: 'Velocidad de propagación, campos en el vacío.' }
+        ]
+      },
+      {
+        id: 'u13',
+        title: 'Unidad 13: Optica fisica',
+        summary: 'Interferencia (Young, peliculas delgadas), difraccion y polarizacion.',
+        sources: ['Programa 2025 - Unidad 13'],
+        concepts: [
+          { title: 'Interferencia', points: ['Principio de Huygens; franjas por superposicion.', 'Peliculas delgadas y recubrimientos antirreflejo.', 'Interferometro de Michelson.'] },
+          { title: 'Difraccion y polarizacion', points: ['Rendijas simples y multiples.', 'Metodos para polarizar y analizar luz.', 'Redes de difraccion y maxima.'] }
+        ],
+        folder: 'inputs/modulo13/',
+        slidesFolder: 'inputs/modulo13/filminas13/',
+        pdfs: [
+          { label: 'Unidad 13 - Optica fisica', file: 'inputs/modulo13/Unidad 13 \u00e0ptica f\u00edsica.pdf' }
+        ],
+        practices: [
+          { title: 'Práctico 15 - Óptica Ondulatoria', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Sección 15', note: 'Franjas de Young, redes de difracción, polarización.' }
+        ]
+      }
+    ];
+
+    const moduleList = document.getElementById('moduleList');
+    const titleEl = document.getElementById('moduleTitle');
+    const subtitleEl = document.getElementById('moduleSubtitle');
+    const summaryEl = document.getElementById('moduleSummary');
+    const sourcesEl = document.getElementById('moduleSources');
+    let summaryImgEl;
+    const conceptsEl = document.getElementById('moduleConcepts');
+    const practicesEl = document.getElementById('modulePractices');
+    const tabButtons = () => Array.from(document.querySelectorAll('.tab-btn'));
+    const slidesSelect = document.getElementById('slidesSelect');
+    const slidesViewer = document.getElementById('slidesViewer');
+    const slidesStatus = document.getElementById('slidesStatus');
+    const slidesHint = document.getElementById('slidesHint');
+    let practiceExercises = [];
+    const summaryImageWrap = document.getElementById('summaryImageWrap');
+    const folderHintEl = document.getElementById('folderHint');
+    const pdfSelect = document.getElementById('pdfSelect');
+    const pdfViewer = document.getElementById('pdfViewer');
+    const pdfToggleBtn = document.getElementById('pdfToggleBtn');
+    const quizTitleEl = document.getElementById('quizTitle');
+    const quizZone = document.getElementById('quizZone');
+    const quizBtn = document.getElementById('quizBtn');
+    const gradeBtn = document.getElementById('gradeBtn'); // legacy (oculto)
+    let practiceExercisesMount = null;
+
+    let currentModule = null;
+    let currentQuiz = [];
+    let pdfVisible = false;
+    let currentQuestionIndex = 0;
+    let correctCount = 0;
+
+    function renderModules() {
+      moduleList.innerHTML = '';
+      modules.forEach((mod, idx) => {
+        const div = document.createElement('div');
+        div.className = 'module-item' + (idx === 0 ? ' active' : '');
+        div.textContent = mod.title;
+        div.addEventListener('click', () => selectModule(mod.id));
+        moduleList.appendChild(div);
+      });
+    }
+
+    function selectModule(id) {
+      currentModule = modules.find(m => m.id === id);
+      document.querySelectorAll('.module-item').forEach(item => {
+        item.classList.toggle('active', item.textContent === currentModule.title);
+      });
+      titleEl.textContent = currentModule.title;
+      subtitleEl.textContent = currentModule.summary;
+      summaryEl.textContent = currentModule.summary;
+      folderHintEl.textContent = `Estructura sugerida: ${currentModule.folder}`;
+      sourcesEl.innerHTML = '';
+      currentModule.sources.forEach(s => {
+        const tag = document.createElement('span');
+        tag.className = 'pill';
+        tag.textContent = s;
+        sourcesEl.appendChild(tag);
+      });
+      renderConcepts();
+      renderPractices();
+      loadSummaryImage();
+      loadPracticeExercises();
+      switchTab('teorico');
+      renderSlides();
+      pdfVisible = false;
+      pdfViewer.classList.add('hidden');
+      pdfToggleBtn.textContent = 'Mostrar PDF';
+      renderPdfOptions();
+      quizTitleEl.textContent = `Quiz: ${currentModule.title}`;
+      quizZone.innerHTML = '<p style="color:var(--muted);margin:0;">El quiz se cargará automáticamente (aleatorio) o con "Quiz rapido".</p>';
+      gradeBtn.style.display = 'none';
+      currentQuiz = [];
+      currentQuestionIndex = 0;
+      correctCount = 0;
+      generateQuiz(); // auto-cargar quiz al seleccionar módulo
+    }
+
+    function renderConcepts() {
+      conceptsEl.innerHTML = '';
+      currentModule.concepts.forEach((c, i) => {
+        const detail = document.createElement('details');
+        if (i === 0) detail.open = true;
+        const summary = document.createElement('summary');
+        summary.textContent = c.title;
+        detail.appendChild(summary);
+        const list = document.createElement('ul');
+        c.points.forEach(p => {
+          const li = document.createElement('li');
+          li.textContent = p;
+          list.appendChild(li);
+        });
+        detail.appendChild(list);
+        conceptsEl.appendChild(detail);
+      });
+    }
+
+    function renderPractices() {
+      practicesEl.innerHTML = '';
+      const wrapper = document.createElement('div');
+      wrapper.className = 'practice-section';
+
+      const head = document.createElement('div');
+      head.className = 'practice-head';
+      const h = document.createElement('h4');
+      h.textContent = 'Guía práctica';
+      head.appendChild(h);
+      const count = document.createElement('span');
+      count.className = 'pill';
+      const total = currentModule.practices ? currentModule.practices.length : 0;
+      count.textContent = total ? `${total} recursos` : 'Sin recursos';
+      head.appendChild(count);
+      wrapper.appendChild(head);
+
+      const grid = document.createElement('div');
+      grid.className = 'practice-grid';
+      if (!currentModule.practices || !currentModule.practices.length) {
+        const empty = document.createElement('p');
+        empty.className = 'practice-empty';
+        empty.textContent = 'No hay prácticos asociados para este módulo.';
+        grid.appendChild(empty);
+      } else {
+        currentModule.practices.forEach(pr => {
+          const card = document.createElement('div');
+          card.className = 'practice-card';
+
+          const t = document.createElement('p');
+          t.className = 'practice-title';
+          t.textContent = `${pr.title} (${pr.section})`;
+          card.appendChild(t);
+
+          const sub = document.createElement('p');
+          sub.className = 'practice-sub';
+          sub.textContent = pr.note || '';
+          card.appendChild(sub);
+
+          const link = document.createElement('a');
+          link.href = pr.ref;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.className = 'practice-link';
+          link.textContent = 'Ver en guía práctica';
+          card.appendChild(link);
+
+          grid.appendChild(card);
+        });
+      }
+      wrapper.appendChild(grid);
+
+      const exercisesBlock = document.createElement('div');
+      exercisesBlock.id = 'practiceExercisesMount';
+      wrapper.appendChild(exercisesBlock);
+      practicesEl.appendChild(wrapper);
+      practiceExercisesMount = exercisesBlock;
+    }
+
+    async function loadPracticeExercises() {
+      practiceExercises = [];
+      const num = currentModule.id.replace('u', '');
+      const path = `inputs/practicos/practU${num}/practicos.json`;
+      try {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error('No encontrado');
+        const data = await res.json();
+        practiceExercises = data.exercises || [];
+        renderPracticeExercises();
+      } catch (e) {
+        // Si no hay JSON, mostramos mensaje
+        if (practiceExercisesMount) {
+          const notice = document.createElement('p');
+          notice.className = 'practice-empty';
+          notice.textContent = 'No se encontraron ejercicios cargados. Agrega practicos.json en ' + path + '.';
+          practiceExercisesMount.appendChild(notice);
+        }
+      }
+    }
+
+    function renderPracticeExercises() {
+      if (!practiceExercisesMount) return;
+      practiceExercisesMount.innerHTML = '';
+      const head = document.createElement('div');
+      head.className = 'practice-head';
+      const h = document.createElement('h4');
+      h.textContent = 'Ejercicios interactivos';
+      head.appendChild(h);
+      const badge = document.createElement('span');
+      badge.className = 'pill';
+      badge.textContent = practiceExercises.length ? `${practiceExercises.length} ejercicios` : 'Sin ejercicios';
+      head.appendChild(badge);
+      practiceExercisesMount.appendChild(head);
+
+      if (!practiceExercises.length) {
+        const empty = document.createElement('p');
+        empty.className = 'practice-empty';
+        empty.textContent = 'Carga ejercicios en inputs/practicos/practU#/practicos.json para mostrarlos aquí.';
+        practiceExercisesMount.appendChild(empty);
+        return;
+      }
+
+      practiceExercises.forEach(ex => {
+        const card = document.createElement('div');
+        card.className = 'exercise-card';
+
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = ex.title || 'Ejercicio';
+        card.appendChild(title);
+
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        if (ex.difficulty) {
+          const pill = document.createElement('span');
+          pill.className = 'exercise-chip accent';
+          pill.textContent = `dificultad: ${ex.difficulty}`;
+          meta.appendChild(pill);
+        }
+        if (ex.tags && ex.tags.length) {
+          ex.tags.slice(0, 4).forEach(t => {
+            const pill = document.createElement('span');
+            pill.className = 'exercise-chip';
+            pill.textContent = t;
+            meta.appendChild(pill);
+          });
+        }
+        card.appendChild(meta);
+
+        if (ex.statement) {
+          const st = document.createElement('div');
+          st.className = 'exercise-body';
+          st.textContent = ex.statement;
+          card.appendChild(st);
+        }
+
+        if (ex.images && ex.images.length) {
+          ex.images.forEach(img => {
+            const im = document.createElement('img');
+            im.src = img;
+            im.alt = ex.title || 'Ejercicio';
+            card.appendChild(im);
+          });
+        }
+
+        const actions = document.createElement('div');
+        actions.className = 'exercise-actions';
+        const hintBtn = document.createElement('button');
+        hintBtn.textContent = 'Pista';
+        const solBtn = document.createElement('button');
+        solBtn.textContent = 'Solución';
+        actions.appendChild(hintBtn);
+        actions.appendChild(solBtn);
+        card.appendChild(actions);
+
+        if (ex.source && ex.source.pdf) {
+          const link = document.createElement('a');
+          link.href = ex.source.pdf + (ex.source.page ? `#page=${ex.source.page}` : '');
+          link.textContent = ex.source.section ? `Abrir ${ex.source.section}` : 'Abrir PDF';
+          link.target = '_blank';
+          link.style.fontWeight = '700';
+          link.style.color = '#006d77';
+          link.style.display = 'inline-block';
+          link.style.marginTop = '4px';
+          card.appendChild(link);
+        }
+
+        let hintDiv, solDiv;
+        if (ex.hint) {
+          hintDiv = document.createElement('div');
+          hintDiv.className = 'exercise-body hidden';
+          hintDiv.textContent = ex.hint;
+          hintDiv.style.color = '#0f172a';
+          card.appendChild(hintDiv);
+        }
+        if (ex.solution) {
+          solDiv = document.createElement('div');
+          solDiv.className = 'exercise-body hidden';
+          solDiv.textContent = ex.solution;
+          solDiv.style.fontWeight = '700';
+          card.appendChild(solDiv);
+        }
+
+        hintBtn.addEventListener('click', () => {
+          if (hintDiv) hintDiv.classList.toggle('hidden');
+        });
+        solBtn.addEventListener('click', () => {
+          if (solDiv) solDiv.classList.toggle('hidden');
+        });
+
+        practiceExercisesMount.appendChild(card);
+      });
+    }
+
+    async function loadSummaryImage() {
+      summaryImageWrap.innerHTML = '';
+      if (!currentModule || !currentModule.slidesFolder) return;
+      const folder = currentModule.slidesFolder;
+      try {
+        const res = await fetch(folder);
+        if (!res.ok) throw new Error('No listado');
+        const html = await res.text();
+        const regex = /href="([^"]+\.(png|jpg|jpeg|webp|gif))"/gi;
+        const files = [];
+        let m;
+        while ((m = regex.exec(html)) !== null) {
+          const href = decodeURIComponent(m[1]);
+          if (href.includes('../')) continue;
+          files.push(href);
+        }
+        const uniq = Array.from(new Set(files));
+        if (!uniq.length) return;
+        const first = uniq[0];
+        let src = '';
+        if (first.startsWith('http') || first.startsWith('/')) {
+          src = first;
+        } else if (first.startsWith(folder)) {
+          src = first;
+        } else {
+          src = folder + first;
+        }
+        const img = document.createElement('img');
+        img.className = 'summary-img';
+        img.src = src;
+        img.alt = 'Filmina resumen';
+        summaryImageWrap.appendChild(img);
+      } catch (e) {
+        // silencioso si no se puede listar
+      }
+    }
+
+    async function renderSlides() {
+      slidesSelect.innerHTML = '';
+      slidesStatus.textContent = 'Cargando filminas...';
+      slidesViewer.innerHTML = 'Selecciona una filmina para ver el PDF.';
+      const folder = currentModule.slidesFolder;
+      slidesHint.textContent = folder;
+      try {
+        const res = await fetch(folder);
+        if (!res.ok) throw new Error('No listado');
+        const html = await res.text();
+        const regex = /href="([^"]+\.pdf)"/gi;
+        const files = [];
+        let m;
+        while ((m = regex.exec(html)) !== null) {
+          const href = decodeURIComponent(m[1]);
+          if (href.includes('../')) continue;
+          files.push(href);
+        }
+        const uniq = Array.from(new Set(files));
+        if (!uniq.length) {
+          slidesStatus.textContent = 'No se encontraron PDFs en la carpeta de filminas.';
+          slidesViewer.innerHTML = 'Agrega PDFs a ' + folder;
+          return;
+        }
+        uniq.forEach((f, idx) => {
+          const opt = document.createElement('option');
+          const label = f.split('/').pop();
+          if (f.startsWith('http')) {
+            opt.value = f;
+          } else if (f.startsWith('/')) {
+            opt.value = f;
+          } else if (f.startsWith(folder)) {
+            opt.value = f;
+          } else {
+            opt.value = folder + f;
+          }
+          opt.textContent = label;
+          if (idx === 0) opt.selected = true;
+          slidesSelect.appendChild(opt);
+        });
+        slidesStatus.textContent = '';
+        loadSlide(slidesSelect.value);
+      } catch (e) {
+        slidesStatus.textContent = 'No se pudo listar la carpeta de filminas.';
+        slidesViewer.innerHTML = 'Verifica que ' + folder + ' esté accesible.';
+      }
+    }
+
+    function loadSlide(path) {
+      if (!path) {
+        slidesViewer.textContent = 'Selecciona una filmina.';
+        return;
+      }
+      const src = encodeURI(path);
+      slidesViewer.innerHTML = `<iframe src="${src}" style="width:100%;height:720px;border:0;display:block;" title="Filmina"></iframe>`;
+    }
+
+    function switchTab(tab) {
+      tabButtons().forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tab));
+      if (tab === 'teorico') {
+        document.getElementById('theoryPanel').classList.remove('hidden');
+        practicesEl.classList.add('hidden');
+      } else {
+        document.getElementById('theoryPanel').classList.add('hidden');
+        practicesEl.classList.remove('hidden');
+      }
+    }
+
+    function renderPdfOptions() {
+      pdfSelect.innerHTML = '';
+      if (!currentModule || !currentModule.pdfs?.length) {
+        const opt = document.createElement('option');
+        opt.textContent = 'Sin PDFs asociados';
+        pdfSelect.appendChild(opt);
+        pdfViewer.textContent = 'No hay PDFs disponibles para este modulo.';
+        return;
+      }
+      currentModule.pdfs.forEach((pdf, idx) => {
+        const opt = document.createElement('option');
+        opt.value = pdf.file;
+        opt.textContent = pdf.label;
+        if (idx === 0) opt.selected = true;
+        pdfSelect.appendChild(opt);
+      });
+      // No cargamos automáticamente; se carga al mostrar.
+    }
+
+    function loadPdf(path) {
+      if (!path) {
+        pdfViewer.textContent = 'Selecciona un PDF.';
+        return;
+      }
+      const src = encodeURI(path);
+      pdfViewer.innerHTML = `<iframe src="${src}" style="width:100%;height:440px;border:0;" title="PDF"></iframe>`;
+    }
+
+    function togglePdf() {
+      pdfVisible = !pdfVisible;
+      if (pdfVisible) {
+        pdfViewer.classList.remove('hidden');
+        pdfToggleBtn.textContent = 'Ocultar PDF';
+        if (pdfSelect.value) loadPdf(pdfSelect.value);
+      } else {
+        pdfViewer.classList.add('hidden');
+        pdfToggleBtn.textContent = 'Mostrar PDF';
+      }
+    }
+
+    function generateQuiz() {
+      if (!currentModule) return;
+      const num = currentModule.id.replace('u', '').toUpperCase();
+      const candidates = [
+        `inputs/quiz/quizU${num}/quiz.json`,
+        `inputs/quiz/quizU${num}/quizU${num}.json`,
+        `inputs/quiz/quizu${num}/quiz.json`,
+        `inputs/quiz/quizu${num}/quizu${num}.json`
+      ];
+
+      const tryLoad = async (path) => {
+        try {
+          const r = await fetch(path);
+          if (!r.ok) throw new Error('No encontrado');
+          return await r.json();
+        } catch {
+          return null;
+        }
+      };
+
+      (async () => {
+        let data = null;
+        for (const p of candidates) {
+          data = await tryLoad(p);
+          if (data) break;
+        }
+        if (!data) {
+          quizZone.innerHTML = `<p style="color:var(--muted);margin:0;">No se encontró quiz. Probé: ${candidates.join(', ')}. Agrega quiz.json o quizU#.json en la carpeta del módulo.</p>`;
+          gradeBtn.style.display = 'none';
+          return;
+        }
+        currentQuiz = (data.questions || []).map((q, idx) => ({
+          q: q.question,
+          options: q.options,
+          answer: q.answer,
+          selected: null,
+          revealed: false,
+          correct: false,
+          scored: false,
+          explanation: q.explanation || '',
+          id: idx
+        }));
+        shuffleCurrentQuiz();
+        currentQuestionIndex = 0;
+        correctCount = 0;
+        renderCurrentQuestion();
+      })();
+    }
+
+    function shuffleCurrentQuiz() {
+      for (let i = currentQuiz.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [currentQuiz[i], currentQuiz[j]] = [currentQuiz[j], currentQuiz[i]];
+      }
+    }
+
+    function renderCurrentQuestion() {
+      if (!currentQuiz.length) {
+        quizZone.innerHTML = '<p style="color:var(--muted);margin:0;">El archivo de quiz no contiene preguntas.</p>';
+        gradeBtn.style.display = 'none';
+        return;
+      }
+      const item = currentQuiz[currentQuestionIndex];
+      const total = currentQuiz.length;
+      const progress = `Pregunta ${currentQuestionIndex + 1} de ${total}`;
+      const btnNextLabel = currentQuestionIndex === total - 1 ? 'Terminar' : 'Siguiente';
+      const feedbackText = item.revealed
+        ? (item.correct ? 'Correcta. ' : (item.selected === null ? 'Mostrada sin respuesta. ' : 'Incorrecta. ')) + (item.explanation || '')
+        : '';
+
+      quizZone.innerHTML = `
+        <div class="quiz-item">
+          <div style="font-weight:700;color:var(--accent);margin-bottom:6px;">${progress}</div>
+          <div style="margin-bottom:8px;">${item.q}</div>
+          <div class="options" id="optionsBox"></div>
+          <div id="feedback" class="${item.revealed ? '' : 'hidden'}" style="margin-top:8px;font-weight:700;color:${item.correct ? '#15803d' : '#dc2626'};">
+            ${feedbackText}
+          </div>
+          <div class="toggle-row" style="margin-top:10px;gap:8px;">
+            <button id="respondBtn" ${item.revealed ? 'disabled' : ''}>Responder</button>
+            <button id="revealBtn" ${item.revealed ? 'disabled' : ''} style="background:#0f172a;">Mostrar respuesta</button>
+            <button id="nextBtn" ${item.revealed ? '' : 'disabled'}>${btnNextLabel}</button>
+          </div>
+        </div>
+      `;
+
+      const optionsBox = document.getElementById('optionsBox');
+      item.options.forEach((opt, optIdx) => {
+        const optEl = document.createElement('div');
+        optEl.className = 'option';
+        optEl.textContent = opt;
+        if (item.selected === optIdx) optEl.classList.add('selected');
+        if (item.revealed) {
+          if (optIdx === item.answer) optEl.classList.add('correct');
+          if (item.selected === optIdx && optIdx !== item.answer) optEl.classList.add('incorrect');
+        }
+        optEl.addEventListener('click', () => {
+          if (item.revealed) return;
+          item.selected = optIdx;
+          renderCurrentQuestion();
+        });
+        optionsBox.appendChild(optEl);
+      });
+
+      document.getElementById('respondBtn').addEventListener('click', () => {
+        if (item.revealed) return;
+        if (item.selected === null) {
+          const fb = document.getElementById('feedback');
+          fb.textContent = 'Elige una opción o usa "Mostrar respuesta".';
+          fb.classList.remove('hidden');
+          fb.style.color = '#dc2626';
+          return;
+        }
+        item.revealed = true;
+        item.correct = item.selected === item.answer;
+        if (item.correct && !item.scored) {
+          correctCount += 1;
+          item.scored = true;
+        }
+        renderCurrentQuestion();
+      });
+
+      document.getElementById('revealBtn').addEventListener('click', () => {
+        if (item.revealed) return;
+        item.revealed = true;
+        item.correct = false;
+        item.selected = null;
+        renderCurrentQuestion();
+      });
+
+      document.getElementById('nextBtn').addEventListener('click', () => {
+        if (!item.revealed) return;
+        if (currentQuestionIndex < total - 1) {
+          currentQuestionIndex += 1;
+          renderCurrentQuestion();
+        } else {
+          quizZone.innerHTML = `<p style="margin:0;font-weight:700;">Completado: ${correctCount} de ${total} correctas.</p>`;
+        }
+      });
+    }
+
+    quizBtn.addEventListener('click', generateQuiz);
+    gradeBtn.style.display = 'none'; // no usamos el botón masivo ahora
+    pdfSelect.addEventListener('change', (e) => loadPdf(e.target.value));
+    pdfToggleBtn.addEventListener('click', togglePdf);
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+    slidesSelect.addEventListener('change', (e) => loadSlide(e.target.value));
+
+    renderModules();
+    selectModule(modules[0].id);
+  </script>
+</body>
+</html>

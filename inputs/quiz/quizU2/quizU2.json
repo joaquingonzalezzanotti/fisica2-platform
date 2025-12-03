@@ -1,0 +1,293 @@
+{
+  "moduleId": "u2",
+  "title": "Quiz Unidad 2 - Principios de la termodinámica",
+  "questions": [
+    {
+      "question": "¿Qué condición define a un proceso adiabático en un gas ideal?",
+      "options": [
+        "La temperatura permanece constante (ΔT = 0).",
+        "No hay transferencia de energía por calor (Q = 0).",
+        "La presión permanece constante (ΔP = 0).",
+        "El volumen permanece constante (ΔV = 0)."
+      ],
+      "answer": 1,
+      "explanation": "Por definición, en un proceso adiabático no hay intercambio de energía por calor entre el sistema y los alrededores, por lo que Q = 0."
+    },
+    {
+      "question": "En un proceso adiabático de un gas ideal, ¿cómo se escribe la primera ley de la termodinámica?",
+      "options": [
+        "dE_int = Q + W, con Q ≠ 0.",
+        "dE_int = Q, porque W = 0.",
+        "dE_int = W, porque Q = 0.",
+        "dE_int = 0, porque Q = W = 0."
+      ],
+      "answer": 2,
+      "explanation": "Si Q = 0 (adiabático), la primera ley dE_int = Q + W se reduce a dE_int = W: todo cambio de energía interna se debe exclusivamente al trabajo."
+    },
+    {
+      "question": "¿Qué relación entre presión y volumen describe un proceso adiabático de un gas ideal?",
+      "options": [
+        "P · V^γ = constante.",
+        "P · V = constante.",
+        "P / V = constante.",
+        "P · V^2 = constante."
+      ],
+      "answer": 0,
+      "explanation": "Del desarrollo matemático para un gas ideal en un proceso adiabático se obtiene P · V^γ = constante, donde γ = c_p / c_v."
+    },
+    {
+      "question": "¿Qué relación entre temperatura y volumen es válida para un proceso adiabático de un gas ideal?",
+      "options": [
+        "T · V = constante.",
+        "T · V^(γ−1) = constante.",
+        "T / V = constante.",
+        "T · V^γ = constante."
+      ],
+      "answer": 1,
+      "explanation": "Para un gas ideal en un proceso adiabático se cumple T · V^(γ−1) = constante, lo que vincula el cambio de temperatura con el cambio de volumen."
+    },
+    {
+      "question": "Para un proceso adiabático entre un estado inicial (i) y uno final (f) en un gas ideal, ¿qué igualdad es correcta?",
+      "options": [
+        "P_i · V_f^γ = P_f · V_i^γ.",
+        "P_i · V_i^γ = P_f · V_f^γ.",
+        "P_i · V_i = P_f · V_f.",
+        "P_i / V_i^γ = P_f / V_f^γ."
+      ],
+      "answer": 1,
+      "explanation": "Como P · V^γ = constante, debe cumplirse P_i · V_i^γ = P_f · V_f^γ entre los estados inicial y final."
+    },
+    {
+      "question": "¿Cuál de las siguientes opciones describe mejor una máquina térmica idealizada?",
+      "options": [
+        "Un dispositivo que solo intercambia calor con un único depósito térmico.",
+        "Un dispositivo que convierte íntegramente el calor absorbido en trabajo, sin ceder calor.",
+        "Un dispositivo que, en un ciclo, absorbe energía de un foco caliente, realiza trabajo y cede parte de la energía a un foco frío.",
+        "Un dispositivo que solo realiza trabajo sobre el entorno, sin intercambiar calor."
+      ],
+      "answer": 2,
+      "explanation": "Una máquina térmica opera cíclicamente: absorbe energía Q_h de un depósito caliente, realiza trabajo W_maq y devuelve una parte como calor Q_c a un depósito frío."
+    },
+    {
+      "question": "En una máquina térmica que opera en ciclo, ¿cuál es la relación correcta entre el trabajo neto realizado y las energías intercambiadas con los focos térmicos?",
+      "options": [
+        "W_maq = |Q_c| − |Q_h|.",
+        "W_maq = |Q_h| + |Q_c|.",
+        "W_maq = |Q_h| − |Q_c|.",
+        "W_maq = 0, porque el ciclo se cierra."
+      ],
+      "answer": 2,
+      "explanation": "La energía neta transferida por calor en el ciclo es Q_neto = |Q_h| − |Q_c|, y por la primera ley se cumple W_maq = Q_neto = |Q_h| − |Q_c|."
+    },
+    {
+      "question": "¿Cómo se define la eficiencia térmica e de una máquina térmica?",
+      "options": [
+        "e = |Q_c| / |Q_h|.",
+        "e = W_maq / |Q_h|.",
+        "e = |Q_h| / W_maq.",
+        "e = |Q_h| / |Q_c|."
+      ],
+      "answer": 1,
+      "explanation": "La eficiencia térmica se define como e = W_maq / |Q_h|, es decir, el cociente entre el trabajo útil neto y el calor absorbido del foco caliente."
+    },
+    {
+      "question": "Según la forma de Kelvin–Planck de la segunda ley, ¿qué es imposible?",
+      "options": [
+        "Convertir parte del calor recibido en trabajo y ceder el resto a un foco frío.",
+        "Construir una máquina térmica que no produzca trabajo mecánico.",
+        "Construir una máquina térmica que, funcionando en ciclo, convierta toda la energía por calor recibida de un solo depósito en igual cantidad de trabajo.",
+        "Construir una máquina térmica con eficiencia menor al 100 %."
+      ],
+      "answer": 2,
+      "explanation": "Kelvin–Planck establece que es imposible una máquina cíclica cuyo único efecto sea tomar calor de un depósito y transformarlo completamente en trabajo sin ningún otro efecto."
+    },
+    {
+      "question": "¿Cuál es la característica principal de un proceso reversible?",
+      "options": [
+        "Puede revertirse siguiendo el mismo camino y el sistema está en equilibrio en cada punto del proceso.",
+        "Solo ocurre a altas temperaturas.",
+        "No intercambia ni calor ni trabajo con el entorno.",
+        "Siempre se realiza en un tiempo muy corto."
+      ],
+      "answer": 0,
+      "explanation": "Un proceso reversible es ideal: el sistema puede volver a su estado inicial recorriendo el mismo camino y manteniendo el equilibrio termodinámico en todos los puntos."
+    },
+    {
+      "question": "Respecto a los procesos reales en la naturaleza, ¿qué afirmación es correcta?",
+      "options": [
+        "Todos los procesos reales son reversibles.",
+        "Todos los procesos reales son irreversibles.",
+        "Algunos procesos reales son reversibles y otros no.",
+        "La reversibilidad o irreversibilidad no tiene relevancia física."
+      ],
+      "answer": 1,
+      "explanation": "En la práctica, todos los procesos reales son irreversibles; la reversibilidad es una idealización útil para el análisis teórico."
+    },
+    {
+      "question": "¿Qué afirmación sobre la máquina de Carnot es correcta?",
+      "options": [
+        "Es una máquina real que se puede construir con eficiencia del 100 %. ",
+        "Es una máquina teórica reversible que fija la máxima eficiencia posible entre dos temperaturas dadas.",
+        "Es una máquina que solo opera con procesos isobáricos.",
+        "Es una máquina que no intercambia calor con el entorno."
+      ],
+      "answer": 1,
+      "explanation": "La máquina de Carnot es un modelo teórico reversible que establece el límite superior de eficiencia para cualquier máquina que opere entre las mismas temperaturas."
+    },
+    {
+      "question": "¿Cuáles son los procesos que componen el ciclo de Carnot para un gas ideal?",
+      "options": [
+        "Dos procesos isobáricos y dos isovolumétricos.",
+        "Un proceso isotérmico, uno isobárico, uno adiabático y uno isovolumétrico.",
+        "Dos procesos isotérmicos y dos adiabáticos, todos reversibles.",
+        "Cuatro procesos adiabáticos consecutivos."
+      ],
+      "answer": 2,
+      "explanation": "El ciclo de Carnot ideal consta de dos procesos isotérmicos y dos procesos adiabáticos, todos reversibles."
+    },
+    {
+      "question": "Para una máquina de Carnot que opera entre un foco caliente a temperatura T_h y uno frío a T_c, ¿qué expresión de su eficiencia térmica e es correcta?",
+      "options": [
+        "e = 1 − T_h / T_c.",
+        "e = 1 − T_c / T_h.",
+        "e = T_c / T_h.",
+        "e = T_h / (T_h − T_c)."
+      ],
+      "answer": 1,
+      "explanation": "Carnot demostró que la eficiencia máxima posible es e = 1 − T_c / T_h, dependiendo solo de las temperaturas absolutas de los focos."
+    },
+    {
+      "question": "Según la expresión de eficiencia de Carnot, ¿cómo puede aumentarse la eficiencia de una máquina térmica ideal?",
+      "options": [
+        "Disminuyendo T_h y aumentando T_c.",
+        "Aumentando T_h y disminuyendo T_c.",
+        "Manteniendo T_h = T_c.",
+        "La eficiencia no depende de T_h ni de T_c."
+      ],
+      "answer": 1,
+      "explanation": "La eficiencia aumenta al incrementar la temperatura del foco caliente T_h y al disminuir la del foco frío T_c."
+    },
+    {
+      "question": "En una bomba de calor o refrigerador, ¿cómo se define el coeficiente de realización COP en modo enfriamiento?",
+      "options": [
+        "COP = |Q_h| / W.",
+        "COP = W / |Q_c|.",
+        "COP = |Q_c| / W.",
+        "COP = |Q_h| / |Q_c|."
+      ],
+      "answer": 2,
+      "explanation": "En modo enfriamiento, el COP se define como COP = |Q_c| / W, es decir, el calor extraído del foco frío por unidad de trabajo invertido."
+    },
+    {
+      "question": "Para una bomba de calor/refrigerador ideal tipo Carnot, ¿qué expresión es correcta para el COP en modo enfriamiento?",
+      "options": [
+        "COP = T_c / (T_h − T_c).",
+        "COP = T_h / (T_h − T_c).",
+        "COP = T_h − T_c.",
+        "COP = 1 − T_c / T_h."
+      ],
+      "answer": 0,
+      "explanation": "Del análisis del ciclo de Carnot se obtiene, en modo enfriamiento, COP = T_c / (T_h − T_c)."
+    },
+    {
+      "question": "El enunciado de Clausius de la segunda ley de la termodinámica establece que es imposible:",
+      "options": [
+        "Transferir calor desde un objeto caliente a uno frío.",
+        "Transferir continuamente calor desde un objeto frío a otro más caliente sin aporte de trabajo externo.",
+        "Convertir calor en trabajo con eficiencia menor al 100 %. ",
+        "Realizar cualquier tipo de trabajo mecánico a partir del calor."
+      ],
+      "answer": 1,
+      "explanation": "Clausius establece que no es posible un proceso cíclico cuyo único efecto sea trasladar continuamente calor de un cuerpo frío a uno más caliente sin suministro de trabajo."
+    },
+    {
+      "question": "¿Cómo se define diferencialmente el cambio de entropía dS para un proceso reversible?",
+      "options": [
+        "dS = dQ / T para cualquier proceso.",
+        "dS = dQ_r / T, donde dQ_r es el calor transferido en un proceso reversible.",
+        "dS = T · dQ_r.",
+        "dS = dW / T."
+      ],
+      "answer": 1,
+      "explanation": "Por definición, para un proceso reversible se cumple dS = dQ_r / T, donde dQ_r es el calor intercambiado en condiciones reversibles."
+    },
+    {
+      "question": "¿Por qué se considera a la entropía una variable de estado?",
+      "options": [
+        "Porque depende explícitamente del tiempo transcurrido.",
+        "Porque depende del camino seguido entre dos estados.",
+        "Porque su variación entre dos estados depende solo de los estados inicial y final y no del camino.",
+        "Porque solo se define para procesos irreversibles."
+      ],
+      "answer": 2,
+      "explanation": "La entropía es una variable de estado: el cambio de entropía entre dos estados de equilibrio depende únicamente de dichos estados, no del proceso seguido."
+    },
+    {
+      "question": "Para cualquier ciclo reversible, ¿qué se cumple para la entropía?",
+      "options": [
+        "La entropía del sistema siempre aumenta.",
+        "La entropía del sistema siempre disminuye.",
+        "El cambio total de entropía del sistema en el ciclo es cero.",
+        "La entropía no está definida en ciclos reversibles."
+      ],
+      "answer": 2,
+      "explanation": "En un ciclo reversible se cumple ∮(dQ_r / T) = 0, por lo que el cambio neto de entropía del sistema en el ciclo es nulo."
+    },
+    {
+      "question": "¿Qué enunciado sobre la entropía del universo es consistente con la segunda ley de la termodinámica?",
+      "options": [
+        "La entropía total del universo puede disminuir en procesos reales.",
+        "La entropía del universo permanece siempre constante, sea cual sea el proceso.",
+        "La entropía del universo aumenta en todos los procesos reales.",
+        "La entropía no tiene significado físico a escala del universo."
+      ],
+      "answer": 2,
+      "explanation": "El enunciado de la entropía de la segunda ley indica que la entropía del universo aumenta en todos los procesos reales; no puede disminuir si se considera el conjunto de todos los sistemas que intervienen."
+    },
+
+    {
+      "question": "Pregunta oral: Explique físicamente qué significa que en un proceso adiabático se cumpla Q = 0 y cómo se relaciona con la variación de la energía interna del gas ideal.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada (resumen): En un proceso adiabático no hay intercambio de energía por calor con el entorno (Q = 0). Por la primera ley, dE_int = Q + W se reduce a dE_int = W. Es decir, todo cambio en la energía interna del gas se debe exclusivamente al trabajo realizado por el gas (expansión) o sobre el gas (compresión). En una expansión adiabática el gas hace trabajo sobre el entorno y su energía interna disminuye, bajando la temperatura; en una compresión adiabática se realiza trabajo sobre el gas, aumenta su energía interna y sube su temperatura."
+    },
+    {
+      "question": "Pregunta oral: Describa las cuatro etapas del ciclo de Carnot para un gas ideal, indicando en cada una si hay intercambio de calor (con qué foco) y si el sistema se expande o se comprime.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada (resumen): El ciclo de Carnot tiene cuatro procesos reversibles: (1) A → B: expansión isotérmica a T_h, el gas se expande y absorbe calor Q_h del foco caliente realizando trabajo. (2) B → C: expansión adiabática, el gas sigue expandiéndose sin intercambio de calor, realizando trabajo y disminuyendo su temperatura de T_h a T_c. (3) C → D: compresión isotérmica a T_c, se comprime el gas en contacto con el foco frío; el entorno realiza trabajo sobre el gas y este cede calor Q_c al foco frío. (4) D → A: compresión adiabática, el gas se comprime sin intercambio de calor, el trabajo realizado sobre él aumenta su energía interna y la temperatura vuelve de T_c a T_h, completando el ciclo."
+    },
+    {
+      "question": "Pregunta oral: Compare los enunciados de Kelvin–Planck y de Clausius de la segunda ley de la termodinámica y explique por qué son equivalentes.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada (resumen): Kelvin–Planck dice que es imposible construir una máquina térmica que, funcionando en ciclo, tenga como único efecto tomar calor de un solo depósito y convertirlo íntegramente en trabajo. Clausius dice que es imposible un proceso cíclico cuyo único efecto sea transferir calor de manera continua desde un cuerpo frío a uno más caliente sin aporte de trabajo. Son enunciados equivalentes porque si fuera posible violar uno (por ejemplo, bombear calor de frío a caliente sin trabajo), combinando ese dispositivo con una máquina térmica adecuada se podría construir una máquina que violara el otro enunciado (conversión completa de calor en trabajo) y viceversa."
+    },
+    {
+      "question": "Pregunta oral: Explique el concepto de entropía como medida de desorden y discuta la idea de la \"muerte térmica\" del universo mencionada en la teoría.",
+      "options": [
+        "Answer A: ver explicación esperada.",
+        "Answer B.",
+        "Answer C.",
+        "Answer D."
+      ],
+      "answer": 0,
+      "explanation": "Respuesta esperada (resumen): La entropía se interpreta como una medida del desorden o del número de microestados accesibles a un sistema; los sistemas aislados tienden a estados de mayor entropía. Al aplicar la segunda ley a todo el universo, la entropía total aumenta en todos los procesos reales, lo que implica una degradación gradual de la energía disponible para realizar trabajo. Si se extrapola este comportamiento, se llega al escenario de \"muerte térmica\" del universo: una situación en la que la temperatura se ha uniformado en todas partes, no hay gradientes térmicos y, por lo tanto, ya no es posible extraer trabajo útil ni sostener procesos físicos, químicos o biológicos."
+    }
+  ]
+}
