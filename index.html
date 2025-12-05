@@ -763,44 +763,44 @@
     const PRACTICO_PDF = 'inputs/Practico Fisica 2 2023.pdf';
     const practiceChapterMap = {
       u1: [
-        { title: 'Cap. 1 - Fundamentos de Termologia', page: 4 },
-        { title: 'Cap. 2 - Calorimetria', page: 9 }
+        { cap: 1, title: 'Cap. 1 - Fundamentos de Termologia', page: 4 },
+        { cap: 2, title: 'Cap. 2 - Calorimetria', page: 9 }
       ],
       u2: [
-        { title: 'Cap. 3 - Transformaciones en Gases', page: 20 },
-        { title: 'Cap. 4 - 1er Principio de la Termodinamica', page: 28 },
-        { title: 'Cap. 5 - 2do Principio de la Termodinamica', page: 33 }
+        { cap: 3, title: 'Cap. 3 - Transformaciones en Gases', page: 20 },
+        { cap: 4, title: 'Cap. 4 - 1er Principio de la Termodinamica', page: 28 },
+        { cap: 5, title: 'Cap. 5 - 2do Principio de la Termodinamica', page: 33 }
       ],
       u3: [
-        { title: 'Cap. 6 - Carga y Campo Electrico', page: 36 }
+        { cap: 6, title: 'Cap. 6 - Carga y Campo Electrico', page: 36 }
       ],
       u4: [
-        { title: 'Cap. 7 - Trabajo y Energia Potencial Electrostatica', page: 51 }
+        { cap: 7, title: 'Cap. 7 - Trabajo y Energia Potencial Electrostatica', page: 51 }
       ],
       u5: [
-        { title: 'Cap. 8 - Dielectrico y Condensadores', page: 58 }
+        { cap: 8, title: 'Cap. 8 - Dielectrico y Condensadores', page: 58 }
       ],
       u6: [
-        { title: 'Cap. 9 - La Corriente Electrica', page: 68 }
+        { cap: 9, title: 'Cap. 9 - La Corriente Electrica', page: 68 }
       ],
       u7: [
-        { title: 'Cap. 10 - Circuitos de Corriente Continua', page: 78 }
+        { cap: 10, title: 'Cap. 10 - Circuitos de Corriente Continua', page: 78 }
       ],
       u8: [
-        { title: 'Cap. 11 - Campo de Induccion Magnetica', page: 88 }
+        { cap: 11, title: 'Cap. 11 - Campo de Induccion Magnetica', page: 88 }
       ],
       u9: [
-        { title: 'Cap. 12 - Induccion Electromagnetica', page: 101 }
+        { cap: 12, title: 'Cap. 12 - Induccion Electromagnetica', page: 101 }
       ],
       u10: [],
       u11: [
-        { title: 'Cap. 13 - Corriente Alterna', page: 110 }
+        { cap: 13, title: 'Cap. 13 - Corriente Alterna', page: 110 }
       ],
       u12: [
-        { title: 'Cap. 14 - Ondas Electromagneticas y Ecuaciones de Maxwell', page: 118 }
+        { cap: 14, title: 'Cap. 14 - Ondas Electromagneticas y Ecuaciones de Maxwell', page: 118 }
       ],
       u13: [
-        { title: 'Cap. 15 - Optica Ondulatoria', page: 121 }
+        { cap: 15, title: 'Cap. 15 - Optica Ondulatoria', page: 121 }
       ]
     };
     const practiceFormulasMap = {
@@ -963,8 +963,7 @@
           card.className = 'practice-card';
 
           // Bloque de formulas por capitulo (oculto por defecto)
-          const capMatch = ch.title.match(/Cap\.?\s*(\d+)/i);
-          const capNum = capMatch ? capMatch[1] : null;
+          const capNum = ch.cap || (ch.title.match(/Cap\.?\s*(\d+)/i)?.[1] || null);
           const formulaSrc = capNum ? `assets/img/formulas/u${capNum}.png` : '';
           const formulaBlock = document.createElement('details');
           formulaBlock.className = 'practice-formulas';
@@ -984,7 +983,8 @@
           const formulaBody = document.createElement('div');
           const formulaImg = document.createElement('img');
           if (formulaSrc) {
-            formulaImg.src = formulaSrc;
+            const cacheBust = Date.now(); // evita servir una version cacheada incorrecta
+            formulaImg.src = `${formulaSrc}?v=${cacheBust}`;
             formulaImg.alt = 'Formulas del capitulo';
             formulaImg.className = 'formula-img';
             formulaImg.onerror = () => { formulaImg.classList.add('hidden'); };
