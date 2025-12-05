@@ -371,6 +371,39 @@
       font-size: 13px;
       box-shadow: none;
     }
+    .practice-formulas {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      margin: 8px 0 6px 0;
+    }
+    .practice-formulas summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--text);
+      list-style: none;
+    }
+    .practice-formulas summary::marker,
+    .practice-formulas summary::-webkit-details-marker { display: none; }
+    .practice-formulas .formula-img {
+      width: 100%;
+      max-width: 1100px;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #fff;
+      margin-top: 8px;
+    }
+    .practice-formulas .formula-status {
+      margin: 6px 0 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
     @media (max-width: 960px) {
       .layout { grid-template-columns: 1fr; }
       aside { position: relative; height: auto; }
@@ -719,7 +752,7 @@
         folder: 'inputs/modulos/modulo13/',
         slidesFolder: 'inputs/modulos/modulo13/filminas13/',
         pdfs: [
-          { label: 'Unidad 13 - Optica fisica', file: 'inputs/modulos/modulo13/Unidad 13 \u00e0ptica f\u00edsica.pdf' }
+          { label: 'Unidad 13 - Optica fisica', file: 'inputs/modulos/modulo13/Unidad 13 Optica fisica.pdf' }
         ],
         practices: [
           { title: 'Practico 15 - ptica Ondulatoria', ref: 'inputs/Practico Fisica 2 2023.pdf', section: 'Seccion 15', note: 'Franjas de Young, redes de difraccion, polarizacion.' }
@@ -916,49 +949,6 @@
       head.appendChild(count);
       wrapper.appendChild(head);
 
-      // Bloque de formulas por capitulo (imagen oculta por defecto)
-      const formulaBlock = document.createElement('div');
-      formulaBlock.className = 'card';
-      formulaBlock.style.boxShadow = 'none';
-      formulaBlock.style.border = '1px solid var(--border)';
-
-      const formulaHead = document.createElement('div');
-      formulaHead.className = 'toggle-row';
-      const formulaTitle = document.createElement('h4');
-      formulaTitle.style.margin = '0';
-      formulaTitle.textContent = 'Formulas del capitulo';
-      formulaHead.appendChild(formulaTitle);
-      const formulaToggle = document.createElement('button');
-      formulaToggle.className = 'mini-btn align-right';
-      formulaToggle.textContent = 'Mostrar';
-      formulaHead.appendChild(formulaToggle);
-      formulaBlock.appendChild(formulaHead);
-
-      const formulaBody = document.createElement('div');
-      formulaBody.id = 'practiceFormulaBody';
-      formulaBody.classList.add('hidden');
-      const formulaSrc = practiceFormulasMap[currentModule.id] || '';
-      const formulaImg = document.createElement('img');
-      formulaImg.id = 'practiceFormulaImg';
-      if (formulaSrc) formulaImg.src = formulaSrc;
-      formulaImg.alt = 'Formulas del capitulo';
-      formulaImg.style.width = '100%';
-      formulaImg.style.maxWidth = '1100px';
-      formulaImg.style.objectFit = 'contain';
-      formulaImg.style.borderRadius = '12px';
-      formulaImg.style.border = '1px solid var(--border)';
-      formulaImg.style.background = '#f8fafc';
-      formulaImg.onerror = () => { formulaImg.classList.add('hidden'); };
-      formulaBody.appendChild(formulaImg);
-      formulaBlock.appendChild(formulaBody);
-
-      formulaToggle.addEventListener('click', () => {
-        const hidden = formulaBody.classList.toggle('hidden');
-        formulaToggle.textContent = hidden ? 'Mostrar' : 'Ocultar';
-      });
-
-      wrapper.appendChild(formulaBlock);
-
       const grid = document.createElement('div');
       grid.className = 'practice-grid';
 
@@ -972,6 +962,45 @@
           const card = document.createElement('div');
           card.className = 'practice-card';
 
+          // Bloque de formulas por capitulo (oculto por defecto)
+          const capMatch = ch.title.match(/Cap\.?\s*(\d+)/i);
+          const capNum = capMatch ? capMatch[1] : null;
+          const formulaSrc = capNum ? `assets/img/formulas/u${capNum}.png` : '';
+          const formulaBlock = document.createElement('details');
+          formulaBlock.className = 'practice-formulas';
+          formulaBlock.open = false; // oculto por defecto
+
+          const summary = document.createElement('summary');
+          const titleSpan = document.createElement('span');
+          titleSpan.textContent = capNum ? `Formulas del capitulo ${capNum}` : 'Formulas del capitulo';
+          const toggleHint = document.createElement('span');
+          toggleHint.className = 'pill';
+          toggleHint.style.marginLeft = 'auto';
+          toggleHint.textContent = 'Mostrar';
+          summary.appendChild(titleSpan);
+          summary.appendChild(toggleHint);
+          formulaBlock.appendChild(summary);
+
+          const formulaBody = document.createElement('div');
+          const formulaImg = document.createElement('img');
+          if (formulaSrc) {
+            formulaImg.src = formulaSrc;
+            formulaImg.alt = 'Formulas del capitulo';
+            formulaImg.className = 'formula-img';
+            formulaImg.onerror = () => { formulaImg.classList.add('hidden'); };
+            formulaBody.appendChild(formulaImg);
+          } else {
+            const note = document.createElement('p');
+            note.className = 'formula-status';
+            note.textContent = 'No se encontro la imagen de formulas (u#.png).';
+            formulaBody.appendChild(note);
+          }
+          formulaBlock.appendChild(formulaBody);
+
+          formulaBlock.addEventListener('toggle', () => {
+            toggleHint.textContent = formulaBlock.open ? 'Ocultar' : 'Mostrar';
+          });
+
           const t = document.createElement('p');
           t.className = 'practice-title';
           t.textContent = ch.title;
@@ -982,6 +1011,8 @@
           sub.textContent = `Pagina inicial: ${ch.page}`;
           card.appendChild(sub);
 
+          card.appendChild(formulaBlock);
+
           const toggle = document.createElement('button');
           toggle.className = 'practice-cta';
           toggle.textContent = idx === 0 ? 'Ocultar' : 'Mostrar';
@@ -991,15 +1022,46 @@
           iframeWrap.style.marginTop = '10px';
           iframeWrap.className = idx === 0 ? '' : 'hidden';
 
-          const iframe = document.createElement('iframe');
-          iframe.src = `${PRACTICO_PDF}#page=${ch.page}`;
-          iframe.title = ch.title;
-          iframe.style.width = '100%';
-          iframe.style.height = '520px';
-          iframe.style.border = '1px solid var(--border)';
-          iframe.style.borderRadius = '10px';
-          iframe.style.background = '#f8fafc';
-          iframeWrap.appendChild(iframe);
+          const pdfSrc = `${encodeURI(PRACTICO_PDF)}#page=${encodeURIComponent(ch.page)}`;
+
+          // Visor embebido; se intenta con <embed> (suele funcionar mejor que iframe file://).
+          const embed = document.createElement('embed');
+          embed.src = pdfSrc;
+          embed.type = 'application/pdf';
+          embed.title = ch.title;
+          embed.style.width = '100%';
+          embed.style.height = '520px';
+          embed.style.border = '1px solid var(--border)';
+          embed.style.borderRadius = '10px';
+          embed.style.background = '#f8fafc';
+
+          const fallback = document.createElement('div');
+          fallback.style.padding = '12px';
+          fallback.style.border = '1px dashed var(--border)';
+          fallback.style.borderRadius = '10px';
+          fallback.style.background = '#fff8e1';
+          fallback.style.marginTop = '8px';
+          fallback.textContent = 'Si el PDF no se carga, usa el enlace "Abrir en pestaña".';
+
+          let pdfLoaded = false;
+          embed.addEventListener('load', () => { pdfLoaded = true; });
+          embed.addEventListener('error', () => { fallback.classList.remove('hidden'); });
+          // Si en ~1s no cargo, muestra fallback (caso de bloqueo por navegador).
+          setTimeout(() => {
+            if (!pdfLoaded) fallback.classList.remove('hidden');
+          }, 1200);
+
+          iframeWrap.appendChild(embed);
+          fallback.classList.add('hidden');
+          iframeWrap.appendChild(fallback);
+
+          const external = document.createElement('a');
+          external.href = pdfSrc;
+          external.target = '_blank';
+          external.rel = 'noopener';
+          external.className = 'practice-link';
+          external.textContent = 'Abrir en pestaña';
+          iframeWrap.appendChild(external);
 
           toggle.addEventListener('click', () => {
             const hidden = iframeWrap.classList.toggle('hidden');

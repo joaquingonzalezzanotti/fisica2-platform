@@ -1,5 +1,12 @@
 # Fisica II - Estructura de proyecto
 
+
+## Leer
+-Instrucciones para el usuario final (inclúyelas en un README.txt):
+
+Descomprimir el ZIP.
+Doble clic a FinalFisica2.exe
+
 ## Raiz
 - `index.html`: UI principal (sin build, HTML único).
 - `assets/img/`: imágenes y favicon (`assets/img/favicon.png`).
